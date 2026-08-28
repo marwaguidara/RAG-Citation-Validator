@@ -1,0 +1,464 @@
+
+##############################################################################
+# QUESTION 1 : What is Retrieval-Augmented Generation (RAG) and what are its main benefits?
+##############################################################################
+
+--- 1) QUESTION UTILISATEUR ---
+What is Retrieval-Augmented Generation (RAG) and what are its main benefits?
+
+--- 2) PROMPT EXACT ---
+Context:
+[1] 2506.06962v3 p.9-9:
+FAiD shows
+a more noticeable overhead of 36.03% on a single GPU due
+to its autoregressive retrieval and feature blending operations. However, this increase remains reasonable given the substan-
+tial performance gains in generation quality. Overall, both DAiD and FAiD do not significantly
+compromise the inference efficiency of Janus-Pro, making them practical for real-world applications. 6
+Related Work
+Retrieval-augmented generation (RAG) has emerged as a powerful paradigm that enhances generative
+models by incorporating external knowledge during decoding [23, 13, 16, 47, 46, 15, 24, 25, 42]. Originally developed for natural language processing, RAG enables models to retrieve relevant
+documents to supplement parametric knowledge during response generation [4], and has been widely
+adopted in many downstream tasks, such as knowledge-intensive tasks [23], document fusion [19],
+model pretraining [16], dialogue generation [35, 1], and so on. Beyond the text domain, prior research has explored enhancing image generation by incorporating
+external visual references. Early approaches [8, 3] condition the diffusion process on retrieved
+images, typically encoded via CLIP or VAE encoders, to gu [...]
+
+[2] 2506.06962v3 p.2-2:
+images based on user prompts [31, 28, 7, 37, 10, 41, 9, 43, 45, 27, 6]. However,
+despite these improvements, the generated images often exhibit local distortions and inconsistencies,
+particularly in visual objects that possess complex structures [11], frequently interact with other
+objects and the surrounding scene [22, 26], or are underrepresented in the training data [8]. A
+promising approach to mitigating these challenges is retrieval-augmented generation (RAG), which
+enhances the generation process by incorporating real-world images as additional references [8, 3]. While RAG has been extensively explored in the language domain [23, 13], its application to image
+and multimodal generation remains largely underdeveloped. A few existing studies [3, 8, 46, 48, 49]
+bridge this gap by performing a single-step retrieval based on the input prompt prior to generation,
+conditioning the entire image generation process on fixed visual cues (Figure 1 (b)). However, as
+demonstrated in our pilot study (Section 5.2), such static, coarse-grained retrieval approaches [3, 8, 49]
+frequently introduce irrelevant or weakly aligned visual contents that persist throughout generation. Since the retrieve [...]
+
+[3] 2402.12317v2 p.1-1:
+EVOR: Evolving Retrieval for Code Generation
+Hongjin Su1, Shuyang Jiang2, Yuhang Lai2,
+Haoyuan Wu1, Boao Shi1, Che Liu1, Qian Liu3, Tao Yu 1,
+1The University of Hong Kong, 2Fudan University, 3Sea AI Lab,
+Correspondence: hjsu@cs.hku.hk
+Abstract
+Recently the retrieval-augmented generation
+(RAG) has been successfully applied in code
+generation. However, existing pipelines for
+retrieval-augmented code generation (RACG)
+employ static knowledge bases with a single
+source, limiting the adaptation capabilities of
+Large Language Models (LLMs) to domains
+they have insufficient knowledge of. In this
+work, we develop a novel pipeline, EVOR, that
+employs the synchronous evolution of both
+queries and diverse knowledge bases. On two
+realistic settings where the external knowledge
+is required to solve code generation tasks, we
+compile four new datasets associated with fre-
+quently updated libraries and long-tail program-
+ming languages, named EVOR-BENCH. Ex-
+tensive experiments demonstrate that EVOR
+achieves two to four times of execution accu-
+racy compared to other methods such as Reflex-
+ion (Shinn et al., 2024), DocPrompting (Zhou
+et al., 2023), etc. We demonstrate that EVOR
+is flexible and ca [...]
+
+[4] 2402.12317v2 p.8-8:
+et al., 2023; Li et al., 2023a; Zhang et al.,
+2023c; Chen et al., 2023; Key et al., 2022) However,
+most of these works set up the evaluation in scenar-
+ios LLMs are familiar with, e.g., HumanEval (Chen
+et al., 2021), HumanEvalPack (Muennighoff et al.,
+2023) and MBPP (Austin et al., 2021), where they
+are capable of demonstrating superior zero-shot
+performance by only utilizing internal knowledge. In this work, we focus on evaluating the capabili-
+ties of LLMs to incorporate external knowledge for
+the purpose of code generation in updated libraries
+or less-common programming languages. Our task
+reflects a more realistic yet challenging scenario
+for LLMs. Retrieval-Augmented Generation
+The retrieval-
+augmented generation (RAG) is an appealing
+paradigm that allows LLMs to efficiently utilize
+external knowledge (Shi et al., 2023b; Izacard and
+Grave, 2020; Xu et al., 2023a; Jiang et al., 2023c). Recent works have applied it to the code generation
+task (Patel et al., 2023; Guo et al., 2023; Parvez
+et al., 2021a; Wang et al., 2023b). Specifically,
+Zhou et al. (2022) explored the natural-language-
+to-code generation approach that explicitly lever-
+ages code documentation. Zan et al. (2022)  [...]
+
+[5] 2402.12317v2 p.1-1:
+base. We hope that our studies
+will inspire more insights into the design of
+advanced RACG pipelines in future research. Our model, code, and data are available at
+https://arks-codegen.github.io. 1
+Introduction
+The
+retrieval-augmented
+generation
+(RAG)
+paradigm has raised significant attention due
+to its efficiency in adapting large language
+models (LLMs) without training (Guu et al.,
+2020; Karpukhin et al., 2020; Izacard et al.,
+2023; Borgeaud et al., 2022; Asai et al., 2023). Recent research has demonstrated its successful
+applications in code generation. They implement
+the retrieval-augmented code generation (RACG)
+Write ponyc code to print odd numbers from 0 to n (inclusive)
+Query
+Generator
+Code
+... The Pony if condition
+allows actions when a
+condition is true. Documentation
+The Pony for loop iterates
+over a collection of items
+using an iterator ... if n <= 0 then
+n = -n
+end
+Code Snippet
+for i in Range(1, n) do
+a = a + 2 * i
+end
+Execution Feedback
+main.pony:10:syntax error:
+unterminated if expression
+if (i % 2) != 0 then ^
+Web Search
+Github
+StackOverflow
+... Knowledge Soup
+... Write ponyc code to ... Retrieve
+Generate
+Feedback
+Execute
+Generate
+Evolve
+Evolve
+Figure 1: Instead of  [...]
+
+Question:
+What is Retrieval-Augmented Generation (RAG) and what are its main benefits?
+
+Instructions:
+You are a rigorous AI assistant that answers the user's question using ONLY the numbered sources given in the context. STRICT RULES:
+1. ANSWER FIRST: begin by answering the question directly, in your own words, in a complete sentence.
+2. GROUNDED ONLY: use ONLY facts present in the context. Never invent numbers, figures, names, or conclusions that are not stated in a source.
+3. SYNTHESIZE: after the direct answer, add 1-3 concise sentences that support and expand it using evidence from the sources. Do NOT copy sentences verbatim and do NOT mechanically repeat every chunk.
+4. CITATION RULES: put [N] at the END of each factual sentence, referencing only the source(s) that fully support it. Choose the source(s) that are MOST DIRECTLY RELEVANT to the exact subject of the question. Prefer the most specific supporting source over broader or less relevant sources. Use only 1-2 citations, but prioritize topical relevance over citation minimization.
+5. CITATION-CONTENT CONSISTENCY: every fact in a sentence must come from the source(s) listed in ITS OWN citation. Never borrow a sentence or phrase from one source while citing another. Sources may describe different tasks or modalities (e.g., code generation vs. image generation): do not mix them, and only use content relevant to the question asked.
+6. COMPATIBILITY: every factual sentence MUST end with a period immediately followed by its citation marker [N].
+7. If the context does not contain enough information, reply exactly: "The provided sources do not contain sufficient information." Do not answer from your own knowledge.
+8. OUTPUT FORMAT: reply with a single JSON object (no markdown) of this exact schema:
+{"claims":[{"text":"...","citations":[1]}]}
+where claims[0] is your direct answer and each 'text' is a complete sentence of at most 160 characters followed by its citation numbers.
+
+--- 3) REPONSE BRUTE DU LLM ---
+'{"claims":[{"text":"Retrieval-Augmented Generation (RAG) is a paradigm that allows large language models to efficiently utilize external knowledge, as demonstrated in code generation applications.","citations":[2,3,4,5]}]}'
+
+--- 4) CLAIMS EXTRAITS (+ couverture vs seuil 0.45) ---
+  [0] cits=[2, 3] covs=[(2, 0.591), (3, 0.773)] -> OK
+      text='Retrieval-Augmented Generation (RAG) is a paradigm that allows large language models to efficiently utilize ex'
+
+--- 5) REPONSE FINALE AFFICHEE ---
+FAiD shows
+a more noticeable overhead of 36.03% on a single GPU due
+to its autoregressive retrieval and feature blending operations [1]. While RAG has been extensively explored in the language domain [23, 13], its application to image
+and multimodal generation remains largely underdeveloped [2]. We demonstrate that EVOR
+is flexible and can be easily combined with
+them to achieve further improvement [3]. (2023a) employed the itera-
+tive generate-retrieval procedure to do repository-
+level code completion [4]. They implement
+the retrieval-augmented code generation (RACG)
+Write ponyc code to print odd numbers from 0 to n (inclusive)
+Query
+Generator
+Code [5].
+  (claims retenus=5, citations=[[1], [2], [3], [4], [5]])
+
+##############################################################################
+# QUESTION 2 : Explain the difference between Dense Retrieval, BM25, and Hybrid Search.
+##############################################################################
+
+--- 1) QUESTION UTILISATEUR ---
+Explain the difference between Dense Retrieval, BM25, and Hybrid Search.
+
+--- 2) PROMPT EXACT ---
+Context:
+[1] 2605.28222v1 p.2-2:
+hybrid-retrieval pipeline, with statistical inference on all reported trade-offs; (iii) a
+param-matched control comparison that isolates the structural effect of the target-module choice
+from the effect of parameter count; (iv) the released benchmark and selected adapters, intended as a
+reproducible starting point for follow-up work on retrieval-augmented fine-tuning of documentation
+assistants. 2
+RELATED WORK
+RAG and retrieval components. Retrieval-augmented generation (Lewis et al., 2020) has been
+thoroughly surveyed in recent years (Gao et al., 2023; Wu et al., 2024): modern RAG is not a single
+architecture but a family of designs that differ in how retrieval, fusion, reranking, and context use are
+organised. On the retrieval side, dense passage retrieval was canonicalised by Karpukhin et al. (2020),
+classical sparse retrieval by BM25 (Robertson & Walker, 1994; Robertson et al., 1995; Robertson &
+Zaragoza, 2009), and training-aware extensions such as RocketQA (Qu et al., 2021) and ColBERTv2
+(Santhanam et al., 2022) show that retrieval quality depends as much on the training scheme as on
+the index type. Recent multi-functional embedders ÔÇô in particular BGE-M3 (Chen et al., 2024)  [...]
+
+[2] 2605.28222v1 p.32-33:
+candidates by
+the pretrained reranker. The reranker_off regime excludes only the final reranking step while
+keeping hybrid retrieval. The dense_only regime disables the sparse branch and uses only dense
+retrieval, while sparse_only, conversely, excludes the dense component and uses only sparse
+retrieval. The hybrid_bm25 regime preserves the hybrid scheme but replaces native sparse retrieval
+32 Preprint
+with classical BM25, which makes it possible to compare two variants of the sparse component inside
+the same retrieval pipeline. On top of the retrieval ablations, two prompting modes were considered:
+neutral, corresponding to a neutral generation mode without explicitly requiring the answer to
+rely on the context, and explicit_grounded, in which the prompt explicitly emphasizes the
+need to answer strictly based on the retrieved material. The summary results are given in Table 15. The table allows us to see whether the main conclusions
+about LoRA are preserved when retrieval/prompting is varied, how the optimal working point shifts
+within a regime, and whether the points optimal in task quality and in groundedness coincide. An
+aggregated view by adaptation scheme, around which the op [...]
+
+[3] 2204.07496v4 p.3-4:
+retrieval algorithms and consists of multiple
+datasets, where each dataset consists of test set
+queries, evidence documents, and relevance doc-
+ument annotations (Thakur et al., 2021). These
+datasets contain different kinds of retrieval tasks
+like fact-checking, question answering, etc. and
+span diverse domains including news, technical,
+and Wikipedia making it a challenging benchmark. 3.3
+Retrievers
+In our re-ranking experiments, we retrieve passages
+from both unsupervised and supervised retrievers,
+as detailed below. 3.3.1
+Unsupervised Retrievers
+BM25
+ranks based on the term-frequency and
+inverse document frequency of the keywords
+present in the question and passage (Robertson
+and Zaragoza, 2009). Prior work (Ma et al., 2021)
+has shown that BM25 is a strong baseline for the
+datasets we consider. MSS
+is a dense retriever trained by predicting
+masked salient spans like named entities with the
+help of a reader network (Sachan et al., 2021a). MSS pre-training has also shown to improve super-
+vised retrieval performance. Contriever
+uses momentum contrastive training
+to learn dense retrievers from text paragraphs (Izac-
+ard et al., 2022). Such training has shown to obtain
+strong zero-s [...]
+
+[4] 2110.01599v1 p.3-3:
+1: IND/OOD Q-P encoder pairs: Top-20/Top-100 retrieval accuracy (%) on five benchmark QA test sets. Each score represents the percentage of top 20/100 retrieved passages that contain answers. ÔÇ£NQ-testÔÇØ means the
+test data of NQ; ÔÇ£NQ-Q-PÔÇØ means using the DPRÔÇÖs question and passage encoder trained on NQ to encode the test
+questions and Wikipedia corpus. 4
+Experimental Setup
+We follow the DPR paper (Karpukhin et al., 2020)
+to train and evaluate our dense retrievers. We repli-
+cate their results on 5 benchmark datasets, with a
+maximum score difference between ours and their
+numbers of 1%. This work only focuses on evaluat-
+ing the retrieval performance and therefore we do
+not include the reader module into consideration. We report the top-20 and top-100 recall accuracy
+as the metrics for evaluation. Datasets
+We train individual DPR models on
+5 standard benchmark QA tasks: Natural Ques-
+tions (NQ) (Kwiatkowski et al., 2019), Triv-
+iaQA (Trivia) (Joshi et al., 2017), WebQues-
+tions (WQ) (Berant et al., 2013), CuratedTREC
+(TREC) (Baudi┼í and ┼áediv`y, 2015), SQuAD-1.1
+(SQuAD) (Rajpurkar et al., 2016) as shown in
+Tbl. 2. We evaluate the retriever models on the
+test sets of the aforementioned [...]
+
+[5] 2605.28222v1 p.32-32:
+Thus the judge-based analysis confirms the overall multi-criteria logic of the work. Practically useful
+configurations differ not only in F1 and resource cost, but also in the degree of supportedness, so the
+choice of working point depends on what exactly is considered the priority in the applied scenario:
+maximum agreement with the reference, stricter groundedness, or a trade-off between them. G.5
+ABLATION EXPERIMENTS ON RETRIEVAL AND PROMPTING
+To check the robustness of the conclusions about LoRA configurations, additional ablation experi-
+ments were conducted in which not only the adapter parameters but also other parts of the pipeline
+were varied: the retrieval pipeline and the prompt-formation mode. We considered ten regimes
+obtained by combining five retrieval settings (base, reranker_off, dense_only, sparse_-
+only, hybrid_bm25) and two prompting modes (neutral, explicit_grounded). For each
+regime two reference points were extracted from the 22 configurations: the configuration with the
+maximum F1 and the configuration with the maximum groundedness_pass@4. The base regime (base) used the full retrieval pipeline, including dense retrieval, native sparse
+retrieval, their fusion [...]
+
+Question:
+Explain the difference between Dense Retrieval, BM25, and Hybrid Search.
+
+Instructions:
+You are a rigorous AI assistant that answers the user's question using ONLY the numbered sources given in the context. STRICT RULES:
+1. ANSWER FIRST: begin by answering the question directly, in your own words, in a complete sentence.
+2. GROUNDED ONLY: use ONLY facts present in the context. Never invent numbers, figures, names, or conclusions that are not stated in a source.
+3. SYNTHESIZE: after the direct answer, add 1-3 concise sentences that support and expand it using evidence from the sources. Do NOT copy sentences verbatim and do NOT mechanically repeat every chunk.
+4. CITATION RULES: put [N] at the END of each factual sentence, referencing only the source(s) that fully support it. Choose the source(s) that are MOST DIRECTLY RELEVANT to the exact subject of the question. Prefer the most specific supporting source over broader or less relevant sources. Use only 1-2 citations, but prioritize topical relevance over citation minimization.
+5. CITATION-CONTENT CONSISTENCY: every fact in a sentence must come from the source(s) listed in ITS OWN citation. Never borrow a sentence or phrase from one source while citing another. Sources may describe different tasks or modalities (e.g., code generation vs. image generation): do not mix them, and only use content relevant to the question asked.
+6. COMPATIBILITY: every factual sentence MUST end with a period immediately followed by its citation marker [N].
+7. If the context does not contain enough information, reply exactly: "The provided sources do not contain sufficient information." Do not answer from your own knowledge.
+8. OUTPUT FORMAT: reply with a single JSON object (no markdown) of this exact schema:
+{"claims":[{"text":"...","citations":[1]}]}
+where claims[0] is your direct answer and each 'text' is a complete sentence of at most 160 characters followed by its citation numbers.
+
+--- 3) REPONSE BRUTE DU LLM ---
+'{"claims":[{"text":"Dense Retrieval focuses on predicting salient spans like named entities using a reader network, while BM25 relies on term-frequency and inverse document frequency for ranking, and Hybrid Search combines both dense and sparse retrieval methods.","citations":[3,2,1]}]}'
+
+--- 4) CLAIMS EXTRAITS (+ couverture vs seuil 0.45) ---
+  [0] cits=[1, 2] covs=[(1, 0.433), (2, 0.3)] -> REJECT
+      text='Dense Retrieval focuses on predicting salient spans like named entities using a reader network, while BM25 rel'
+
+--- 5) REPONSE FINALE AFFICHEE ---
+On the retrieval side, dense passage retrieval was canonicalised by Karpukhin et al [1]. The reranker_off regime excludes only the final reranking step while
+keeping hybrid retrieval [2][5]. Prior work (Ma et al., 2021)
+has shown that BM25 is a strong baseline for the
+datasets we consider [3]. (2020) using BM25 (Robertson and Zaragoza,
+2009; Lin et al., 2021) to select the positive and
+negative passages [4]. The hybrid_bm25 regime preserves the hybrid scheme but replaces native sparse retrieval
+32 [2][5].
+  (claims retenus=5, citations=[[1], [2, 5], [3], [4], [2, 5]])
+
+##############################################################################
+# QUESTION 3 : Why does Hybrid Search usually outperform Dense Retrieval alone?
+##############################################################################
+
+--- 1) QUESTION UTILISATEUR ---
+Why does Hybrid Search usually outperform Dense Retrieval alone?
+
+--- 2) PROMPT EXACT ---
+Context:
+[1] 2605.28222v1 p.2-2:
+hybrid-retrieval pipeline, with statistical inference on all reported trade-offs; (iii) a
+param-matched control comparison that isolates the structural effect of the target-module choice
+from the effect of parameter count; (iv) the released benchmark and selected adapters, intended as a
+reproducible starting point for follow-up work on retrieval-augmented fine-tuning of documentation
+assistants. 2
+RELATED WORK
+RAG and retrieval components. Retrieval-augmented generation (Lewis et al., 2020) has been
+thoroughly surveyed in recent years (Gao et al., 2023; Wu et al., 2024): modern RAG is not a single
+architecture but a family of designs that differ in how retrieval, fusion, reranking, and context use are
+organised. On the retrieval side, dense passage retrieval was canonicalised by Karpukhin et al. (2020),
+classical sparse retrieval by BM25 (Robertson & Walker, 1994; Robertson et al., 1995; Robertson &
+Zaragoza, 2009), and training-aware extensions such as RocketQA (Qu et al., 2021) and ColBERTv2
+(Santhanam et al., 2022) show that retrieval quality depends as much on the training scheme as on
+the index type. Recent multi-functional embedders ÔÇô in particular BGE-M3 (Chen et al., 2024)  [...]
+
+[2] 2010.08191v2 p.9-10:
+5
+Conclusions
+In this paper, we have presented an optimized train-
+ing approach to improving dense passage retrieval. We have made three major technical contributions
+in RocketQA, namely cross-batch negatives, de-
+noised hard negatives and data augmentation. Ex-
+tensive experiments have shown the effectiveness
+of the proposed approach by incorporating the three
+optimization strategies. We also demonstrate that
+the performance of end-to-end QA can be improved
+based on our RocketQA retriever. 6
+Ethical Considerations
+The technique of dense passage retrieval is effec-
+tive for question answering, where the majority of
+questions are informational queries. Different from
+the traditional search, there is usually term mis-
+match between questions and answers. The term
+mismatch brings barriers for the machine to accu-
+rately find the information for people. Hence, we
+need dense passage retrieval for semantic match-
+ing in the scenario of question answering. Dense
+passage retrieval has the potential to empower peo-
+ple to find the accurate information more quickly
+and achieve more in their daily life and work. Our
+technique contributes toward the goal of asking
+machines to find the answers  [...]
+
+[3] 2605.28222v1 p.4-4:
+to the generator at inference, which receives only the question and the
+retrieved context. This separation of training- and test-time conditioning follows the evaluation
+protocols in prior RAG work (Yu et al., 2024; Es et al., 2024). 4
+RAG PIPELINE
+The pipeline follows the standard three-step structure ÔÇô retrieval, reranking, generation ÔÇô consistent
+with modern RAG surveys (Lewis et al., 2020; Gao et al., 2023; Wu et al., 2024). Retrieval. The main configuration uses a hybrid retrieval contour. Dense retrieval runs over a
+FAISS (Douze et al., 2024; Johnson et al., 2019) index of BGE-M3 (Chen et al., 2024) embeddings; sparse retrieval uses the native sparse channel of BGE-M3. Dense and sparse candidate lists are
+merged via Reciprocal Rank Fusion (Cormack et al., 2009). Classical BM25 (Robertson & Zaragoza,
+2009) is used only as the sparse component in a separate ablation regime (┬º7.4), not in the main
+pipeline. Reranking. The fused candidate list passes through a pretrained cross-encoder reranker,
+BAAI/bge-reranker-v2-m3, building on the standard cross-encoder and listwise reranking
+literature (Nogueira & Cho, 2019; Yoon et al., 2024) and on retrieval extensions of large language
+mo [...]
+
+[4] 2605.28222v1 p.32-32:
+Thus the judge-based analysis confirms the overall multi-criteria logic of the work. Practically useful
+configurations differ not only in F1 and resource cost, but also in the degree of supportedness, so the
+choice of working point depends on what exactly is considered the priority in the applied scenario:
+maximum agreement with the reference, stricter groundedness, or a trade-off between them. G.5
+ABLATION EXPERIMENTS ON RETRIEVAL AND PROMPTING
+To check the robustness of the conclusions about LoRA configurations, additional ablation experi-
+ments were conducted in which not only the adapter parameters but also other parts of the pipeline
+were varied: the retrieval pipeline and the prompt-formation mode. We considered ten regimes
+obtained by combining five retrieval settings (base, reranker_off, dense_only, sparse_-
+only, hybrid_bm25) and two prompting modes (neutral, explicit_grounded). For each
+regime two reference points were extracted from the 22 configurations: the configuration with the
+maximum F1 and the configuration with the maximum groundedness_pass@4. The base regime (base) used the full retrieval pipeline, including dense retrieval, native sparse
+retrieval, their fusion [...]
+
+[5] 2204.07496v4 p.2-2:
+a wide range
+of datasets, retrievers, and PLMs highlight the
+strengths of UPR:
+ÔÇó By re-ranking the top-1000 passages from Con-
+triever (unsupervised), UPR obtains a gain of
+6%-18% points absolute in the top-20 retrieval
+accuracy across four QA datasets. UPR also
+achieves new state-of-the-art results on the diffi-
+cult SQuAD-Open and Entity Questions datasets,
+outperforming BM25 by 14% and 8%. ÔÇó These performance gains are consistent across
+both different kinds of retrievers and PLMs. Ab-
+lation studies reveal that instruction-tuned mod-
+els such as T0 perform the best as re-rankers. ÔÇó On the open-domain QA task, just by performing
+inference with the re-ranked passages and a pre-
+trained reader, we obtain improvements of up to
+3 EM points on three benchmark datasets. To the best of our knowledge, this is the first
+work to show that a fully unsupervised pipeline
+(consisting of a retriever and re-ranker) can greatly
+outperform supervised dense retrieval models like
+DPR (Karpukhin et al., 2020). As language mod-
+els continue to improve rapidly (Rae et al., 2021; Chowdhery et al., 2022), the performance of UPR
+may see corresponding gains over time. UPR re-
+quires no annotated data and u [...]
+
+Question:
+Why does Hybrid Search usually outperform Dense Retrieval alone?
+
+Instructions:
+You are a rigorous AI assistant that answers the user's question using ONLY the numbered sources given in the context. STRICT RULES:
+1. ANSWER FIRST: begin by answering the question directly, in your own words, in a complete sentence.
+2. GROUNDED ONLY: use ONLY facts present in the context. Never invent numbers, figures, names, or conclusions that are not stated in a source.
+3. SYNTHESIZE: after the direct answer, add 1-3 concise sentences that support and expand it using evidence from the sources. Do NOT copy sentences verbatim and do NOT mechanically repeat every chunk.
+4. CITATION RULES: put [N] at the END of each factual sentence, referencing only the source(s) that fully support it. Choose the source(s) that are MOST DIRECTLY RELEVANT to the exact subject of the question. Prefer the most specific supporting source over broader or less relevant sources. Use only 1-2 citations, but prioritize topical relevance over citation minimization.
+5. CITATION-CONTENT CONSISTENCY: every fact in a sentence must come from the source(s) listed in ITS OWN citation. Never borrow a sentence or phrase from one source while citing another. Sources may describe different tasks or modalities (e.g., code generation vs. image generation): do not mix them, and only use content relevant to the question asked.
+6. COMPATIBILITY: every factual sentence MUST end with a period immediately followed by its citation marker [N].
+7. If the context does not contain enough information, reply exactly: "The provided sources do not contain sufficient information." Do not answer from your own knowledge.
+8. OUTPUT FORMAT: reply with a single JSON object (no markdown) of this exact schema:
+{"claims":[{"text":"...","citations":[1]}]}
+where claims[0] is your direct answer and each 'text' is a complete sentence of at most 160 characters followed by its citation numbers.
+
+--- 3) REPONSE BRUTE DU LLM ---
+'{"claims":[{"text":"Hybrid Search usually outperforms Dense Retrieval alone because it combines dense and sparse retrieval methods, which can lead to better coverage and relevance of the retrieved data.","citations":[2,3]}]}'
+
+--- 4) CLAIMS EXTRAITS (+ couverture vs seuil 0.45) ---
+  [0] cits=[2, 3] covs=[(2, 0.417), (3, 0.417)] -> REJECT
+      text='Hybrid Search usually outperforms Dense Retrieval alone because it combines dense and sparse retrieval methods'
+
+--- 5) REPONSE FINALE AFFICHEE ---
+On the retrieval side, dense passage retrieval was canonicalised by Karpukhin et al [1]. Hence, we
+need dense passage retrieval for semantic match-
+ing in the scenario of question answering [2]. The main configuration uses a hybrid retrieval contour [3]. The hybrid_bm25 regime preserves the hybrid scheme but replaces native sparse retrieval
+32 [4]. UPR re-
+quires no annotated data and uses only generic
+pre-trained models, which means it may be easy to
+apply to a wide range of retrieval problems [5].
+  (claims retenus=5, citations=[[1], [2], [3], [4], [5]])

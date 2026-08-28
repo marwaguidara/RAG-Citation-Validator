@@ -1,0 +1,42 @@
+# --- API & Backend ---
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+pydantic==2.10.4
+python-dotenv==1.0.1
+
+# --- Retrieval : dense + sparse ---
+sentence-transformers==3.3.1
+rank-bm25==0.2.2
+qdrant-client==1.12.1
+
+# --- Reranking ---
+transformers==4.47.1
+torch==2.7.1
+
+# --- Certificats SSL (corrige les erreurs SSL: CERTIFICATE_VERIFY_FAILED sous Windows) ---
+certifi==2024.12.14
+
+# --- Vérification de citations (NLI) ---
+# roberta-large-mnli chargé via transformers (déjà inclus ci-dessus)
+
+# --- LLM génération (local, gratuit) ---
+ollama==0.4.4
+# Fallback cloud gratuit (optionnel, décommenter si utilisé) :
+# groq==0.13.0
+
+# --- Ingestion de documents ---
+pymupdf==1.25.1          # extraction PDF (papers arXiv)
+huggingface-hub==0.27.0
+
+# --- Évaluation & dashboard ---
+numpy==2.1.3
+pandas==2.2.3
+scikit-learn==1.6.0
+matplotlib==3.10.0
+tqdm==4.67.1
+
+# --- Interface utilisateur ---
+streamlit==1.41.1
+
+# --- Tests ---
+pytest==8.3.4

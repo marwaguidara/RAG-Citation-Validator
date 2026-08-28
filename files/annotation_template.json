@@ -1,0 +1,405 @@
+{
+  "_instructions": {
+    "description": "Jeu de test annoté pour l'évaluation du pipeline RAG (Recall@k, MRR, Faithfulness).",
+    "format": "relevant_chunks contient les IDs EXACTS des chunks pertinents dans l'index (pas juste le nom du document).",
+    "regles": [
+      "Chaque question doit avoir au moins 1 chunk pertinent identifié.",
+      "Vérifier manuellement chaque paire question -> chunks avant de considérer l'annotation finale.",
+      "Répartir les questions entre les 3 thèmes du corpus : RAG, Agents, Fine-tuning.",
+      "Varier la difficulté : questions factuelles simples, questions nécessitant plusieurs chunks, questions sur les limitations/résultats."
+    ],
+    "taille_minimale": "30 questions / 50 documents sources",
+    "etat_annotation": "Batch 1 validé (q01-q12) le 2026-08-25 : 12 questions annotées avec les chunk_id UUID réels du corpus (chunks.json, sha256 tracé dans evaluation_report.json). Les slots restants (q13+) sont réservés aux prochaines sessions d'annotation."
+  },
+  "questions": [
+    {
+      "id": "q01",
+      "theme": "RAG",
+      "question": "What is the RAGAS framework for automated evaluation of retrieval augmented generation?",
+      "relevant_chunks": [
+        "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+        "4635f2de-fad3-55d0-8f17-85e9a66c8997"
+      ],
+      "source_document": "2309.15217v2",
+      "difficulty": "simple",
+      "notes": "Titre + abstract et description du framework (p.1-2 de RAGAS)."
+    },
+    {
+      "id": "q02",
+      "theme": "RAG",
+      "question": "Which metrics does RAGAS define, such as faithfulness and answer relevance?",
+      "relevant_chunks": [
+        "4635f2de-fad3-55d0-8f17-85e9a66c8997",
+        "7f3a1eba-c572-578d-8f42-1d96b211f82e",
+        "4e5e143c-38b9-5cfb-bb24-1d586211912a"
+      ],
+      "source_document": "2309.15217v2",
+      "difficulty": "multi-chunk",
+      "notes": "Sections définissant Faithfulness, Answer Relevance et Context Precision (p.2-3)."
+    },
+    {
+      "id": "q03",
+      "theme": "RAG",
+      "question": "How does RocketQA use denoising of false negatives and cross-batch negatives to improve dense passage retrieval?",
+      "relevant_chunks": [
+        "f844ae12-5095-5e72-b0a6-612fed14fec5",
+        "3eb8212f-1950-5a9d-98ad-771f9875c844",
+        "d0876fe4-b47f-52c1-afc6-cdc1a93825ad"
+      ],
+      "source_document": "2010.08191v2",
+      "difficulty": "multi-chunk",
+      "notes": "Titre/abstract + sections denoising (~70% de faux négatifs MSMARCO) et cross-batch negatives."
+    },
+    {
+      "id": "q04",
+      "theme": "RAG",
+      "question": "How does AR-RAG perform context-aware autoregressive retrieval during image generation?",
+      "relevant_chunks": [
+        "513d0e9d-dfa3-5a3c-aa1a-ecb60f4e340c",
+        "6439193e-f677-554e-857a-009677fcdeaf",
+        "92f95142-ddf0-5096-bc3d-d8edbfc7f2f8"
+      ],
+      "source_document": "2506.06962v3",
+      "difficulty": "simple",
+      "notes": "Titre/abstract AR-RAG + mécanisme de retrieval context-aware par étape de génération."
+    },
+    {
+      "id": "q05",
+      "theme": "Agents",
+      "question": "How does ReAct unify reasoning and acting in large language model agents?",
+      "relevant_chunks": [
+        "ee485dad-cbc8-5c1f-a15a-4fe3b942179a",
+        "b044d069-9220-57d9-9c57-ba101d22faa6"
+      ],
+      "source_document": "2601.12538v1",
+      "difficulty": "multi-chunk",
+      "notes": "Passage sur le reframing 'reasoning with acting' + section From LLM Reasoning to Agentic Reasoning."
+    },
+    {
+      "id": "q06",
+      "theme": "Agents",
+      "question": "What is hierarchical multi-agent collaboration with large language models?",
+      "relevant_chunks": [
+        "d3994922-4b30-5b5c-9b6f-644a7c9fb95b",
+        "146e6b30-9d82-5781-943d-f03a87f2e0a7"
+      ],
+      "source_document": "2512.13930v1",
+      "difficulty": "simple",
+      "notes": "Titre/abstract du papier Hierarchical Multi-agent LLM Reasoning + framework MASTER."
+    },
+    {
+      "id": "q07",
+      "theme": "Agents",
+      "question": "What is adaptive reasoning suppression (ARS) and why suppress extended reasoning chains in large reasoning models?",
+      "relevant_chunks": [
+        "3644c8ab-ccad-54d8-a097-c28b35b7f97a",
+        "8a327bd1-3e3b-5fae-a816-f0863959b60b"
+      ],
+      "source_document": "2510.00071v2",
+      "difficulty": "simple",
+      "notes": "Titre/abstract ARS + motivation (reflection, backtracking, self-verification)."
+    },
+    {
+      "id": "q08",
+      "theme": "Agents",
+      "question": "What distinguishes agentic reasoning from traditional chain-of-thought reasoning in LLMs?",
+      "relevant_chunks": [
+        "ee485dad-cbc8-5c1f-a15a-4fe3b942179a",
+        "b044d069-9220-57d9-9c57-ba101d22faa6"
+      ],
+      "source_document": "2601.12538v1",
+      "difficulty": "medium",
+      "notes": "Mêmes passages fondateurs que q05 mais angle comparatif (agentic vs CoT)."
+    },
+    {
+      "id": "q09",
+      "theme": "Fine-tuning",
+      "question": "What are parameter-efficient fine-tuning approaches such as adapter layers for large models?",
+      "relevant_chunks": [
+        "72989066-93be-52ac-ae66-05ad949847ab"
+      ],
+      "source_document": "2402.12354v2",
+      "difficulty": "simple",
+      "notes": "Introduction LoRA+ décrivant les adapter layers (Houlsby et al., 2019)."
+    },
+    {
+      "id": "q10",
+      "theme": "Fine-tuning",
+      "question": "What activation memory bottleneck does CARE-LoRA address in LoRA fine-tuning?",
+      "relevant_chunks": [
+        "802323c1-1128-5577-ab0f-433ae92879b8",
+        "8b65e28d-ba17-54a6-a515-529db2192ab4"
+      ],
+      "source_document": "2607.11940v1",
+      "difficulty": "multi-chunk",
+      "notes": "Titre CARE-LoRA + chunk sur la mémoire d'activations non réduite par LoRA seul."
+    },
+    {
+      "id": "q11",
+      "theme": "Fine-tuning",
+      "question": "How does LoRA-FAIR improve federated LoRA fine-tuning through aggregation and initialization refinement?",
+      "relevant_chunks": [
+        "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+        "34684b9a-1740-5517-8ee7-51972b0b8874"
+      ],
+      "source_document": "2411.14961v3",
+      "difficulty": "simple",
+      "notes": "Titre/abstract LoRA-FAIR + section contributions."
+    },
+    {
+      "id": "q12",
+      "theme": "Fine-tuning",
+      "question": "What is client-side initialization lag in federated LoRA fine-tuning?",
+      "relevant_chunks": [
+        "1ec3c333-4457-5093-8f12-80dd08888683",
+        "34684b9a-1740-5517-8ee7-51972b0b8874"
+      ],
+      "source_document": "2411.14961v3",
+      "difficulty": "medium",
+      "notes": "Challenge 2 (Client-Side Initialization Lag) + contexte des challenges fédérés."
+    },
+    {
+      "id": "q04",
+      "theme": "RAG",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q05",
+      "theme": "RAG",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q06",
+      "theme": "RAG",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q07",
+      "theme": "RAG",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q08",
+      "theme": "RAG",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q09",
+      "theme": "RAG",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q10",
+      "theme": "RAG",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q11",
+      "theme": "Agents",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q12",
+      "theme": "Agents",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q13",
+      "theme": "Agents",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q14",
+      "theme": "Agents",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q15",
+      "theme": "Agents",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q16",
+      "theme": "Agents",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q17",
+      "theme": "Agents",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q18",
+      "theme": "Agents",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q19",
+      "theme": "Agents",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q20",
+      "theme": "Agents",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q21",
+      "theme": "Fine-tuning",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q22",
+      "theme": "Fine-tuning",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q23",
+      "theme": "Fine-tuning",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q24",
+      "theme": "Fine-tuning",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q25",
+      "theme": "Fine-tuning",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q26",
+      "theme": "Fine-tuning",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q27",
+      "theme": "Fine-tuning",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q28",
+      "theme": "Fine-tuning",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q29",
+      "theme": "Fine-tuning",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    },
+    {
+      "id": "q30",
+      "theme": "Fine-tuning",
+      "question": "",
+      "relevant_chunks": [],
+      "source_document": "",
+      "difficulty": "",
+      "notes": ""
+    }
+  ]
+}

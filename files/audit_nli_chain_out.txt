@@ -1,0 +1,138 @@
+retrieval: hybrid=20 reranked=5 [6155 ms]
+  rerank[1] doc=2506.06962v3 p.9-9 score=5.1099 chunk=f4d08b51-1d40-58aa-8209-8b050ccf8692
+  rerank[2] doc=2506.06962v3 p.2-2 score=4.9523 chunk=9bb9381e-a4f1-5a09-aebb-5db962463c16
+  rerank[3] doc=2402.12317v2 p.1-1 score=4.6834 chunk=5f4162f9-1cfb-5d1d-9db0-d83e54d52a1b
+  rerank[4] doc=2402.12317v2 p.8-8 score=4.1861 chunk=d28bd74e-b4c7-5d0b-8b8c-1e93cacc42e7
+  rerank[5] doc=2402.12317v2 p.1-1 score=3.8486 chunk=92b45aeb-ee0f-5284-9609-235407aa14ff
+
+=== REPONSE FINALE (generate_answer) ===
+Retrieval-Augmented Generation (RAG) is a paradigm that enhances generative models by incorporating external knowledge during the generation process, particularly useful for tasks requiring real-world data like code and image generation [2][4]. RAG allows LLMs to efficiently utilize external knowledge, enabling them to solve tasks they lack domain-specific knowledge for, such as code generation in updated libraries or less-common programming languages [4][5].
+generation_latency=27682.0 ms
+
+=== SEGMENTS (segment_claims) : 2 ===
+  seg[0] cits=(2, 4) text=Retrieval-Augmented Generation (RAG) is a paradigm that enhances generative models by inco
+  seg[1] cits=(4, 5) text=RAG allows LLMs to efficiently utilize external knowledge, enabling them to solve tasks th
+
+================================================================================
+DETAILL PAR PAIRE (claim, source) — 4 paires
+================================================================================
+
+--- PAIR [0,2] source=[2] doc=2506.06962v3 p.2-2 id=3e1503ddd937
+
+[1] CLAIM (hypothesis) :
+    Retrieval-Augmented Generation (RAG) is a paradigm that enhances generative models by incorporating external knowledge during the generation process, particularly useful for tasks requiring real-world data like code and image generation .
+
+[2] CHUNK CITE (entier, 1925 chars) :
+    images based on user prompts [31, 28, 7, 37, 10, 41, 9, 43, 45, 27, 6]. However, despite these improvements, the generated images often exhibit local distortions and inconsistencies, particularly in visual objects that possess complex structures [11], frequently interact with other objects and the surrounding scene [22, 26], or are underrepresented in the training data [8]. A promising approach to mitigating these challenges is retrieval-augmented generation (RAG), which enhances the generation process by incorporating real-world images as additional references [8, 3]. While RAG has been extensively explored in the language domain [23, 13], its application to image and multimodal generation remains largely underdeveloped. A few existing studies [3, 8, 46, 48, 49] bridge this gap by performing a single-step retrieval based on the input prompt prior to generation, conditioning the entire image generation process on fixed visual cues (Figure 1 (b)). However, as demonstrated in our pilot study (Section 5.2), such static, coarse-grained retrieval approaches [3, 8, 49] frequently introduce irrelevant or weakly aligned visual contents that persist throughout generation. Since the retrieved images are selected once, before decoding begins, and remain unchanged, these methods cannot respond to the evolving generation needs, resulting in over-copying of irrelevant details, stylistic bias, and the hallucination of unrelated visual elements. For example, as shown in Figure 1(b), a basket [...]
+
+[3] FENETRE LOCALE NLI (extract_local_premise, 659 chars) :
+    However, despite these improvements, the generated images often exhibit local distortions and inconsistencies, particularly in visual objects that possess complex structures [11], frequently interact with other objects and the surrounding scene [22, 26], or are underrepresented in the training data [8]. A promising approach to mitigating these challenges is retrieval-augmented generation (RAG), which enhances the generation process by incorporating real-world images as additional references [8, 3]. While RAG has been extensively explored in the language domain [23, 13], its application to image and multimodal generation remains largely underdeveloped.
+
+[4] HYPOTHESIS envoyée à MNLI :
+    Retrieval-Augmented Generation (RAG) is a paradigm that enhances generative models by incorporating external knowledge during the generation process, particularly useful for tasks requiring real-world data like code and image generation .
+
+[5] SCORES COMPLETS :
+    entailment      = 0.7658
+    neutral         = 0.2087
+    contradiction   = 0.0255
+    support_score   = 0.7411
+
+[6] VERDICT : Supported
+
+[7] ANALYSE :
+    couverture tokens claim / fenêtre      = 0.600
+    couverture tokens claim / chunk entier = 0.667
+    termes claim absents du chunk (>=4c)   = ['code', 'during', 'external', 'generative', 'knowledge', 'like', 'models', 'requiring', 'tasks', 'useful']
+    termes claim absents de la fenêtre     = ['code', 'during', 'external', 'generative', 'knowledge', 'like', 'models', 'paradigm', 'requiring', 'tasks', 'useful']
+    DIAGNOSTIC : A/B: chevauchement partiel — à juger sur le fond
+
+--- PAIR [0,4] source=[4] doc=2402.12317v2 p.8-8 id=004a65f97d0b
+
+[1] CLAIM (hypothesis) :
+    Retrieval-Augmented Generation (RAG) is a paradigm that enhances generative models by incorporating external knowledge during the generation process, particularly useful for tasks requiring real-world data like code and image generation .
+
+[2] CHUNK CITE (entier, 1881 chars) :
+    et al., 2023; Li et al., 2023a; Zhang et al., 2023c; Chen et al., 2023; Key et al., 2022) However, most of these works set up the evaluation in scenar- ios LLMs are familiar with, e.g., HumanEval (Chen et al., 2021), HumanEvalPack (Muennighoff et al., 2023) and MBPP (Austin et al., 2021), where they are capable of demonstrating superior zero-shot performance by only utilizing internal knowledge. In this work, we focus on evaluating the capabili- ties of LLMs to incorporate external knowledge for the purpose of code generation in updated libraries or less-common programming languages. Our task reflects a more realistic yet challenging scenario for LLMs. Retrieval-Augmented Generation The retrieval- augmented generation (RAG) is an appealing paradigm that allows LLMs to efficiently utilize external knowledge (Shi et al., 2023b; Izacard and Grave, 2020; Xu et al., 2023a; Jiang et al., 2023c). Recent works have applied it to the code generation task (Patel et al., 2023; Guo et al., 2023; Parvez et al., 2021a; Wang et al., 2023b). Specifically, Zhou et al. (2022) explored the natural-language- to-code generation approach that explicitly lever- ages code documentation. Zan et al. (2022) in- troduced a framework designed to adapt LLMs to private libraries, which first utilizes an APIRe- triever to find useful APIs and then leverages an APICoder to generate code using these API docs. Zhang et al. (2023a) employed the itera- tive generate-retrieval procedure to do repository- level co [...]
+
+[3] FENETRE LOCALE NLI (extract_local_premise, 450 chars) :
+    Our task reflects a more realistic yet challenging scenario for LLMs. Retrieval-Augmented Generation The retrieval- augmented generation (RAG) is an appealing paradigm that allows LLMs to efficiently utilize external knowledge (Shi et al., 2023b; Izacard and Grave, 2020; Xu et al., 2023a; Jiang et al., 2023c). Recent works have applied it to the code generation task (Patel et al., 2023; Guo et al., 2023; Parvez et al., 2021a; Wang et al., 2023b).
+
+[4] HYPOTHESIS envoyée à MNLI :
+    Retrieval-Augmented Generation (RAG) is a paradigm that enhances generative models by incorporating external knowledge during the generation process, particularly useful for tasks requiring real-world data like code and image generation .
+
+[5] SCORES COMPLETS :
+    entailment      = 0.0357
+    neutral         = 0.9613
+    contradiction   = 0.003
+    support_score   = 0.0329
+
+[6] VERDICT : Unsupported
+
+[7] ANALYSE :
+    couverture tokens claim / fenêtre      = 0.467
+    couverture tokens claim / chunk entier = 0.533
+    termes claim absents du chunk (>=4c)   = ['data', 'during', 'enhances', 'generative', 'image', 'incorporating', 'like', 'models', 'particularly', 'process', 'real', 'requiring', 'tasks', 'world']
+    termes claim absents de la fenêtre     = ['data', 'during', 'enhances', 'generative', 'image', 'incorporating', 'like', 'models', 'particularly', 'process', 'real', 'requiring', 'tasks', 'useful', 'world']
+    DIAGNOSTIC : B: paraphrase/synthèse correcte que MNLI évalue 'neutral' (limite du modèle NLI)
+
+--- PAIR [1,4] source=[4] doc=2402.12317v2 p.8-8 id=d29867d90e63
+
+[1] CLAIM (hypothesis) :
+    RAG allows LLMs to efficiently utilize external knowledge, enabling them to solve tasks they lack domain-specific knowledge for, such as code generation in updated libraries or less-common programming languages .
+
+[2] CHUNK CITE (entier, 1881 chars) :
+    et al., 2023; Li et al., 2023a; Zhang et al., 2023c; Chen et al., 2023; Key et al., 2022) However, most of these works set up the evaluation in scenar- ios LLMs are familiar with, e.g., HumanEval (Chen et al., 2021), HumanEvalPack (Muennighoff et al., 2023) and MBPP (Austin et al., 2021), where they are capable of demonstrating superior zero-shot performance by only utilizing internal knowledge. In this work, we focus on evaluating the capabili- ties of LLMs to incorporate external knowledge for the purpose of code generation in updated libraries or less-common programming languages. Our task reflects a more realistic yet challenging scenario for LLMs. Retrieval-Augmented Generation The retrieval- augmented generation (RAG) is an appealing paradigm that allows LLMs to efficiently utilize external knowledge (Shi et al., 2023b; Izacard and Grave, 2020; Xu et al., 2023a; Jiang et al., 2023c). Recent works have applied it to the code generation task (Patel et al., 2023; Guo et al., 2023; Parvez et al., 2021a; Wang et al., 2023b). Specifically, Zhou et al. (2022) explored the natural-language- to-code generation approach that explicitly lever- ages code documentation. Zan et al. (2022) in- troduced a framework designed to adapt LLMs to private libraries, which first utilizes an APIRe- triever to find useful APIs and then leverages an APICoder to generate code using these API docs. Zhang et al. (2023a) employed the itera- tive generate-retrieval procedure to do repository- level co [...]
+
+[3] FENETRE LOCALE NLI (extract_local_premise, 660 chars) :
+    et al., 2023; Li et al., 2023a; Zhang et al., 2023c; Chen et al., 2023; Key et al., 2022) However, most of these works set up the evaluation in scenar- ios LLMs are familiar with, e.g., HumanEval (Chen et al., 2021), HumanEvalPack (Muennighoff et al., 2023) and MBPP (Austin et al., 2021), where they are capable of demonstrating superior zero-shot performance by only utilizing internal knowledge. In this work, we focus on evaluating the capabili- ties of LLMs to incorporate external knowledge for the purpose of code generation in updated libraries or less-common programming languages. Our task reflects a more realistic yet challenging scenario for LLMs.
+
+[4] HYPOTHESIS envoyée à MNLI :
+    RAG allows LLMs to efficiently utilize external knowledge, enabling them to solve tasks they lack domain-specific knowledge for, such as code generation in updated libraries or less-common programming languages .
+
+[5] SCORES COMPLETS :
+    entailment      = 0.1269
+    neutral         = 0.7711
+    contradiction   = 0.102
+    support_score   = 0.0703
+
+[6] VERDICT : Unsupported
+
+[7] ANALYSE :
+    couverture tokens claim / fenêtre      = 0.552
+    couverture tokens claim / chunk entier = 0.690
+    termes claim absents du chunk (>=4c)   = ['domain', 'enabling', 'lack', 'solve', 'specific', 'such', 'tasks', 'them']
+    termes claim absents de la fenêtre     = ['allows', 'domain', 'efficiently', 'enabling', 'lack', 'solve', 'specific', 'such', 'tasks', 'them', 'utilize']
+    DIAGNOSTIC : B: paraphrase/synthèse correcte que MNLI évalue 'neutral' (limite du modèle NLI)
+
+--- PAIR [1,5] source=[5] doc=2402.12317v2 p.1-1 id=c9b47b87e5a0
+
+[1] CLAIM (hypothesis) :
+    RAG allows LLMs to efficiently utilize external knowledge, enabling them to solve tasks they lack domain-specific knowledge for, such as code generation in updated libraries or less-common programming languages .
+
+[2] CHUNK CITE (entier, 1670 chars) :
+    base. We hope that our studies will inspire more insights into the design of advanced RACG pipelines in future research. Our model, code, and data are available at https://arks-codegen.github.io. 1 Introduction The retrieval-augmented generation (RAG) paradigm has raised significant attention due to its efficiency in adapting large language models (LLMs) without training (Guu et al., 2020; Karpukhin et al., 2020; Izacard et al., 2023; Borgeaud et al., 2022; Asai et al., 2023). Recent research has demonstrated its successful applications in code generation. They implement the retrieval-augmented code generation (RACG) Write ponyc code to print odd numbers from 0 to n (inclusive) Query Generator Code ... The Pony if condition allows actions when a condition is true. Documentation The Pony for loop iterates over a collection of items using an iterator ... if n <= 0 then n = -n end Code Snippet for i in Range(1, n) do a = a + 2 * i end Execution Feedback main.pony:10:syntax error: unterminated if expression if (i % 2) != 0 then ^ Web Search Github StackOverflow ... Knowledge Soup ... Write ponyc code to ... Retrieve Generate Feedback Execute Generate Evolve Evolve Figure 1: Instead of using a given query to retrieve from a static knowledge base, we design a novel pipeline to dynamically evolve both queries and knowledge soup in retrieval-augmented code generation. pipelines either using a given query (Parvez et al., 2021b), or a rewritten version (Jiang et al., 2023b) to retrieve [...]
+
+[3] FENETRE LOCALE NLI (extract_local_premise, 441 chars) :
+    Our model, code, and data are available at https://arks-codegen.github.io. 1 Introduction The retrieval-augmented generation (RAG) paradigm has raised significant attention due to its efficiency in adapting large language models (LLMs) without training (Guu et al., 2020; Karpukhin et al., 2020; Izacard et al., 2023; Borgeaud et al., 2022; Asai et al., 2023). Recent research has demonstrated its successful applications in code generation.
+
+[4] HYPOTHESIS envoyée à MNLI :
+    RAG allows LLMs to efficiently utilize external knowledge, enabling them to solve tasks they lack domain-specific knowledge for, such as code generation in updated libraries or less-common programming languages .
+
+[5] SCORES COMPLETS :
+    entailment      = 0.1137
+    neutral         = 0.8821
+    contradiction   = 0.0042
+    support_score   = 0.1097
+
+[6] VERDICT : Unsupported
+
+[7] ANALYSE :
+    couverture tokens claim / fenêtre      = 0.207
+    couverture tokens claim / chunk entier = 0.379
+    termes claim absents du chunk (>=4c)   = ['common', 'domain', 'efficiently', 'enabling', 'external', 'lack', 'languages', 'less', 'libraries', 'programming', 'solve', 'specific', 'such', 'tasks', 'them', 'updated', 'utilize']
+    termes claim absents de la fenêtre     = ['allows', 'common', 'domain', 'efficiently', 'enabling', 'external', 'knowledge', 'lack', 'languages', 'less', 'libraries', 'programming', 'solve', 'specific', 'such', 'tasks', 'them', 'they', 'updated', 'utilize']
+    DIAGNOSTIC : B: paraphrase/synthèse correcte que MNLI évalue 'neutral' (limite du modèle NLI)
+
+=== SYNTHESE ===
+    scores=[0.7411, 0.0329, 0.0703, 0.1097]
+    verdicts=['Supported', 'Unsupported', 'Unsupported', 'Unsupported']
