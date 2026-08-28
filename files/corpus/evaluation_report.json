@@ -1,0 +1,3329 @@
+{
+  "metadata": {
+    "project": "RAG Citation Validator",
+    "description": "Comparative evaluation of 4 RAG configurations",
+    "generated_at": "2026-08-26T22:47:58+00:00",
+    "num_queries": 30,
+    "num_configs": 4,
+    "configs": [
+      "Dense",
+      "Hybrid",
+      "Hybrid + Rerank",
+      "Hybrid + Rerank + Verification"
+    ],
+    "metrics": [
+      "Recall@3",
+      "Recall@5",
+      "Recall@10",
+      "MRR",
+      "Faithfulness",
+      "Citation Accuracy",
+      "Average Latency",
+      "P95 Latency"
+    ],
+    "corpus_info": {
+      "chunks_file": "chunks.json",
+      "total_chunks": 2026,
+      "total_documents": 40
+    }
+  },
+  "queries": [
+    {
+      "query_id": "q01",
+      "query": "What is retrieval augmented generation?",
+      "theme": "RAG",
+      "difficulty": "simple",
+      "relevant_doc_ids": [
+        "2309.15217v2",
+        "2506.06962v3"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+            "9dd2c99c-746d-5e9c-9a7b-5e751871528d",
+            "9bb9381e-a4f1-5a09-aebb-5db962463c16",
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "92b45aeb-ee0f-5284-9609-235407aa14ff",
+            "63209bdb-2c42-5f89-a6cd-8d4287e349e8",
+            "e7352b10-7f6b-56cb-b5d2-7d45301eac3a",
+            "62e3ee38-0c7a-5fb7-90b2-ed07e93e2a12",
+            "6b191ff9-36c3-5816-853a-ea4664b3b495",
+            "5f4162f9-1cfb-5d1d-9db0-d83e54d52a1b"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 50.51,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+            "9bb9381e-a4f1-5a09-aebb-5db962463c16",
+            "6b191ff9-36c3-5816-853a-ea4664b3b495",
+            "62e3ee38-0c7a-5fb7-90b2-ed07e93e2a12",
+            "e7352b10-7f6b-56cb-b5d2-7d45301eac3a",
+            "92b45aeb-ee0f-5284-9609-235407aa14ff",
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "63209bdb-2c42-5f89-a6cd-8d4287e349e8",
+            "9dd2c99c-746d-5e9c-9a7b-5e751871528d",
+            "5f4162f9-1cfb-5d1d-9db0-d83e54d52a1b"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 22.09,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "9bb9381e-a4f1-5a09-aebb-5db962463c16",
+            "d28bd74e-b4c7-5d0b-8b8c-1e93cacc42e7",
+            "5f4162f9-1cfb-5d1d-9db0-d83e54d52a1b",
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+            "92b45aeb-ee0f-5284-9609-235407aa14ff",
+            "62e3ee38-0c7a-5fb7-90b2-ed07e93e2a12",
+            "e9d769e2-f957-5e33-bf87-529e239f758f",
+            "f812553d-7a0c-509d-a62e-7cea3d2ac455",
+            "46c460a9-3979-572c-8bdb-d7944f94bd46"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 5866.39,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "9bb9381e-a4f1-5a09-aebb-5db962463c16",
+            "d28bd74e-b4c7-5d0b-8b8c-1e93cacc42e7",
+            "5f4162f9-1cfb-5d1d-9db0-d83e54d52a1b",
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+            "92b45aeb-ee0f-5284-9609-235407aa14ff",
+            "62e3ee38-0c7a-5fb7-90b2-ed07e93e2a12",
+            "e9d769e2-f957-5e33-bf87-529e239f758f",
+            "f812553d-7a0c-509d-a62e-7cea3d2ac455",
+            "46c460a9-3979-572c-8bdb-d7944f94bd46"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": 0.7247,
+          "citation_accuracy": 0.8,
+          "avg_latency_ms": 8003.25,
+          "p95_latency_ms": 11540.33,
+          "answer": "With Ragas, we put forward a suite\nof metrics which can be used to evaluate these\ndifferent dimensions without having to rely on\nground truth human annotations[1]. While RAG has been extensively explored in the language domain [23, 13], its application to image\nand multimodal generation remains largely underdeveloped[2]. (2023a) employed the itera-\ntive generate-retrieval procedure to do repository-\nlevel code completion[3]. We demonstrate that EVOR\nis flexible and can be easily combined with\nthem to achieve further improvement[4]. These methods enable context-aware and prompt-sensitive guidance during generation[5].",
+          "verification_details": {
+            "citations_verified": 5,
+            "verdict_counts": {
+              "Supported": 4,
+              "Weak Support": 0,
+              "Unsupported": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q02",
+      "query": "What are the key components of a RAG system?",
+      "theme": "RAG",
+      "difficulty": "simple",
+      "relevant_doc_ids": [
+        "2309.15217v2",
+        "2110.01599v1"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "34b280fb-6310-5b17-956d-6e104c2d3e70",
+            "de9351d4-c4ca-5321-a55f-589d5013d9f8",
+            "f9682536-905e-5f86-8c57-550c73fe9b0a",
+            "613994cc-c583-5d76-8496-e6c29af9d400",
+            "00175e41-5bb1-5e81-8f5f-21cc6cfcc32c",
+            "8cf6c449-c73d-5023-9d54-276e88bdd41d",
+            "c8f2b080-500b-5f54-a3c7-e53b215c034d",
+            "12f03280-0fa5-5839-8422-c9acaaf6fe5d",
+            "a9f148ff-4f75-50ff-9693-9fe4592e9c93",
+            "3046b1d8-928b-5def-8f62-f9e85c7fbc14"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 25.88,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "34b280fb-6310-5b17-956d-6e104c2d3e70",
+            "613994cc-c583-5d76-8496-e6c29af9d400",
+            "f9682536-905e-5f86-8c57-550c73fe9b0a",
+            "de9351d4-c4ca-5321-a55f-589d5013d9f8",
+            "12f03280-0fa5-5839-8422-c9acaaf6fe5d",
+            "00175e41-5bb1-5e81-8f5f-21cc6cfcc32c",
+            "8cf6c449-c73d-5023-9d54-276e88bdd41d",
+            "a9f148ff-4f75-50ff-9693-9fe4592e9c93",
+            "c8f2b080-500b-5f54-a3c7-e53b215c034d",
+            "3046b1d8-928b-5def-8f62-f9e85c7fbc14"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 22.93,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "f460d3ec-1ddd-5915-9402-d9659be7ad4f",
+            "c403b4dc-cf90-5122-99a6-26956b01ebcf",
+            "c8f2b080-500b-5f54-a3c7-e53b215c034d",
+            "f9682536-905e-5f86-8c57-550c73fe9b0a",
+            "00175e41-5bb1-5e81-8f5f-21cc6cfcc32c",
+            "12f03280-0fa5-5839-8422-c9acaaf6fe5d",
+            "82920914-9a4d-5371-9d7d-5fd534e4e4eb",
+            "78663eb3-1081-561d-8785-4d278b1b1b5e",
+            "aeeedba9-682d-5c7a-8c30-4b306f6637c9",
+            "613994cc-c583-5d76-8496-e6c29af9d400"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 5994.22,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "f460d3ec-1ddd-5915-9402-d9659be7ad4f",
+            "c403b4dc-cf90-5122-99a6-26956b01ebcf",
+            "c8f2b080-500b-5f54-a3c7-e53b215c034d",
+            "f9682536-905e-5f86-8c57-550c73fe9b0a",
+            "00175e41-5bb1-5e81-8f5f-21cc6cfcc32c",
+            "12f03280-0fa5-5839-8422-c9acaaf6fe5d",
+            "82920914-9a4d-5371-9d7d-5fd534e4e4eb",
+            "78663eb3-1081-561d-8785-4d278b1b1b5e",
+            "aeeedba9-682d-5c7a-8c30-4b306f6637c9",
+            "613994cc-c583-5d76-8496-e6c29af9d400"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": 0.6617,
+          "citation_accuracy": 0.8,
+          "avg_latency_ms": 8987.75,
+          "p95_latency_ms": 11540.33,
+          "answer": "Our attack consistently outperforms prior works while being undetectable[1]. several aspects of the RAG\nsystem and our attak[2]. 3 Successful membership inference in a RAG system is not straight-\nforward to achieve[3]. [11] focus on membership inference for in-context learning\nunder the gray-box access setting, where model probabilities are\navailable[4]. However, this approach would\ndegrade the overall performance and utility of the RAG system,\nundermining its primary purpose[5].",
+          "verification_details": {
+            "citations_verified": 5,
+            "verdict_counts": {
+              "Supported": 3,
+              "Weak Support": 1,
+              "Unsupported": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q03",
+      "query": "How does RAG combine retrieval and generation?",
+      "theme": "RAG",
+      "difficulty": "multi-chunk",
+      "relevant_doc_ids": [
+        "2309.15217v2",
+        "2506.06962v3"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "34e26985-1cc3-5428-9a92-5eab87267bbc",
+            "a3a54f57-1fe1-5a23-a7a3-e684070f6d1a",
+            "2a51cc52-f79f-5bf0-8f9f-f771c250c7b4",
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+            "513d0e9d-dfa3-5a3c-aa1a-ecb60f4e340c",
+            "64e445d3-c4aa-5194-ac4f-827d21fd799d",
+            "9bb9381e-a4f1-5a09-aebb-5db962463c16",
+            "82920914-9a4d-5371-9d7d-5fd534e4e4eb",
+            "35a0b5a4-b7d1-5dc3-8403-1e0e381a4579"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 38.61,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "513d0e9d-dfa3-5a3c-aa1a-ecb60f4e340c",
+            "2a51cc52-f79f-5bf0-8f9f-f771c250c7b4",
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+            "9bb9381e-a4f1-5a09-aebb-5db962463c16",
+            "34e26985-1cc3-5428-9a92-5eab87267bbc",
+            "64e445d3-c4aa-5194-ac4f-827d21fd799d",
+            "82920914-9a4d-5371-9d7d-5fd534e4e4eb",
+            "35a0b5a4-b7d1-5dc3-8403-1e0e381a4579",
+            "a3a54f57-1fe1-5a23-a7a3-e684070f6d1a"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 30.86,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "35a0b5a4-b7d1-5dc3-8403-1e0e381a4579",
+            "82920914-9a4d-5371-9d7d-5fd534e4e4eb",
+            "513d0e9d-dfa3-5a3c-aa1a-ecb60f4e340c",
+            "9bb9381e-a4f1-5a09-aebb-5db962463c16",
+            "f40af8a9-cb9e-55cd-955e-6ee46c2482ec",
+            "49d0c998-6c76-504d-a8e0-8a24b4c1fe91",
+            "2a51cc52-f79f-5bf0-8f9f-f771c250c7b4",
+            "a3a54f57-1fe1-5a23-a7a3-e684070f6d1a",
+            "5f4162f9-1cfb-5d1d-9db0-d83e54d52a1b"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 7192.68,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "35a0b5a4-b7d1-5dc3-8403-1e0e381a4579",
+            "82920914-9a4d-5371-9d7d-5fd534e4e4eb",
+            "513d0e9d-dfa3-5a3c-aa1a-ecb60f4e340c",
+            "9bb9381e-a4f1-5a09-aebb-5db962463c16",
+            "f40af8a9-cb9e-55cd-955e-6ee46c2482ec",
+            "49d0c998-6c76-504d-a8e0-8a24b4c1fe91",
+            "2a51cc52-f79f-5bf0-8f9f-f771c250c7b4",
+            "a3a54f57-1fe1-5a23-a7a3-e684070f6d1a",
+            "5f4162f9-1cfb-5d1d-9db0-d83e54d52a1b"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": 0.7228,
+          "citation_accuracy": 0.8,
+          "avg_latency_ms": 9004.85,
+          "p95_latency_ms": 11540.33,
+          "answer": "With Ragas, we put forward a suite\nof metrics which can be used to evaluate these\ndifferent dimensions without having to rely on\nground truth human annotations[1]. A param-matched con-\ntrol comparison further indicates that the q/v advantage is structural rather than\npurely parametric[2]. This enables the model to adapt retrieval\nstrategies mid-inference, refine its queries, and better integrate evidence from multiple sources[3]. Augmentation\nGeneration\nPrompt\nGenerated Image\nGenerated Image\n(b) Image-Based Retrieval Augmentation\nPrompt\nGenerated Image\nRetrieved Images\n[4]. While RAG has been extensively explored in the language domain [23, 13], its application to image\nand multimodal generation remains largely underdeveloped[5].",
+          "verification_details": {
+            "citations_verified": 5,
+            "verdict_counts": {
+              "Supported": 4,
+              "Weak Support": 0,
+              "Unsupported": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q04",
+      "query": "What is the RAGAS framework for evaluating RAG?",
+      "theme": "RAG",
+      "difficulty": "simple",
+      "relevant_doc_ids": [
+        "2309.15217v2"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "4635f2de-fad3-55d0-8f17-85e9a66c8997",
+            "cf3f8d6f-6dba-5182-9ea9-4d834b5a6e2f",
+            "64e445d3-c4aa-5194-ac4f-827d21fd799d",
+            "c241124d-23c4-5491-b725-69ea6ee60d2c",
+            "528d5755-2733-5a5a-8b35-818bc512d8aa",
+            "2a51cc52-f79f-5bf0-8f9f-f771c250c7b4",
+            "78694e05-9172-52ee-82b5-10e860f40789",
+            "283c4443-31f2-5c2f-b904-361a3221cc1a",
+            "9005306e-cbb4-5c2c-91cc-a606ca7f857d"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 27.5,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "4635f2de-fad3-55d0-8f17-85e9a66c8997",
+            "cf3f8d6f-6dba-5182-9ea9-4d834b5a6e2f",
+            "528d5755-2733-5a5a-8b35-818bc512d8aa",
+            "c241124d-23c4-5491-b725-69ea6ee60d2c",
+            "78694e05-9172-52ee-82b5-10e860f40789",
+            "64e445d3-c4aa-5194-ac4f-827d21fd799d",
+            "9005306e-cbb4-5c2c-91cc-a606ca7f857d",
+            "283c4443-31f2-5c2f-b904-361a3221cc1a",
+            "2a51cc52-f79f-5bf0-8f9f-f771c250c7b4"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 26.74,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "4635f2de-fad3-55d0-8f17-85e9a66c8997",
+            "cf3f8d6f-6dba-5182-9ea9-4d834b5a6e2f",
+            "283c4443-31f2-5c2f-b904-361a3221cc1a",
+            "4960269a-f103-5f82-80b7-2d0c88e75709",
+            "9005306e-cbb4-5c2c-91cc-a606ca7f857d",
+            "528d5755-2733-5a5a-8b35-818bc512d8aa",
+            "78694e05-9172-52ee-82b5-10e860f40789",
+            "bc274f65-1a31-5fef-94a9-d7ee385147b2",
+            "83db7c5c-745d-57e2-8aa5-7fd66b39b715"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 6764.01,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "4635f2de-fad3-55d0-8f17-85e9a66c8997",
+            "cf3f8d6f-6dba-5182-9ea9-4d834b5a6e2f",
+            "283c4443-31f2-5c2f-b904-361a3221cc1a",
+            "4960269a-f103-5f82-80b7-2d0c88e75709",
+            "9005306e-cbb4-5c2c-91cc-a606ca7f857d",
+            "528d5755-2733-5a5a-8b35-818bc512d8aa",
+            "78694e05-9172-52ee-82b5-10e860f40789",
+            "bc274f65-1a31-5fef-94a9-d7ee385147b2",
+            "83db7c5c-745d-57e2-8aa5-7fd66b39b715"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": 0.6484,
+          "citation_accuracy": 0.6,
+          "avg_latency_ms": 8738.09,
+          "p95_latency_ms": 11540.33,
+          "answer": "With Ragas, we put forward a suite\nof metrics which can be used to evaluate these\ndifferent dimensions without having to rely on\nground truth human annotations[1]. For instance,\nBARTScore (Yuan et al., 2021) estimates factuality\nby looking at the conditional probability of the gen-\nerated text given the input[2]. This framework is easy\nto use and can provide deverlopers of RAG sys-\ntems with valuable insights, even in the absence\nof any ground truth[3]. 3.1.1 Indexing\nThe first step in RAG is constructing a searchable knowl-\nedge database[4]. The core idea behind MusT-RAG is to\naugment LLMs with external knowledge retrieval mech-\nanisms[5].",
+          "verification_details": {
+            "citations_verified": 5,
+            "verdict_counts": {
+              "Supported": 3,
+              "Weak Support": 0,
+              "Unsupported": 2
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q05",
+      "query": "How does AR-RAG differ from standard RAG for image generation?",
+      "theme": "RAG",
+      "difficulty": "simple",
+      "relevant_doc_ids": [
+        "2506.06962v3"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "c9a93f78-3213-5feb-a31c-cd783473046a",
+            "513d0e9d-dfa3-5a3c-aa1a-ecb60f4e340c",
+            "6439193e-f677-554e-857a-009677fcdeaf",
+            "9bb9381e-a4f1-5a09-aebb-5db962463c16",
+            "49d0c998-6c76-504d-a8e0-8a24b4c1fe91",
+            "63209bdb-2c42-5f89-a6cd-8d4287e349e8",
+            "4af469fc-6c47-54a0-b286-ef58f5ec2c23",
+            "ec53ab53-87da-5c37-bf44-0e2fdbcca2c4",
+            "92f95142-ddf0-5096-bc3d-d8edbfc7f2f8",
+            "f812553d-7a0c-509d-a62e-7cea3d2ac455"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 31.49,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "513d0e9d-dfa3-5a3c-aa1a-ecb60f4e340c",
+            "6439193e-f677-554e-857a-009677fcdeaf",
+            "49d0c998-6c76-504d-a8e0-8a24b4c1fe91",
+            "9bb9381e-a4f1-5a09-aebb-5db962463c16",
+            "c9a93f78-3213-5feb-a31c-cd783473046a",
+            "63209bdb-2c42-5f89-a6cd-8d4287e349e8",
+            "f812553d-7a0c-509d-a62e-7cea3d2ac455",
+            "92f95142-ddf0-5096-bc3d-d8edbfc7f2f8",
+            "4af469fc-6c47-54a0-b286-ef58f5ec2c23",
+            "ec53ab53-87da-5c37-bf44-0e2fdbcca2c4"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 27.74,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "9bb9381e-a4f1-5a09-aebb-5db962463c16",
+            "513d0e9d-dfa3-5a3c-aa1a-ecb60f4e340c",
+            "fd5a78f7-3e62-50a1-a2b7-8903204b8d9c",
+            "6439193e-f677-554e-857a-009677fcdeaf",
+            "49d0c998-6c76-504d-a8e0-8a24b4c1fe91",
+            "63209bdb-2c42-5f89-a6cd-8d4287e349e8",
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+            "f812553d-7a0c-509d-a62e-7cea3d2ac455",
+            "4af469fc-6c47-54a0-b286-ef58f5ec2c23",
+            "92f95142-ddf0-5096-bc3d-d8edbfc7f2f8"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 6682.47,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "9bb9381e-a4f1-5a09-aebb-5db962463c16",
+            "513d0e9d-dfa3-5a3c-aa1a-ecb60f4e340c",
+            "fd5a78f7-3e62-50a1-a2b7-8903204b8d9c",
+            "6439193e-f677-554e-857a-009677fcdeaf",
+            "49d0c998-6c76-504d-a8e0-8a24b4c1fe91",
+            "63209bdb-2c42-5f89-a6cd-8d4287e349e8",
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+            "f812553d-7a0c-509d-a62e-7cea3d2ac455",
+            "4af469fc-6c47-54a0-b286-ef58f5ec2c23",
+            "92f95142-ddf0-5096-bc3d-d8edbfc7f2f8"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": 0.731,
+          "citation_accuracy": 1.0,
+          "avg_latency_ms": 9210.5,
+          "p95_latency_ms": 11540.33,
+          "answer": "While RAG has been extensively explored in the language domain [23, 13], its application to image\nand multimodal generation remains largely underdeveloped[1]. Augmentation\nGeneration\nPrompt\nGenerated Image\nGenerated Image\n(b) Image-Based Retrieval Augmentation\nPrompt\nGenerated Image\nRetrieved Images\n[2]. Semi-\nparametric neural image synthesis[3]. We validate the effectiveness of AR-RAG on widely adopted benchmarks,\n1Jingyuan Qi and Zhiyang Xu contributed equally to this work[4]. • Extensive experiments and analysis show that AR-RAG significantly improves performance of\nstate-of-the-art image generation model across diverse metrics[5].",
+          "verification_details": {
+            "citations_verified": 5,
+            "verdict_counts": {
+              "Supported": 3,
+              "Weak Support": 2,
+              "Unsupported": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q06",
+      "query": "What is the EVOR framework for code generation?",
+      "theme": "RAG",
+      "difficulty": "simple",
+      "relevant_doc_ids": [
+        "2402.12317v2"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "5f4162f9-1cfb-5d1d-9db0-d83e54d52a1b",
+            "5dbb5e26-5d85-50dd-ab4a-d35cee799e89",
+            "1fa30986-9971-5f1f-88f0-23ef5967bdef",
+            "3d63504b-3deb-5e56-87ba-21c2994dc651",
+            "42dd85c6-2521-5a3d-bf1b-390629e4bfa8",
+            "b38ca374-8818-509e-a70b-c19723fe22ae",
+            "c56db280-975f-5e99-8e3e-376cb801f428",
+            "23a0c672-532d-53e5-8c6b-be0406ae30fa",
+            "0969bb0e-1485-574d-a942-cfb96c46211e",
+            "8a1ba96b-633a-5f8c-bcf5-89c61ef8e860"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 33.36,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "5f4162f9-1cfb-5d1d-9db0-d83e54d52a1b",
+            "1fa30986-9971-5f1f-88f0-23ef5967bdef",
+            "3d63504b-3deb-5e56-87ba-21c2994dc651",
+            "5dbb5e26-5d85-50dd-ab4a-d35cee799e89",
+            "23a0c672-532d-53e5-8c6b-be0406ae30fa",
+            "b38ca374-8818-509e-a70b-c19723fe22ae",
+            "42dd85c6-2521-5a3d-bf1b-390629e4bfa8",
+            "8a1ba96b-633a-5f8c-bcf5-89c61ef8e860",
+            "0969bb0e-1485-574d-a942-cfb96c46211e",
+            "c56db280-975f-5e99-8e3e-376cb801f428"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 24.55,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "dc521994-3353-566a-a224-067a66257c4e",
+            "5f4162f9-1cfb-5d1d-9db0-d83e54d52a1b",
+            "79bde22b-fef2-55d4-97e8-733c2b7b3b8f",
+            "0969bb0e-1485-574d-a942-cfb96c46211e",
+            "1fa30986-9971-5f1f-88f0-23ef5967bdef",
+            "133c64ef-483f-5bfe-bced-4456d42d2ecc",
+            "23a0c672-532d-53e5-8c6b-be0406ae30fa",
+            "aa105f20-78cf-51b0-a27b-8e41406f4d71",
+            "7d68af12-63d6-5546-9bf7-82cd69526333",
+            "4fe38cf1-ded4-5462-854d-f30ab2fff01b"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 6837.74,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "dc521994-3353-566a-a224-067a66257c4e",
+            "5f4162f9-1cfb-5d1d-9db0-d83e54d52a1b",
+            "79bde22b-fef2-55d4-97e8-733c2b7b3b8f",
+            "0969bb0e-1485-574d-a942-cfb96c46211e",
+            "1fa30986-9971-5f1f-88f0-23ef5967bdef",
+            "133c64ef-483f-5bfe-bced-4456d42d2ecc",
+            "23a0c672-532d-53e5-8c6b-be0406ae30fa",
+            "aa105f20-78cf-51b0-a27b-8e41406f4d71",
+            "7d68af12-63d6-5546-9bf7-82cd69526333",
+            "4fe38cf1-ded4-5462-854d-f30ab2fff01b"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": 0.7001,
+          "citation_accuracy": 0.8,
+          "avg_latency_ms": 8440.76,
+          "p95_latency_ms": 11540.33,
+          "answer": "Additionally,\nthere are concerns about privacy and security if\nsensitive code snippets are inadvertently included\nin the retrieval process[1]. We demonstrate that EVOR\nis flexible and can be easily combined with\nthem to achieve further improvement[2]. (2023) use the execution result as feedback to help\nLLM refine the code[3]. K\nIntended use\nEVOR is an advanced pipeline for RACG, and it\nis expected to be applied in customized code gen-\neration[4]. (2023b) argues that iterative code\ngeneration, e.g., self-repair, may not yield higher\npass rates when taking the cost into account[5].",
+          "verification_details": {
+            "citations_verified": 5,
+            "verdict_counts": {
+              "Supported": 4,
+              "Weak Support": 0,
+              "Unsupported": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q07",
+      "query": "What improvements does RocketQA bring to passage retrieval?",
+      "theme": "RAG",
+      "difficulty": "medium",
+      "relevant_doc_ids": [
+        "2010.08191v2"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "d0876fe4-b47f-52c1-afc6-cdc1a93825ad",
+            "064ece72-30a6-581c-a1cb-034d1c2ef9a1",
+            "197f115f-28f9-5398-8506-0410fc9f0c36",
+            "8a1da111-3513-519a-b7e6-54d4fb2d2362",
+            "f844ae12-5095-5e72-b0a6-612fed14fec5",
+            "3d79986e-2102-5e0f-a1dd-c2e229bdc065",
+            "06f5fecf-3449-5a84-841c-0eebdf8f8997",
+            "b2b6d298-760d-58c4-bd3b-e1f3f771b922",
+            "3eb8212f-1950-5a9d-98ad-771f9875c844",
+            "903251d1-bea1-54c8-a8b8-048f87a57d0f"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 32.31,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "064ece72-30a6-581c-a1cb-034d1c2ef9a1",
+            "d0876fe4-b47f-52c1-afc6-cdc1a93825ad",
+            "f844ae12-5095-5e72-b0a6-612fed14fec5",
+            "197f115f-28f9-5398-8506-0410fc9f0c36",
+            "3eb8212f-1950-5a9d-98ad-771f9875c844",
+            "3d79986e-2102-5e0f-a1dd-c2e229bdc065",
+            "8a1da111-3513-519a-b7e6-54d4fb2d2362",
+            "06f5fecf-3449-5a84-841c-0eebdf8f8997",
+            "903251d1-bea1-54c8-a8b8-048f87a57d0f",
+            "b2b6d298-760d-58c4-bd3b-e1f3f771b922"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 28.33,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "f844ae12-5095-5e72-b0a6-612fed14fec5",
+            "197f115f-28f9-5398-8506-0410fc9f0c36",
+            "064ece72-30a6-581c-a1cb-034d1c2ef9a1",
+            "d0876fe4-b47f-52c1-afc6-cdc1a93825ad",
+            "3eb8212f-1950-5a9d-98ad-771f9875c844",
+            "903251d1-bea1-54c8-a8b8-048f87a57d0f",
+            "b2b6d298-760d-58c4-bd3b-e1f3f771b922",
+            "7617493f-e4df-5d14-957f-8f2c1befe174",
+            "3d79986e-2102-5e0f-a1dd-c2e229bdc065",
+            "1353f1a7-b220-5e81-a97a-383645d1c9af"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 6868.61,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "f844ae12-5095-5e72-b0a6-612fed14fec5",
+            "197f115f-28f9-5398-8506-0410fc9f0c36",
+            "064ece72-30a6-581c-a1cb-034d1c2ef9a1",
+            "d0876fe4-b47f-52c1-afc6-cdc1a93825ad",
+            "3eb8212f-1950-5a9d-98ad-771f9875c844",
+            "903251d1-bea1-54c8-a8b8-048f87a57d0f",
+            "b2b6d298-760d-58c4-bd3b-e1f3f771b922",
+            "7617493f-e4df-5d14-957f-8f2c1befe174",
+            "3d79986e-2102-5e0f-a1dd-c2e229bdc065",
+            "1353f1a7-b220-5e81-a97a-383645d1c9af"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": 0.5956,
+          "citation_accuracy": 0.6,
+          "avg_latency_ms": 8836.98,
+          "p95_latency_ms": 11540.33,
+          "answer": "To address these chal-\nlenges, we propose an optimized training ap-\nproach, called RocketQA, to improving dense\npassage retrieval[1]. 5\nConclusions\nIn this paper, we have presented an optimized train-\ning approach to improving dense passage retrieval[2][3]. The motivation is that the reader\nshould be adapted to the retrieval distribution of\nRocketQA[3]. Experimental results show that\nthe three strategies are effective to improve\nthe performance of dense passage retrieval[4]. We propose an opti-\nmized training approach, called RocketQA, to im-\nproving dense passage retrieval[5].",
+          "verification_details": {
+            "citations_verified": 6,
+            "verdict_counts": {
+              "Supported": 4,
+              "Weak Support": 0,
+              "Unsupported": 2
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q08",
+      "query": "What are dense passage retrieval models for RAG?",
+      "theme": "RAG",
+      "difficulty": "medium",
+      "relevant_doc_ids": [
+        "2110.01599v1"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "bf55e721-20e8-5846-943e-5fbe0f19efb1",
+            "64e445d3-c4aa-5194-ac4f-827d21fd799d",
+            "bebc04dd-7e38-5d8c-9e6f-bf5fad450cec",
+            "f40af8a9-cb9e-55cd-955e-6ee46c2482ec",
+            "197f115f-28f9-5398-8506-0410fc9f0c36",
+            "6b168f82-e04d-5297-9447-1d935b7ea9c4",
+            "a3a54f57-1fe1-5a23-a7a3-e684070f6d1a",
+            "e19f9a75-0c01-5c72-a54d-65e7e49a519b",
+            "8844e390-af4d-5f12-afa0-8ebefeea49b2",
+            "06f5fecf-3449-5a84-841c-0eebdf8f8997"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.125,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 29.71,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "64e445d3-c4aa-5194-ac4f-827d21fd799d",
+            "bf55e721-20e8-5846-943e-5fbe0f19efb1",
+            "bebc04dd-7e38-5d8c-9e6f-bf5fad450cec",
+            "197f115f-28f9-5398-8506-0410fc9f0c36",
+            "e19f9a75-0c01-5c72-a54d-65e7e49a519b",
+            "06f5fecf-3449-5a84-841c-0eebdf8f8997",
+            "f40af8a9-cb9e-55cd-955e-6ee46c2482ec",
+            "a3a54f57-1fe1-5a23-a7a3-e684070f6d1a",
+            "6b168f82-e04d-5297-9447-1d935b7ea9c4",
+            "8844e390-af4d-5f12-afa0-8ebefeea49b2"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.2,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 30.22,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "bf55e721-20e8-5846-943e-5fbe0f19efb1",
+            "197f115f-28f9-5398-8506-0410fc9f0c36",
+            "f40af8a9-cb9e-55cd-955e-6ee46c2482ec",
+            "8844e390-af4d-5f12-afa0-8ebefeea49b2",
+            "64e445d3-c4aa-5194-ac4f-827d21fd799d",
+            "3d79986e-2102-5e0f-a1dd-c2e229bdc065",
+            "f844ae12-5095-5e72-b0a6-612fed14fec5",
+            "a3a54f57-1fe1-5a23-a7a3-e684070f6d1a",
+            "2a51cc52-f79f-5bf0-8f9f-f771c250c7b4",
+            "04fbb2d8-7221-5a04-8a9f-5a992e77f8d5"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 6751.7,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "bf55e721-20e8-5846-943e-5fbe0f19efb1",
+            "197f115f-28f9-5398-8506-0410fc9f0c36",
+            "f40af8a9-cb9e-55cd-955e-6ee46c2482ec",
+            "8844e390-af4d-5f12-afa0-8ebefeea49b2",
+            "64e445d3-c4aa-5194-ac4f-827d21fd799d",
+            "3d79986e-2102-5e0f-a1dd-c2e229bdc065",
+            "f844ae12-5095-5e72-b0a6-612fed14fec5",
+            "a3a54f57-1fe1-5a23-a7a3-e684070f6d1a",
+            "2a51cc52-f79f-5bf0-8f9f-f771c250c7b4",
+            "04fbb2d8-7221-5a04-8a9f-5a992e77f8d5"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": 0.6666,
+          "citation_accuracy": 0.8,
+          "avg_latency_ms": 9058.87,
+          "p95_latency_ms": 11540.33,
+          "answer": "By leveraging contrastive learning between audio and text,\nthey can serve as more domain-specialized text embedding\nmodels for music-related tasks[1]. Hence, we\nneed dense passage retrieval for semantic match-\ning in the scenario of question answering[2]. On the retrieval side, dense passage retrieval was canonicalised by Karpukhin et al[3]. There are over 21\nmillion total passages[4]. In contrast, for\nFigure 2:\nRAG performance and retrieval time for\nWikipedia Corpus [8] and MusWikiDB[5].",
+          "verification_details": {
+            "citations_verified": 5,
+            "verdict_counts": {
+              "Supported": 2,
+              "Weak Support": 2,
+              "Unsupported": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q09",
+      "query": "What is the difference between extractive and generative QA in RAG?",
+      "theme": "RAG",
+      "difficulty": "medium",
+      "relevant_doc_ids": [
+        "2204.07496v4"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "aeeedba9-682d-5c7a-8c30-4b306f6637c9",
+            "78663eb3-1081-561d-8785-4d278b1b1b5e",
+            "7972b8e3-dd57-5a6d-a8ca-4aa1ef25bc20",
+            "83db7c5c-745d-57e2-8aa5-7fd66b39b715",
+            "b1470de0-4d0a-5a89-8631-a56ad47648b8",
+            "78694e05-9172-52ee-82b5-10e860f40789",
+            "4a387a86-68d5-5555-87d6-b815d6add2b0",
+            "dd25a770-de0f-5c71-bdfa-f30b10ab7914",
+            "12f03280-0fa5-5839-8422-c9acaaf6fe5d",
+            "c241124d-23c4-5491-b725-69ea6ee60d2c"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 30.58,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "b1470de0-4d0a-5a89-8631-a56ad47648b8",
+            "78663eb3-1081-561d-8785-4d278b1b1b5e",
+            "aeeedba9-682d-5c7a-8c30-4b306f6637c9",
+            "dd25a770-de0f-5c71-bdfa-f30b10ab7914",
+            "7972b8e3-dd57-5a6d-a8ca-4aa1ef25bc20",
+            "78694e05-9172-52ee-82b5-10e860f40789",
+            "c241124d-23c4-5491-b725-69ea6ee60d2c",
+            "12f03280-0fa5-5839-8422-c9acaaf6fe5d",
+            "4a387a86-68d5-5555-87d6-b815d6add2b0",
+            "83db7c5c-745d-57e2-8aa5-7fd66b39b715"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 28.33,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "283c4443-31f2-5c2f-b904-361a3221cc1a",
+            "7972b8e3-dd57-5a6d-a8ca-4aa1ef25bc20",
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+            "064ece72-30a6-581c-a1cb-034d1c2ef9a1",
+            "60a045dd-1c8a-5427-bb86-012eb0760e7a",
+            "0b20a3cc-c881-5a61-85f8-9d28bf5f4082",
+            "6b168f82-e04d-5297-9447-1d935b7ea9c4",
+            "7f3a1eba-c572-578d-8f42-1d96b211f82e",
+            "c722e3d4-507c-5797-9bdb-181880d83cd4",
+            "78663eb3-1081-561d-8785-4d278b1b1b5e"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 6693.82,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "283c4443-31f2-5c2f-b904-361a3221cc1a",
+            "7972b8e3-dd57-5a6d-a8ca-4aa1ef25bc20",
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+            "064ece72-30a6-581c-a1cb-034d1c2ef9a1",
+            "60a045dd-1c8a-5427-bb86-012eb0760e7a",
+            "0b20a3cc-c881-5a61-85f8-9d28bf5f4082",
+            "6b168f82-e04d-5297-9447-1d935b7ea9c4",
+            "7f3a1eba-c572-578d-8f42-1d96b211f82e",
+            "c722e3d4-507c-5797-9bdb-181880d83cd4",
+            "78663eb3-1081-561d-8785-4d278b1b1b5e"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": 0.6911,
+          "citation_accuracy": 0.8,
+          "avg_latency_ms": 8192.44,
+          "p95_latency_ms": 11540.33,
+          "answer": "3.1.1 Indexing\nThe first step in RAG is constructing a searchable knowl-\nedge database[1]. In contrast, RAG is\nlike an open-book exam: the model dynamically retrieves\nrelevant information from an external knowledge source\nduring inference[2]. However, this increase remains reasonable given the substan-\ntial performance gains in generation quality[3]. The motivation is that the reader\nshould be adapted to the retrieval distribution of\nRocketQA[4]. 23\nD RAG System Architecture\n23\nD.1\nOverall solution scheme\n[5].",
+          "verification_details": {
+            "citations_verified": 5,
+            "verdict_counts": {
+              "Supported": 3,
+              "Weak Support": 1,
+              "Unsupported": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q10",
+      "query": "How does retrieval quality affect RAG generation quality?",
+      "theme": "RAG",
+      "difficulty": "multi-chunk",
+      "relevant_doc_ids": [
+        "2502.00306v2",
+        "2309.15217v2"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "f40af8a9-cb9e-55cd-955e-6ee46c2482ec",
+            "aeeedba9-682d-5c7a-8c30-4b306f6637c9",
+            "9b85fb69-c21e-5b81-8bc4-2b9eb7636546",
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+            "35a0b5a4-b7d1-5dc3-8403-1e0e381a4579",
+            "a3a54f57-1fe1-5a23-a7a3-e684070f6d1a",
+            "83db7c5c-745d-57e2-8aa5-7fd66b39b715",
+            "d2395577-e296-5d53-b748-842feed4524c",
+            "cc3951a4-112f-5d41-a491-89fd58174fbd"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 30.29,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "aeeedba9-682d-5c7a-8c30-4b306f6637c9",
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "f40af8a9-cb9e-55cd-955e-6ee46c2482ec",
+            "35a0b5a4-b7d1-5dc3-8403-1e0e381a4579",
+            "83db7c5c-745d-57e2-8aa5-7fd66b39b715",
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+            "cc3951a4-112f-5d41-a491-89fd58174fbd",
+            "a3a54f57-1fe1-5a23-a7a3-e684070f6d1a",
+            "9b85fb69-c21e-5b81-8bc4-2b9eb7636546",
+            "d2395577-e296-5d53-b748-842feed4524c"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 0.5,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 26.36,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+            "f40af8a9-cb9e-55cd-955e-6ee46c2482ec",
+            "aeeedba9-682d-5c7a-8c30-4b306f6637c9",
+            "9d47e53d-20d9-522a-99f0-38b0ebedaaf1",
+            "35a0b5a4-b7d1-5dc3-8403-1e0e381a4579",
+            "cf3f8d6f-6dba-5182-9ea9-4d834b5a6e2f",
+            "7f3a1eba-c572-578d-8f42-1d96b211f82e",
+            "a3a54f57-1fe1-5a23-a7a3-e684070f6d1a",
+            "83db7c5c-745d-57e2-8aa5-7fd66b39b715"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 6715.98,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+            "f40af8a9-cb9e-55cd-955e-6ee46c2482ec",
+            "aeeedba9-682d-5c7a-8c30-4b306f6637c9",
+            "9d47e53d-20d9-522a-99f0-38b0ebedaaf1",
+            "35a0b5a4-b7d1-5dc3-8403-1e0e381a4579",
+            "cf3f8d6f-6dba-5182-9ea9-4d834b5a6e2f",
+            "7f3a1eba-c572-578d-8f42-1d96b211f82e",
+            "a3a54f57-1fe1-5a23-a7a3-e684070f6d1a",
+            "83db7c5c-745d-57e2-8aa5-7fd66b39b715"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 1.0,
+          "faithfulness": 0.574,
+          "citation_accuracy": 0.6,
+          "avg_latency_ms": 8936.06,
+          "p95_latency_ms": 11540.33,
+          "answer": "With Ragas, we put forward a suite\nof metrics which can be used to evaluate these\ndifferent dimensions without having to rely on\nground truth human annotations[1]. However, this increase remains reasonable given the substan-\ntial performance gains in generation quality[2]. 2\nRELATED WORK\nRAG and retrieval components[3]. Second, generation quality strongly depends on the quality of retrieval and reranking, because\nthe generator is restricted to the provided context[4]. This allows us to separate errors caused by low-quality context from errors that arise already at the\nanswer-generation stage given relevant context[5].",
+          "verification_details": {
+            "citations_verified": 5,
+            "verdict_counts": {
+              "Supported": 2,
+              "Weak Support": 1,
+              "Unsupported": 2
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q11",
+      "query": "How does ReAct combine reasoning and action in language models?",
+      "theme": "Agents",
+      "difficulty": "multi-chunk",
+      "relevant_doc_ids": [
+        "2601.12538v1"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "adc61a14-ff80-5893-9ccc-4abbd75859b8",
+            "1f72ae45-58fe-550f-bc55-d60b888b69b4",
+            "602809c1-1d13-5c24-b771-e9747feac5a5",
+            "c7451c49-1eff-5168-9f30-27c3e576e752",
+            "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+            "e7ab2b0f-33ae-523b-bcc0-f9b6db0d12c3",
+            "9132e454-694e-5220-882d-b830287626f1",
+            "882c2d3c-6ee1-5678-afb6-71615e8f52d3",
+            "80e9c6bb-7b02-54c7-8b2a-7c8fc4f9a8dc",
+            "9a70e88c-9b7c-5a39-8a4a-69145bc8cb9d"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 32.8,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "adc61a14-ff80-5893-9ccc-4abbd75859b8",
+            "e7ab2b0f-33ae-523b-bcc0-f9b6db0d12c3",
+            "602809c1-1d13-5c24-b771-e9747feac5a5",
+            "1f72ae45-58fe-550f-bc55-d60b888b69b4",
+            "c7451c49-1eff-5168-9f30-27c3e576e752",
+            "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+            "882c2d3c-6ee1-5678-afb6-71615e8f52d3",
+            "9132e454-694e-5220-882d-b830287626f1",
+            "80e9c6bb-7b02-54c7-8b2a-7c8fc4f9a8dc",
+            "9a70e88c-9b7c-5a39-8a4a-69145bc8cb9d"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 25.25,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "602809c1-1d13-5c24-b771-e9747feac5a5",
+            "882c2d3c-6ee1-5678-afb6-71615e8f52d3",
+            "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+            "ee485dad-cbc8-5c1f-a15a-4fe3b942179a",
+            "80e9c6bb-7b02-54c7-8b2a-7c8fc4f9a8dc",
+            "2f751470-5584-5d26-953a-802a1c337b18",
+            "c7451c49-1eff-5168-9f30-27c3e576e752",
+            "9132e454-694e-5220-882d-b830287626f1",
+            "7ff03470-a951-57a5-b4b6-cb80d423dca7",
+            "adc61a14-ff80-5893-9ccc-4abbd75859b8"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 6941.48,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "602809c1-1d13-5c24-b771-e9747feac5a5",
+            "882c2d3c-6ee1-5678-afb6-71615e8f52d3",
+            "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+            "ee485dad-cbc8-5c1f-a15a-4fe3b942179a",
+            "80e9c6bb-7b02-54c7-8b2a-7c8fc4f9a8dc",
+            "2f751470-5584-5d26-953a-802a1c337b18",
+            "c7451c49-1eff-5168-9f30-27c3e576e752",
+            "9132e454-694e-5220-882d-b830287626f1",
+            "7ff03470-a951-57a5-b4b6-cb80d423dca7",
+            "adc61a14-ff80-5893-9ccc-4abbd75859b8"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": 0.6693,
+          "citation_accuracy": 0.8,
+          "avg_latency_ms": 9171.19,
+          "p95_latency_ms": 11540.33,
+          "answer": "React: Synergizing reasoning and acting in language models[1]. 8 Agentic Reasoning for Large Language Models\nIn-Context Reasoning: Inference-Time Search[2]. Yet, these approaches often\nassume static contexts and short-horizon reasoning[3]. This reframing unifies reasoning with acting, positioning\nreasoning as the organizing principle for perception, planning, decision, and verification[3][4]. We use GPT-3.5-0125 to generate CoT reasoning\nsteps with three in-context learning (Brown et al.,\n2020) examples on the GSM8k dataset[5].",
+          "verification_details": {
+            "citations_verified": 6,
+            "verdict_counts": {
+              "Supported": 4,
+              "Weak Support": 1,
+              "Unsupported": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q12",
+      "query": "What is the difference between ReAct and chain-of-thought prompting?",
+      "theme": "Agents",
+      "difficulty": "simple",
+      "relevant_doc_ids": [
+        "2601.12538v1"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "1f72ae45-58fe-550f-bc55-d60b888b69b4",
+            "9d842dd5-5636-5496-a7a6-7c5ab97b622f",
+            "a86baae6-77ce-5439-96d7-f517607c9bfd",
+            "b368b2f2-ce5b-596e-8e1e-b7ef568428a4",
+            "80e9c6bb-7b02-54c7-8b2a-7c8fc4f9a8dc",
+            "e67be116-4868-501c-bf95-b5a32f7e98b1",
+            "bbd52586-0666-5efc-bfde-173937fbfafc",
+            "c8042eb1-faf4-5e7a-b713-41c8f7b4d603",
+            "07efde08-32b4-5fbd-a7e8-f2c475eff6b5",
+            "9f7a5cf3-e116-59c7-86ea-1c256ca52e14"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 30.18,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "9d842dd5-5636-5496-a7a6-7c5ab97b622f",
+            "80e9c6bb-7b02-54c7-8b2a-7c8fc4f9a8dc",
+            "b368b2f2-ce5b-596e-8e1e-b7ef568428a4",
+            "9f7a5cf3-e116-59c7-86ea-1c256ca52e14",
+            "e67be116-4868-501c-bf95-b5a32f7e98b1",
+            "1f72ae45-58fe-550f-bc55-d60b888b69b4",
+            "07efde08-32b4-5fbd-a7e8-f2c475eff6b5",
+            "bbd52586-0666-5efc-bfde-173937fbfafc",
+            "a86baae6-77ce-5439-96d7-f517607c9bfd",
+            "c8042eb1-faf4-5e7a-b713-41c8f7b4d603"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 23.51,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "80e9c6bb-7b02-54c7-8b2a-7c8fc4f9a8dc",
+            "602809c1-1d13-5c24-b771-e9747feac5a5",
+            "9f7a5cf3-e116-59c7-86ea-1c256ca52e14",
+            "1f72ae45-58fe-550f-bc55-d60b888b69b4",
+            "9d842dd5-5636-5496-a7a6-7c5ab97b622f",
+            "6671d982-b0a9-520c-b698-a979ef09443b",
+            "976e50c0-719d-5b60-a2f7-e602db5ce393",
+            "37803f6e-cc73-5312-be3e-2cb6b3582ab4",
+            "bbd52586-0666-5efc-bfde-173937fbfafc",
+            "d2ee94ed-b21f-5007-a58b-a99b61acac1f"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 6953.37,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "80e9c6bb-7b02-54c7-8b2a-7c8fc4f9a8dc",
+            "602809c1-1d13-5c24-b771-e9747feac5a5",
+            "9f7a5cf3-e116-59c7-86ea-1c256ca52e14",
+            "1f72ae45-58fe-550f-bc55-d60b888b69b4",
+            "9d842dd5-5636-5496-a7a6-7c5ab97b622f",
+            "6671d982-b0a9-520c-b698-a979ef09443b",
+            "976e50c0-719d-5b60-a2f7-e602db5ce393",
+            "37803f6e-cc73-5312-be3e-2cb6b3582ab4",
+            "bbd52586-0666-5efc-bfde-173937fbfafc",
+            "d2ee94ed-b21f-5007-a58b-a99b61acac1f"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "faithfulness": 0.6597,
+          "citation_accuracy": 0.75,
+          "avg_latency_ms": 14525.24,
+          "p95_latency_ms": 11540.33,
+          "answer": "In this section, we conduct prelimi-\nnary experiments to explore whether NAT works\nwell with Chain-of-Thought (CoT) prompting (Wei\net al., 2022)[1][3]. Chain-of-thought prompting elicits reasoning in large language models[2][4]. 6.2\nChain-of-Thought Prompting\nSo far we have conducted all experiments on agent\nscenarios with the ReAct (Yao et al., 2023) prompt-\ning strategy[3]. Chain-of-thought prompting elicits reasoning in large language models[2][4]. CFT performs as well as chain of thought\nprompting for world cities and 35% better for local\nrestaurants, with an LM only 7.4% of the size (13B\nvs 175B)[5].",
+          "verification_details": {
+            "citations_verified": 8,
+            "verdict_counts": {
+              "Supported": 7,
+              "Weak Support": 0,
+              "Unsupported": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q13",
+      "query": "How do LLM agents use external tools for information retrieval?",
+      "theme": "Agents",
+      "difficulty": "medium",
+      "relevant_doc_ids": [
+        "2409.11353v3",
+        "2503.01763v2"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "6bca9449-d32f-5355-8476-d91e4b296fbb",
+            "9f5cb849-4abc-5aa7-b131-ab8ab3b713ab",
+            "b112c431-4072-5f41-b477-9bd59e320608",
+            "db44e3d0-c50c-50f9-b20b-7bc81cd759b2",
+            "86df55ea-a615-5821-b40a-83791337eff2",
+            "ffc1f3b1-9e5d-5ff8-968b-5650f37390bf",
+            "f4086afe-974f-57c3-9010-fe076581e7d3",
+            "f54f207e-b6b1-5e66-a555-10e2f3135d7b",
+            "3a7274a4-29e8-5dfb-86e5-9b59c7183d62",
+            "adc61a14-ff80-5893-9ccc-4abbd75859b8"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 0.25,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 39.03,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "db44e3d0-c50c-50f9-b20b-7bc81cd759b2",
+            "adc61a14-ff80-5893-9ccc-4abbd75859b8",
+            "b112c431-4072-5f41-b477-9bd59e320608",
+            "f54f207e-b6b1-5e66-a555-10e2f3135d7b",
+            "6bca9449-d32f-5355-8476-d91e4b296fbb",
+            "9f5cb849-4abc-5aa7-b131-ab8ab3b713ab",
+            "3a7274a4-29e8-5dfb-86e5-9b59c7183d62",
+            "ffc1f3b1-9e5d-5ff8-968b-5650f37390bf",
+            "86df55ea-a615-5821-b40a-83791337eff2",
+            "f4086afe-974f-57c3-9010-fe076581e7d3"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 36.26,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "db44e3d0-c50c-50f9-b20b-7bc81cd759b2",
+            "f4086afe-974f-57c3-9010-fe076581e7d3",
+            "4bfb3263-1ead-5040-9b48-1fae85146593",
+            "ffc1f3b1-9e5d-5ff8-968b-5650f37390bf",
+            "3a7274a4-29e8-5dfb-86e5-9b59c7183d62",
+            "be7dd503-e8a3-5fa4-b869-1a8a27dd392a",
+            "976840ff-b823-543e-99c5-d90a93e2f530",
+            "6bca9449-d32f-5355-8476-d91e4b296fbb",
+            "534215f5-2d36-5d1a-8183-48d28b530e1c",
+            "1ed94a38-3e82-542e-9c77-de792ab5d7e1"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 7310.71,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "db44e3d0-c50c-50f9-b20b-7bc81cd759b2",
+            "f4086afe-974f-57c3-9010-fe076581e7d3",
+            "4bfb3263-1ead-5040-9b48-1fae85146593",
+            "ffc1f3b1-9e5d-5ff8-968b-5650f37390bf",
+            "3a7274a4-29e8-5dfb-86e5-9b59c7183d62",
+            "be7dd503-e8a3-5fa4-b869-1a8a27dd392a",
+            "976840ff-b823-543e-99c5-d90a93e2f530",
+            "6bca9449-d32f-5355-8476-d91e4b296fbb",
+            "534215f5-2d36-5d1a-8183-48d28b530e1c",
+            "1ed94a38-3e82-542e-9c77-de792ab5d7e1"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 1.0,
+          "faithfulness": 0.9077,
+          "citation_accuracy": 1.0,
+          "avg_latency_ms": 8966.57,
+          "p95_latency_ms": 11540.33,
+          "answer": "In practical applications, retrieving useful tools\nfrom toolsets for LLM agents typically serves as\n*Corresponding author[1]. for tool-use agents, remains\nunderexplored[2][4]. World model-based agents such as [112, 138, 185, 89, 90, 91, 186, 187]\nlearn or leverage environment models for model-based planning[3]. However, tool re-\ntrieval, a crucial step for tool-use agents, remains\nunderexplored[4]. These methods leverage general-purpose LLM agents for re-ranking tasks in a zero-\nshot setting, simulating the tool selection process of tool-use agents[5].",
+          "verification_details": {
+            "citations_verified": 6,
+            "verdict_counts": {
+              "Supported": 5,
+              "Weak Support": 0,
+              "Unsupported": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q14",
+      "query": "What role does reasoning play in agentic systems?",
+      "theme": "Agents",
+      "difficulty": "simple",
+      "relevant_doc_ids": [
+        "2601.12538v1"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "1380c9e0-794d-5490-bd40-c90b9cb59d8e",
+            "75386e08-1971-5683-89e6-669e47c5657a",
+            "66a06869-b65a-5f99-aa58-fcc402e0b8ed",
+            "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+            "244a787a-994c-50d7-8b67-98d1bf0e6a0b",
+            "1e0f8403-22da-5560-a30a-3cb7387fb9b2",
+            "d81c7088-f1ec-5d30-9205-fc204b254974",
+            "67dada56-1daa-50ab-b14b-364aed1a85b1",
+            "b585ac6a-cc59-50da-8212-21b9ea8a4cee",
+            "b0202a2d-ad4a-5d3f-a5c6-64e53dd24e6f"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 27.93,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "1380c9e0-794d-5490-bd40-c90b9cb59d8e",
+            "d81c7088-f1ec-5d30-9205-fc204b254974",
+            "244a787a-994c-50d7-8b67-98d1bf0e6a0b",
+            "75386e08-1971-5683-89e6-669e47c5657a",
+            "66a06869-b65a-5f99-aa58-fcc402e0b8ed",
+            "b0202a2d-ad4a-5d3f-a5c6-64e53dd24e6f",
+            "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+            "67dada56-1daa-50ab-b14b-364aed1a85b1",
+            "b585ac6a-cc59-50da-8212-21b9ea8a4cee",
+            "1e0f8403-22da-5560-a30a-3cb7387fb9b2"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 24.86,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "be3d28f6-dced-5680-8f6f-61287e54984e",
+            "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+            "ee485dad-cbc8-5c1f-a15a-4fe3b942179a",
+            "75386e08-1971-5683-89e6-669e47c5657a",
+            "01d2259f-bd80-5517-ad10-2b153b7c4c0d",
+            "e4f00d15-1e34-5215-8a66-ed454c3c8939",
+            "63524b99-10f9-5b1c-a6cf-8df204f0e16c",
+            "1e0f8403-22da-5560-a30a-3cb7387fb9b2",
+            "1380c9e0-794d-5490-bd40-c90b9cb59d8e",
+            "b585ac6a-cc59-50da-8212-21b9ea8a4cee"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 6449.71,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "be3d28f6-dced-5680-8f6f-61287e54984e",
+            "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+            "ee485dad-cbc8-5c1f-a15a-4fe3b942179a",
+            "75386e08-1971-5683-89e6-669e47c5657a",
+            "01d2259f-bd80-5517-ad10-2b153b7c4c0d",
+            "e4f00d15-1e34-5215-8a66-ed454c3c8939",
+            "63524b99-10f9-5b1c-a6cf-8df204f0e16c",
+            "1e0f8403-22da-5560-a30a-3cb7387fb9b2",
+            "1380c9e0-794d-5490-bd40-c90b9cb59d8e",
+            "b585ac6a-cc59-50da-8212-21b9ea8a4cee"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": 0.9471,
+          "citation_accuracy": 1.0,
+          "avg_latency_ms": 8460.38,
+          "p95_latency_ms": 11540.33,
+          "answer": "In\nthis survey, we provide a systematic roadmap by organizing agentic reasoning along three complementary\ndimensions[1]. Yet, these approaches often\nassume static contexts and short-horizon reasoning[2]. This reframing unifies reasoning with acting, positioning\nreasoning as the organizing principle for perception, planning, decision, and verification[2][3]. Beyond role assignment, the essence of multi-agent reasoning lies in how these agents collaborate, communi-\ncate, and co-evolve[5].",
+          "verification_details": {
+            "citations_verified": 5,
+            "verdict_counts": {
+              "Supported": 5,
+              "Weak Support": 0,
+              "Unsupported": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q15",
+      "query": "What is hierarchical multi-agent collaboration?",
+      "theme": "Agents",
+      "difficulty": "medium",
+      "relevant_doc_ids": [
+        "2512.13930v1"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "61edd2be-f2ae-5b00-8a89-3aa55caa2902",
+            "7293550f-93cb-5db4-917e-d056d39394b1",
+            "100e2788-e3dd-59c5-8578-33c2db349fa8",
+            "b0202a2d-ad4a-5d3f-a5c6-64e53dd24e6f",
+            "6ee09dc8-04c9-58b3-9e8c-734c6a226671",
+            "ca6abf11-464f-5165-b5b2-8feece2816ea",
+            "1380c9e0-794d-5490-bd40-c90b9cb59d8e",
+            "aaed1dc2-c3a5-5440-939e-a95abc1163b1",
+            "566951fd-89c5-5736-b8f9-41d39eaeb0b2",
+            "f00cd7a0-2ff6-59d4-b188-7b0c5faa040d"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 28.79,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "100e2788-e3dd-59c5-8578-33c2db349fa8",
+            "61edd2be-f2ae-5b00-8a89-3aa55caa2902",
+            "ca6abf11-464f-5165-b5b2-8feece2816ea",
+            "6ee09dc8-04c9-58b3-9e8c-734c6a226671",
+            "7293550f-93cb-5db4-917e-d056d39394b1",
+            "b0202a2d-ad4a-5d3f-a5c6-64e53dd24e6f",
+            "566951fd-89c5-5736-b8f9-41d39eaeb0b2",
+            "1380c9e0-794d-5490-bd40-c90b9cb59d8e",
+            "aaed1dc2-c3a5-5440-939e-a95abc1163b1",
+            "f00cd7a0-2ff6-59d4-b188-7b0c5faa040d"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 24.97,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "d3994922-4b30-5b5c-9b6f-644a7c9fb95b",
+            "7293550f-93cb-5db4-917e-d056d39394b1",
+            "61edd2be-f2ae-5b00-8a89-3aa55caa2902",
+            "ca6abf11-464f-5165-b5b2-8feece2816ea",
+            "100e2788-e3dd-59c5-8578-33c2db349fa8",
+            "5a2f32ac-7fc2-5def-a3fa-7f886a9164ce",
+            "566951fd-89c5-5736-b8f9-41d39eaeb0b2",
+            "5835ebcf-0232-5ece-b9db-e7e3f5bb5d51",
+            "c74d21bd-f1d5-5398-98ae-eaa0e2b48535",
+            "244a787a-994c-50d7-8b67-98d1bf0e6a0b"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 6959.65,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "d3994922-4b30-5b5c-9b6f-644a7c9fb95b",
+            "7293550f-93cb-5db4-917e-d056d39394b1",
+            "61edd2be-f2ae-5b00-8a89-3aa55caa2902",
+            "ca6abf11-464f-5165-b5b2-8feece2816ea",
+            "100e2788-e3dd-59c5-8578-33c2db349fa8",
+            "5a2f32ac-7fc2-5def-a3fa-7f886a9164ce",
+            "566951fd-89c5-5736-b8f9-41d39eaeb0b2",
+            "5835ebcf-0232-5ece-b9db-e7e3f5bb5d51",
+            "c74d21bd-f1d5-5398-98ae-eaa0e2b48535",
+            "244a787a-994c-50d7-8b67-98d1bf0e6a0b"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": 0.7756,
+          "citation_accuracy": 1.0,
+          "avg_latency_ms": 8998.16,
+          "p95_latency_ms": 11540.33,
+          "answer": "Hierarchical Multi-agent Large Language\nModel Reasoning for Autonomous Functional\nMaterials Discovery\nSamuel Rothfarb†,‡\n, Megan C[1]. Labor\nCollaboration and division of labor constitute a central organizing principle in modern multi-agent systems[2]. Earlier multi-agent designs such as CAMEL [531] demonstrate how cooperative\nrole-play with tool access can enhance hypothesis generation and task decomposition[3]. task descriptions, intermediate drafts, and revision\nrecords, enabling agents to coordinate through a common representation[4]. Flexible systems such as SoA [498]\nfurther adjust the number and specialization of agents in response to task complexity[5].",
+          "verification_details": {
+            "citations_verified": 5,
+            "verdict_counts": {
+              "Supported": 3,
+              "Weak Support": 2,
+              "Unsupported": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q16",
+      "query": "How does adaptive reasoning suppression work in LLM agents?",
+      "theme": "Agents",
+      "difficulty": "simple",
+      "relevant_doc_ids": [
+        "2510.00071v2"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "8a327bd1-3e3b-5fae-a816-f0863959b60b",
+            "3644c8ab-ccad-54d8-a097-c28b35b7f97a",
+            "2d1ec334-989c-5aeb-b460-8cbd3c02987e",
+            "c8a914bb-0147-5d90-a927-4d14567e19a2",
+            "4f8c12ad-5e98-588c-a243-038b52fa5959",
+            "b41c82a5-1e8f-53e0-a019-eda45833a7a3",
+            "12d40a83-72b4-53de-ba12-2f6960ebb0e9",
+            "66a06869-b65a-5f99-aa58-fcc402e0b8ed",
+            "75386e08-1971-5683-89e6-669e47c5657a",
+            "344546af-6868-5957-beca-acdc4b1ada65"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 30.72,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "3644c8ab-ccad-54d8-a097-c28b35b7f97a",
+            "8a327bd1-3e3b-5fae-a816-f0863959b60b",
+            "b41c82a5-1e8f-53e0-a019-eda45833a7a3",
+            "4f8c12ad-5e98-588c-a243-038b52fa5959",
+            "c8a914bb-0147-5d90-a927-4d14567e19a2",
+            "344546af-6868-5957-beca-acdc4b1ada65",
+            "2d1ec334-989c-5aeb-b460-8cbd3c02987e",
+            "66a06869-b65a-5f99-aa58-fcc402e0b8ed",
+            "12d40a83-72b4-53de-ba12-2f6960ebb0e9",
+            "75386e08-1971-5683-89e6-669e47c5657a"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 32.73,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "8a327bd1-3e3b-5fae-a816-f0863959b60b",
+            "3644c8ab-ccad-54d8-a097-c28b35b7f97a",
+            "b044d069-9220-57d9-9c57-ba101d22faa6",
+            "2d1ec334-989c-5aeb-b460-8cbd3c02987e",
+            "b41c82a5-1e8f-53e0-a019-eda45833a7a3",
+            "c8a914bb-0147-5d90-a927-4d14567e19a2",
+            "344546af-6868-5957-beca-acdc4b1ada65",
+            "44528151-99db-57d0-9436-15169ed934df",
+            "75386e08-1971-5683-89e6-669e47c5657a",
+            "4f8c12ad-5e98-588c-a243-038b52fa5959"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 6963.71,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "8a327bd1-3e3b-5fae-a816-f0863959b60b",
+            "3644c8ab-ccad-54d8-a097-c28b35b7f97a",
+            "b044d069-9220-57d9-9c57-ba101d22faa6",
+            "2d1ec334-989c-5aeb-b460-8cbd3c02987e",
+            "b41c82a5-1e8f-53e0-a019-eda45833a7a3",
+            "c8a914bb-0147-5d90-a927-4d14567e19a2",
+            "344546af-6868-5957-beca-acdc4b1ada65",
+            "44528151-99db-57d0-9436-15169ed934df",
+            "75386e08-1971-5683-89e6-669e47c5657a",
+            "4f8c12ad-5e98-588c-a243-038b52fa5959"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": 0.934,
+          "citation_accuracy": 1.0,
+          "avg_latency_ms": 8347.16,
+          "p95_latency_ms": 11540.33,
+          "answer": "During reasoning, models\nexhibit reflection behaviors triggered by specific keywords T = {\"Wait\", \"But\", \"Alternatively\", [1]. Existing efficient reasoning methods\nface the challenge of balancing reasoning quality with inference cost reduction[2]. Agentic reasoning, in contrast, emphasizes scaling test-time interaction[3]. Existing surveys on LLM reasoning mainly investigate how to elicit\nor enhance reasoning within a model’s internal computation process[4].",
+          "verification_details": {
+            "citations_verified": 4,
+            "verdict_counts": {
+              "Supported": 4,
+              "Weak Support": 0,
+              "Unsupported": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q17",
+      "query": "What are the limitations of agentic reasoning in large language models?",
+      "theme": "Agents",
+      "difficulty": "medium",
+      "relevant_doc_ids": [
+        "2601.12538v1",
+        "2508.04848v1"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "b044d069-9220-57d9-9c57-ba101d22faa6",
+            "be3d28f6-dced-5680-8f6f-61287e54984e",
+            "9cee7249-48c9-52be-a89f-539325eb9aba",
+            "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+            "9132e454-694e-5220-882d-b830287626f1",
+            "1e0f8403-22da-5560-a30a-3cb7387fb9b2",
+            "402158ae-7f21-55d7-a5bc-c87377bd1301",
+            "aa5589dc-2286-506d-a8ce-7f768969df1f",
+            "3aede794-b963-5f54-a589-e638c2474933",
+            "7627eb91-56fd-565d-8935-b2c85296950d"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 29.85,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "9cee7249-48c9-52be-a89f-539325eb9aba",
+            "b044d069-9220-57d9-9c57-ba101d22faa6",
+            "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+            "1e0f8403-22da-5560-a30a-3cb7387fb9b2",
+            "3aede794-b963-5f54-a589-e638c2474933",
+            "402158ae-7f21-55d7-a5bc-c87377bd1301",
+            "be3d28f6-dced-5680-8f6f-61287e54984e",
+            "9132e454-694e-5220-882d-b830287626f1",
+            "aa5589dc-2286-506d-a8ce-7f768969df1f",
+            "7627eb91-56fd-565d-8935-b2c85296950d"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 28.24,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "b044d069-9220-57d9-9c57-ba101d22faa6",
+            "be3d28f6-dced-5680-8f6f-61287e54984e",
+            "aa5589dc-2286-506d-a8ce-7f768969df1f",
+            "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+            "3af40223-eef3-5b7f-8f18-4bee1f678cee",
+            "1e0f8403-22da-5560-a30a-3cb7387fb9b2",
+            "9132e454-694e-5220-882d-b830287626f1",
+            "3aede794-b963-5f54-a589-e638c2474933",
+            "ee485dad-cbc8-5c1f-a15a-4fe3b942179a",
+            "e40e3a16-c44e-535b-a3e8-7cdb308a09ae"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 6996.17,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "b044d069-9220-57d9-9c57-ba101d22faa6",
+            "be3d28f6-dced-5680-8f6f-61287e54984e",
+            "aa5589dc-2286-506d-a8ce-7f768969df1f",
+            "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+            "3af40223-eef3-5b7f-8f18-4bee1f678cee",
+            "1e0f8403-22da-5560-a30a-3cb7387fb9b2",
+            "9132e454-694e-5220-882d-b830287626f1",
+            "3aede794-b963-5f54-a589-e638c2474933",
+            "ee485dad-cbc8-5c1f-a15a-4fe3b942179a",
+            "e40e3a16-c44e-535b-a3e8-7cdb308a09ae"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": 0.7462,
+          "citation_accuracy": 1.0,
+          "avg_latency_ms": 10265.56,
+          "p95_latency_ms": 11540.33,
+          "answer": "Agentic reasoning, in contrast, emphasizes scaling test-time interaction[1]. In\nthis survey, we provide a systematic roadmap by organizing agentic reasoning along three complementary\ndimensions[2]. Large Language Models Reasoning Abilities Under Non-Ideal Conditions After\nRL-Fine-Tuning\nChang Tian1, Matthew B[3]. This reframing unifies reasoning with acting, positioning\nreasoning as the organizing principle for perception, planning, decision, and verification[4]. The reasoning capability is essential for large language models (LLMs) to serve\nas the brain of the artificial general intelligence agent[5].",
+          "verification_details": {
+            "citations_verified": 5,
+            "verdict_counts": {
+              "Supported": 3,
+              "Weak Support": 2,
+              "Unsupported": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q18",
+      "query": "How do LLM agents retrieve code for programming tasks?",
+      "theme": "Agents",
+      "difficulty": "simple",
+      "relevant_doc_ids": [
+        "2604.14214v1"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "b8a9642a-2d5c-501b-b043-e6bc86f5840b",
+            "bc4b29e8-f036-5b8c-bf36-6cc5aee0489f",
+            "fe742f16-62bb-5e83-a61a-74ada60738c3",
+            "f479dbb9-de37-5957-a791-28a743fc657b",
+            "7d68af12-63d6-5546-9bf7-82cd69526333",
+            "8af17706-9b29-585b-8ef9-68eff469935e",
+            "6dc9edab-a3da-5f1d-938f-bdee97fdc28d",
+            "7c34c239-5b69-54c6-8e5c-0a4866770f6a",
+            "7441d96d-86bd-536c-852b-95e0be774e99",
+            "2aaba7ae-8ad3-5a24-8f8d-54b306ef5f15"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 31.31,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "b8a9642a-2d5c-501b-b043-e6bc86f5840b",
+            "6dc9edab-a3da-5f1d-938f-bdee97fdc28d",
+            "8af17706-9b29-585b-8ef9-68eff469935e",
+            "2aaba7ae-8ad3-5a24-8f8d-54b306ef5f15",
+            "bc4b29e8-f036-5b8c-bf36-6cc5aee0489f",
+            "7d68af12-63d6-5546-9bf7-82cd69526333",
+            "7441d96d-86bd-536c-852b-95e0be774e99",
+            "fe742f16-62bb-5e83-a61a-74ada60738c3",
+            "f479dbb9-de37-5957-a791-28a743fc657b",
+            "7c34c239-5b69-54c6-8e5c-0a4866770f6a"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 27.55,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "2aaba7ae-8ad3-5a24-8f8d-54b306ef5f15",
+            "f479dbb9-de37-5957-a791-28a743fc657b",
+            "bdbfa225-e148-5fa3-b546-ab94ed629176",
+            "645e7a66-783f-5508-bf76-fef24397127d",
+            "aa105f20-78cf-51b0-a27b-8e41406f4d71",
+            "bc4b29e8-f036-5b8c-bf36-6cc5aee0489f",
+            "fe742f16-62bb-5e83-a61a-74ada60738c3",
+            "b8a9642a-2d5c-501b-b043-e6bc86f5840b",
+            "7d68af12-63d6-5546-9bf7-82cd69526333",
+            "7c34c239-5b69-54c6-8e5c-0a4866770f6a"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 7038.45,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "2aaba7ae-8ad3-5a24-8f8d-54b306ef5f15",
+            "f479dbb9-de37-5957-a791-28a743fc657b",
+            "bdbfa225-e148-5fa3-b546-ab94ed629176",
+            "645e7a66-783f-5508-bf76-fef24397127d",
+            "aa105f20-78cf-51b0-a27b-8e41406f4d71",
+            "bc4b29e8-f036-5b8c-bf36-6cc5aee0489f",
+            "fe742f16-62bb-5e83-a61a-74ada60738c3",
+            "b8a9642a-2d5c-501b-b043-e6bc86f5840b",
+            "7d68af12-63d6-5546-9bf7-82cd69526333",
+            "7c34c239-5b69-54c6-8e5c-0a4866770f6a"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": 0.7203,
+          "citation_accuracy": 0.75,
+          "avg_latency_ms": 9369.19,
+          "p95_latency_ms": 11540.33,
+          "answer": "Utilizing the APIs provided by these models, our agents can retrieve code that is then evaluated\nby a specialized verification agent[1][4]. critical in tool retrieval, as IR models\nare often used to augment LLM agents and receive\nadditional context from the agents beyond the input\nquery[2]. Our developed model utilizes\nthe API of each language model to retrieve code for a given high-level descrip-\ntion[3]. Utilizing the APIs provided by these models, our agents can retrieve code that is then evaluated\nby a specialized verification agent[1][4]. Additionally, we also accumulate\ncode solutions generated by LLMs[5].",
+          "verification_details": {
+            "citations_verified": 7,
+            "verdict_counts": {
+              "Supported": 6,
+              "Weak Support": 0,
+              "Unsupported": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q19",
+      "query": "What is the importance of token efficiency in agent architectures?",
+      "theme": "Agents",
+      "difficulty": "medium",
+      "relevant_doc_ids": [
+        "2604.14214v1",
+        "2504.16021v1"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "5df073c4-6a25-571e-8916-935dcc4f77cd",
+            "1fa30986-9971-5f1f-88f0-23ef5967bdef",
+            "77c34ad3-8111-5dd4-b58d-71489a909e49",
+            "46ee5e37-4d6c-58fe-9dbb-497e939e081e",
+            "566951fd-89c5-5736-b8f9-41d39eaeb0b2",
+            "cd8fce42-0583-598c-bc50-66663d87bf2f",
+            "926bcde9-26f7-594f-a68a-d2a6df53bf82",
+            "3c7518c1-077f-5216-a0f4-cf731311c2cb",
+            "deb6f6fc-2582-5fc9-ab8e-c98baa906c85",
+            "945feb36-445e-5666-9b9f-2b83ccdb226a"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.5,
+          "mrr": 0.1429,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 35.52,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "46ee5e37-4d6c-58fe-9dbb-497e939e081e",
+            "77c34ad3-8111-5dd4-b58d-71489a909e49",
+            "5df073c4-6a25-571e-8916-935dcc4f77cd",
+            "3c7518c1-077f-5216-a0f4-cf731311c2cb",
+            "1fa30986-9971-5f1f-88f0-23ef5967bdef",
+            "cd8fce42-0583-598c-bc50-66663d87bf2f",
+            "945feb36-445e-5666-9b9f-2b83ccdb226a",
+            "566951fd-89c5-5736-b8f9-41d39eaeb0b2",
+            "926bcde9-26f7-594f-a68a-d2a6df53bf82",
+            "deb6f6fc-2582-5fc9-ab8e-c98baa906c85"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.5,
+          "mrr": 0.1111,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 33.04,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "3c7518c1-077f-5216-a0f4-cf731311c2cb",
+            "1fa30986-9971-5f1f-88f0-23ef5967bdef",
+            "46ee5e37-4d6c-58fe-9dbb-497e939e081e",
+            "926bcde9-26f7-594f-a68a-d2a6df53bf82",
+            "b585ac6a-cc59-50da-8212-21b9ea8a4cee",
+            "344546af-6868-5957-beca-acdc4b1ada65",
+            "74a04519-1bd0-51d8-a663-e7d64621b14c",
+            "02bdde94-03b4-571f-807f-d55fdfeb1cfe",
+            "cd8fce42-0583-598c-bc50-66663d87bf2f",
+            "5df073c4-6a25-571e-8916-935dcc4f77cd"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 0.25,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 6941.03,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "3c7518c1-077f-5216-a0f4-cf731311c2cb",
+            "1fa30986-9971-5f1f-88f0-23ef5967bdef",
+            "46ee5e37-4d6c-58fe-9dbb-497e939e081e",
+            "926bcde9-26f7-594f-a68a-d2a6df53bf82",
+            "b585ac6a-cc59-50da-8212-21b9ea8a4cee",
+            "344546af-6868-5957-beca-acdc4b1ada65",
+            "74a04519-1bd0-51d8-a663-e7d64621b14c",
+            "02bdde94-03b4-571f-807f-d55fdfeb1cfe",
+            "cd8fce42-0583-598c-bc50-66663d87bf2f",
+            "5df073c4-6a25-571e-8916-935dcc4f77cd"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 0.25,
+          "faithfulness": 0.7859,
+          "citation_accuracy": 0.8,
+          "avg_latency_ms": 11334.51,
+          "p95_latency_ms": 11540.33,
+          "answer": "ARS (highlighted in the red shadow)\nachieves the best balance of efficiency and accuracy across all metrics[1]. We\nconduct additional experiments to check the perfor-\nmance of EVOR at different levels of token budgets[2]. Equivalent analysis for the M-N-C case is presented\nin Fig[3]. Consumption\nCROP consistently achieved state-of-the-art token\nefficiency while preserving the logical integrity\nrequired for complex problem-solving[4]. Structured Use of Memory\nBeyond flat memory usage and control, the structure of memory plays a critical role in enabling complex\nreasoning[5].",
+          "verification_details": {
+            "citations_verified": 5,
+            "verdict_counts": {
+              "Supported": 4,
+              "Weak Support": 0,
+              "Unsupported": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q20",
+      "query": "How does tool-use affect retrieval-augmented agents?",
+      "theme": "Agents",
+      "difficulty": "multi-chunk",
+      "relevant_doc_ids": [
+        "2409.11353v3"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "f4086afe-974f-57c3-9010-fe076581e7d3",
+            "cfd2423d-fede-583e-8874-88220f833eab",
+            "03303ac5-b187-537e-a565-8e61bb05bfdf",
+            "9f5cb849-4abc-5aa7-b131-ab8ab3b713ab",
+            "82920914-9a4d-5371-9d7d-5fd534e4e4eb",
+            "6bca9449-d32f-5355-8476-d91e4b296fbb",
+            "4dc20789-b187-5c73-bbf8-945018585627",
+            "66d516cd-ce55-5bfb-9ac3-736d1ab5271b",
+            "2f751470-5584-5d26-953a-802a1c337b18",
+            "f54f207e-b6b1-5e66-a555-10e2f3135d7b"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 33.58,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "cfd2423d-fede-583e-8874-88220f833eab",
+            "6bca9449-d32f-5355-8476-d91e4b296fbb",
+            "f54f207e-b6b1-5e66-a555-10e2f3135d7b",
+            "66d516cd-ce55-5bfb-9ac3-736d1ab5271b",
+            "4dc20789-b187-5c73-bbf8-945018585627",
+            "03303ac5-b187-537e-a565-8e61bb05bfdf",
+            "2f751470-5584-5d26-953a-802a1c337b18",
+            "82920914-9a4d-5371-9d7d-5fd534e4e4eb",
+            "f4086afe-974f-57c3-9010-fe076581e7d3",
+            "9f5cb849-4abc-5aa7-b131-ab8ab3b713ab"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 31.1,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "684f9dac-3637-5f0f-9025-bdb92fa153a4",
+            "f4086afe-974f-57c3-9010-fe076581e7d3",
+            "82920914-9a4d-5371-9d7d-5fd534e4e4eb",
+            "2f751470-5584-5d26-953a-802a1c337b18",
+            "da245403-fb7d-56a7-9e4e-79f01deed559",
+            "6bca9449-d32f-5355-8476-d91e4b296fbb",
+            "db44e3d0-c50c-50f9-b20b-7bc81cd759b2",
+            "cfd2423d-fede-583e-8874-88220f833eab",
+            "9ddcd96e-3cba-5ed0-a9d2-ef0a7cabef68",
+            "66d516cd-ce55-5bfb-9ac3-736d1ab5271b"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 7491.81,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "684f9dac-3637-5f0f-9025-bdb92fa153a4",
+            "f4086afe-974f-57c3-9010-fe076581e7d3",
+            "82920914-9a4d-5371-9d7d-5fd534e4e4eb",
+            "2f751470-5584-5d26-953a-802a1c337b18",
+            "da245403-fb7d-56a7-9e4e-79f01deed559",
+            "6bca9449-d32f-5355-8476-d91e4b296fbb",
+            "db44e3d0-c50c-50f9-b20b-7bc81cd759b2",
+            "cfd2423d-fede-583e-8874-88220f833eab",
+            "9ddcd96e-3cba-5ed0-a9d2-ef0a7cabef68",
+            "66d516cd-ce55-5bfb-9ac3-736d1ab5271b"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "faithfulness": 0.7357,
+          "citation_accuracy": 0.8,
+          "avg_latency_ms": 9453.44,
+          "p95_latency_ms": 11540.33,
+          "answer": "This\nlow retrieval quality degrades the task pass rate\nof tool-use LLMs[1]. for tool-use agents, remains\nunderexplored[2]. This enables the model to adapt retrieval\nstrategies mid-inference, refine its queries, and better integrate evidence from multiple sources[3]. In-context agentic RAG systems embed retrieval behavior directly\ninto the inference process of language models through carefully designed prompting strategies[3][4]. These methods leverage general-\npurpose LLM agents for re-ranking tasks in a zero-\nshot setting, simulating the tool selection process\nof tool-use agents[5].",
+          "verification_details": {
+            "citations_verified": 6,
+            "verdict_counts": {
+              "Supported": 5,
+              "Weak Support": 0,
+              "Unsupported": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q21",
+      "query": "What is LoRA fine tuning and how does it work?",
+      "theme": "Fine-tuning",
+      "difficulty": "simple",
+      "relevant_doc_ids": [
+        "2607.11940v1",
+        "2411.14961v3"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "45cc3811-ac39-519e-afb2-3618d7825694",
+            "cc3951a4-112f-5d41-a491-89fd58174fbd",
+            "72989066-93be-52ac-ae66-05ad949847ab",
+            "8ab6056c-9041-5e87-aed7-55284059ee35",
+            "dd388021-8bee-5d0c-9ab2-bffc0796282b",
+            "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "a9517dec-256e-50d7-844e-46365503eb31",
+            "a98899cd-abc7-56c6-8b5c-a501972392f0"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 29.21,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "cc3951a4-112f-5d41-a491-89fd58174fbd",
+            "dd388021-8bee-5d0c-9ab2-bffc0796282b",
+            "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42",
+            "a98899cd-abc7-56c6-8b5c-a501972392f0",
+            "45cc3811-ac39-519e-afb2-3618d7825694",
+            "72989066-93be-52ac-ae66-05ad949847ab",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "8ab6056c-9041-5e87-aed7-55284059ee35",
+            "a9517dec-256e-50d7-844e-46365503eb31"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 27.34,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "dd388021-8bee-5d0c-9ab2-bffc0796282b",
+            "45cc3811-ac39-519e-afb2-3618d7825694",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "8ab6056c-9041-5e87-aed7-55284059ee35",
+            "b4a83157-620d-59bc-8dd8-aadd60485e6a",
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42",
+            "2800aee3-0c56-5cf1-9f0f-1cb8dc8abe02"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 7146.36,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "dd388021-8bee-5d0c-9ab2-bffc0796282b",
+            "45cc3811-ac39-519e-afb2-3618d7825694",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "8ab6056c-9041-5e87-aed7-55284059ee35",
+            "b4a83157-620d-59bc-8dd8-aadd60485e6a",
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42",
+            "2800aee3-0c56-5cf1-9f0f-1cb8dc8abe02"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": 0.7404,
+          "citation_accuracy": 0.8,
+          "avg_latency_ms": 10000.32,
+          "p95_latency_ms": 11540.33,
+          "answer": "Index Terms—Low-rank adaptation, parameter-efficient fine-tuning, activation compression, large language models[1][2]. This has motivated recent work on reducing the ac-\ntivations saved during LoRA-style fine-tuning[2]. Related Work\nParameter-Efficient Fine-Tuning[3]. In LoRA\nfine-tuning, only \\protect \\mathbf {A} and \\protect \\mathbf {B} are updated, while \\protect \\mathbf {W} remains\nfrozen[4]. We\nfurther prove that its projection-down subspace can\nevolve during fine-tuning[5].",
+          "verification_details": {
+            "citations_verified": 6,
+            "verdict_counts": {
+              "Supported": 4,
+              "Weak Support": 0,
+              "Unsupported": 2
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q22",
+      "query": "How does Low-Rank Adaptation reduce model parameters?",
+      "theme": "Fine-tuning",
+      "difficulty": "simple",
+      "relevant_doc_ids": [
+        "2607.11940v1"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "94d169f1-95ed-5a76-a856-c5e1ebaac2ba",
+            "14e224e3-b86d-5189-b1e0-f7b00004a87d",
+            "51d147ab-804b-5dbc-9fa0-e4167fc01229",
+            "960d4fc8-5cf1-5159-a16d-dd46abb38f5c",
+            "c6bb8802-2cdd-5dab-bd3c-8fa99a8c006e",
+            "8d78eb98-7379-576e-86e0-3636720c1e82",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "5903a928-20e0-5131-a9cb-f02c2cd5c335",
+            "88c76c19-9da3-59f7-9324-d2a7f28b8451",
+            "34e39773-ee5c-5666-8ffd-775928854e40"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.1667,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 34.1,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "94d169f1-95ed-5a76-a856-c5e1ebaac2ba",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "960d4fc8-5cf1-5159-a16d-dd46abb38f5c",
+            "51d147ab-804b-5dbc-9fa0-e4167fc01229",
+            "14e224e3-b86d-5189-b1e0-f7b00004a87d",
+            "88c76c19-9da3-59f7-9324-d2a7f28b8451",
+            "c6bb8802-2cdd-5dab-bd3c-8fa99a8c006e",
+            "5903a928-20e0-5131-a9cb-f02c2cd5c335",
+            "8d78eb98-7379-576e-86e0-3636720c1e82",
+            "34e39773-ee5c-5666-8ffd-775928854e40"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 28.36,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "94d169f1-95ed-5a76-a856-c5e1ebaac2ba",
+            "88c76c19-9da3-59f7-9324-d2a7f28b8451",
+            "51d147ab-804b-5dbc-9fa0-e4167fc01229",
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "960d4fc8-5cf1-5159-a16d-dd46abb38f5c",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "45cc3811-ac39-519e-afb2-3618d7825694",
+            "c6bb8802-2cdd-5dab-bd3c-8fa99a8c006e",
+            "14e224e3-b86d-5189-b1e0-f7b00004a87d"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.25,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 7118.42,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "94d169f1-95ed-5a76-a856-c5e1ebaac2ba",
+            "88c76c19-9da3-59f7-9324-d2a7f28b8451",
+            "51d147ab-804b-5dbc-9fa0-e4167fc01229",
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "960d4fc8-5cf1-5159-a16d-dd46abb38f5c",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "45cc3811-ac39-519e-afb2-3618d7825694",
+            "c6bb8802-2cdd-5dab-bd3c-8fa99a8c006e",
+            "14e224e3-b86d-5189-b1e0-f7b00004a87d"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.25,
+          "faithfulness": 0.7386,
+          "citation_accuracy": 0.75,
+          "avg_latency_ms": 9812.82,
+          "p95_latency_ms": 11540.33,
+          "answer": "This method approximates weight up-\ndates using these low-rank matrices, thereby reducing the number of parameters required\nfor finetuning[1]. We\nempirically validate our theory on Low Rank Adaptation (LoRA) on LLMs[2]. Existing\nmethods perform low-rank adaptation over the full parameter\nspace[3]. Index Terms—Low-rank adaptation, parameter-efficient fine-tuning, activation compression, large language models[4][5]. Index Terms—Low-rank adaptation, parameter-efficient fine-tuning, activation compression, large language models[4][5].",
+          "verification_details": {
+            "citations_verified": 7,
+            "verdict_counts": {
+              "Supported": 4,
+              "Weak Support": 0,
+              "Unsupported": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q23",
+      "query": "What is the difference between LoRA and full fine-tuning?",
+      "theme": "Fine-tuning",
+      "difficulty": "medium",
+      "relevant_doc_ids": [
+        "2411.14961v3",
+        "2402.12354v2"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "45cc3811-ac39-519e-afb2-3618d7825694",
+            "cc3951a4-112f-5d41-a491-89fd58174fbd",
+            "72989066-93be-52ac-ae66-05ad949847ab",
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "0cdb7d23-9fca-589f-83c2-92cddc3c5786",
+            "dd388021-8bee-5d0c-9ab2-bffc0796282b",
+            "ff8ffce0-70ee-553f-8211-6360fa983c7b",
+            "a9517dec-256e-50d7-844e-46365503eb31",
+            "5903a928-20e0-5131-a9cb-f02c2cd5c335"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 29.55,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "45cc3811-ac39-519e-afb2-3618d7825694",
+            "ff8ffce0-70ee-553f-8211-6360fa983c7b",
+            "cc3951a4-112f-5d41-a491-89fd58174fbd",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "dd388021-8bee-5d0c-9ab2-bffc0796282b",
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "0cdb7d23-9fca-589f-83c2-92cddc3c5786",
+            "5903a928-20e0-5131-a9cb-f02c2cd5c335",
+            "72989066-93be-52ac-ae66-05ad949847ab",
+            "a9517dec-256e-50d7-844e-46365503eb31"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 26.23,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "45cc3811-ac39-519e-afb2-3618d7825694",
+            "72989066-93be-52ac-ae66-05ad949847ab",
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "b4a83157-620d-59bc-8dd8-aadd60485e6a",
+            "960d4fc8-5cf1-5159-a16d-dd46abb38f5c",
+            "dd388021-8bee-5d0c-9ab2-bffc0796282b",
+            "a9517dec-256e-50d7-844e-46365503eb31",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "cc3951a4-112f-5d41-a491-89fd58174fbd",
+            "919165a6-4a9d-5bb8-a581-f0f0ee53e997"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 7052.03,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "45cc3811-ac39-519e-afb2-3618d7825694",
+            "72989066-93be-52ac-ae66-05ad949847ab",
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "b4a83157-620d-59bc-8dd8-aadd60485e6a",
+            "960d4fc8-5cf1-5159-a16d-dd46abb38f5c",
+            "dd388021-8bee-5d0c-9ab2-bffc0796282b",
+            "a9517dec-256e-50d7-844e-46365503eb31",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "cc3951a4-112f-5d41-a491-89fd58174fbd",
+            "919165a6-4a9d-5bb8-a581-f0f0ee53e997"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": 0.5203,
+          "citation_accuracy": 0.6,
+          "avg_latency_ms": 10329.45,
+          "p95_latency_ms": 11540.33,
+          "answer": "In LoRA\nfine-tuning, only \\protect \\mathbf {A} and \\protect \\mathbf {B} are updated, while \\protect \\mathbf {W} remains\nfrozen[1]. Efficient use of LoRA requires a careful choice of\nhyperparameters: the rank and the learning rate[2]. We propose LoRA-FAIR, a novel method that tackles both is-\nsues by introducing a correction term on the server, enhanc-\ning aggregation efficiency and accuracy[3]. 4\nEXPERIMENTS\nWe evaluate CARE-LoRA on three categories of fine-tuning\ntasks[4]. This low-rank adaptation\nenables LoRA to achieve performance comparable to full\nfine-tuning while significantly reducing the computational\nand memory overhead[5].",
+          "verification_details": {
+            "citations_verified": 5,
+            "verdict_counts": {
+              "Supported": 2,
+              "Weak Support": 1,
+              "Unsupported": 2
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q24",
+      "query": "What are the memory benefits of LoRA fine tuning?",
+      "theme": "Fine-tuning",
+      "difficulty": "simple",
+      "relevant_doc_ids": [
+        "2607.11940v1"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "84a54efa-50bf-54e0-af7b-280984a58f5c",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "14c51eb4-53ee-56ce-866b-6660ee674b25",
+            "8b65e28d-ba17-54a6-a515-529db2192ab4",
+            "6d927628-3a84-54fb-81d9-2ccc6094fcc3",
+            "3e750254-c52c-5db2-a899-a8d0e6ca4ce0",
+            "dbbffeaf-9400-5539-b12e-fb281fea7113",
+            "2800aee3-0c56-5cf1-9f0f-1cb8dc8abe02",
+            "802323c1-1128-5577-ab0f-433ae92879b8"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 32.54,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "84a54efa-50bf-54e0-af7b-280984a58f5c",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "3e750254-c52c-5db2-a899-a8d0e6ca4ce0",
+            "6d927628-3a84-54fb-81d9-2ccc6094fcc3",
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "dbbffeaf-9400-5539-b12e-fb281fea7113",
+            "14c51eb4-53ee-56ce-866b-6660ee674b25",
+            "2800aee3-0c56-5cf1-9f0f-1cb8dc8abe02",
+            "8b65e28d-ba17-54a6-a515-529db2192ab4"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 24.0,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "14c51eb4-53ee-56ce-866b-6660ee674b25",
+            "9a9ffeda-8b95-57a4-b3b7-2a5848f23105",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "8b65e28d-ba17-54a6-a515-529db2192ab4",
+            "39204042-5f8f-5f6e-adb5-cf0788577a44",
+            "2800aee3-0c56-5cf1-9f0f-1cb8dc8abe02",
+            "dbbffeaf-9400-5539-b12e-fb281fea7113",
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "2f941c31-f0e6-50d0-9c2e-3f66f2b4409d"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 7310.19,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "14c51eb4-53ee-56ce-866b-6660ee674b25",
+            "9a9ffeda-8b95-57a4-b3b7-2a5848f23105",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "8b65e28d-ba17-54a6-a515-529db2192ab4",
+            "39204042-5f8f-5f6e-adb5-cf0788577a44",
+            "2800aee3-0c56-5cf1-9f0f-1cb8dc8abe02",
+            "dbbffeaf-9400-5539-b12e-fb281fea7113",
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "2f941c31-f0e6-50d0-9c2e-3f66f2b4409d"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": 0.6122,
+          "citation_accuracy": 0.5,
+          "avg_latency_ms": 9541.99,
+          "p95_latency_ms": 11540.33,
+          "answer": "Wang et al., “HyC-LoRA: Memory efficient LoRA fine-tuning\nwith hybrid activation compression,” in Proceedings of Machine\nLearning and Systems, vol[1]. Despite these advances, all of them still retain the full\ninput activation for backpropagation, leaving the activation\nmemory of fine-tuning unaddressed[2]. This has motivated recent work on reducing the ac-\ntivations saved during LoRA-style fine-tuning[3][5]. We\nfurther prove that its projection-down subspace can\nevolve during fine-tuning[4]. This has motivated recent work on reducing the ac-\ntivations saved during LoRA-style fine-tuning[3][5].",
+          "verification_details": {
+            "citations_verified": 7,
+            "verdict_counts": {
+              "Supported": 5,
+              "Weak Support": 0,
+              "Unsupported": 2
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q25",
+      "query": "How does federated LoRA fine-tuning work?",
+      "theme": "Fine-tuning",
+      "difficulty": "simple",
+      "relevant_doc_ids": [
+        "2411.14961v3"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "a98899cd-abc7-56c6-8b5c-a501972392f0",
+            "8ab6056c-9041-5e87-aed7-55284059ee35",
+            "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42",
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "57c8725d-cd97-5cf6-84a0-3c2ae0975242",
+            "34684b9a-1740-5517-8ee7-51972b0b8874",
+            "1ec3c333-4457-5093-8f12-80dd08888683",
+            "327966f6-96f1-5784-8b4f-d796b2de2f89",
+            "960d4fc8-5cf1-5159-a16d-dd46abb38f5c",
+            "d63ca26c-1b0d-5232-8623-bdb6222dc320"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 29.52,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "a98899cd-abc7-56c6-8b5c-a501972392f0",
+            "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42",
+            "8ab6056c-9041-5e87-aed7-55284059ee35",
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "1ec3c333-4457-5093-8f12-80dd08888683",
+            "57c8725d-cd97-5cf6-84a0-3c2ae0975242",
+            "34684b9a-1740-5517-8ee7-51972b0b8874",
+            "960d4fc8-5cf1-5159-a16d-dd46abb38f5c",
+            "327966f6-96f1-5784-8b4f-d796b2de2f89",
+            "d63ca26c-1b0d-5232-8623-bdb6222dc320"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 26.07,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "a98899cd-abc7-56c6-8b5c-a501972392f0",
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "960d4fc8-5cf1-5159-a16d-dd46abb38f5c",
+            "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42",
+            "d63ca26c-1b0d-5232-8623-bdb6222dc320",
+            "8ab6056c-9041-5e87-aed7-55284059ee35",
+            "ec806c16-1f4a-50b7-94b0-c464e70533e9",
+            "4dba9e45-31ed-58f5-b3e2-2bdab7efbad9",
+            "c4e5bb19-4adb-5084-ba94-fe31e9cde458",
+            "57c8725d-cd97-5cf6-84a0-3c2ae0975242"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 7061.24,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "a98899cd-abc7-56c6-8b5c-a501972392f0",
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "960d4fc8-5cf1-5159-a16d-dd46abb38f5c",
+            "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42",
+            "d63ca26c-1b0d-5232-8623-bdb6222dc320",
+            "8ab6056c-9041-5e87-aed7-55284059ee35",
+            "ec806c16-1f4a-50b7-94b0-c464e70533e9",
+            "4dba9e45-31ed-58f5-b3e2-2bdab7efbad9",
+            "c4e5bb19-4adb-5084-ba94-fe31e9cde458",
+            "57c8725d-cd97-5cf6-84a0-3c2ae0975242"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": 0.7148,
+          "citation_accuracy": 0.75,
+          "avg_latency_ms": 11540.33,
+          "p95_latency_ms": 11540.33,
+          "answer": "A closely\nrelated area to our work involves federated fine-tuning us-\ning LoRA[1][4]. Parameter-efficient fine-tuning (PEFT)\nmethods like Low-Rank Adaptation (LoRA) reduce this cost\nby introducing low-rank matrices for tuning fewer parame-\nters[2]. This low-rank adaptation\nenables LoRA to achieve performance comparable to full\nfine-tuning while significantly reducing the computational\nand memory overhead[3]. A closely\nrelated area to our work involves federated fine-tuning us-\ning LoRA[1][4]. Federated fine-tuning of large language mod-\nels under heterogeneous language tasks and client resources[5].",
+          "verification_details": {
+            "citations_verified": 7,
+            "verdict_counts": {
+              "Supported": 6,
+              "Weak Support": 0,
+              "Unsupported": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q26",
+      "query": "What is parameter-efficient fine-tuning (PEFT)?",
+      "theme": "Fine-tuning",
+      "difficulty": "medium",
+      "relevant_doc_ids": [
+        "2411.14961v3",
+        "2607.11940v1"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "6658061f-1084-5568-a3e8-fb93a377d922",
+            "5666e334-15ae-5bb9-92dc-4baf4a92c405",
+            "1c714d77-b0b3-519c-8f84-5b8d46c331c7",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "45cc3811-ac39-519e-afb2-3618d7825694",
+            "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42",
+            "dd388021-8bee-5d0c-9ab2-bffc0796282b",
+            "346552af-cd76-55af-a7fa-fc14380bf235",
+            "c263977f-38e8-5b6e-a43d-ac1807241075",
+            "665f4e97-0b0c-54b4-9a0b-e8e58568499c"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.25,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 30.47,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "5666e334-15ae-5bb9-92dc-4baf4a92c405",
+            "1c714d77-b0b3-519c-8f84-5b8d46c331c7",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "dd388021-8bee-5d0c-9ab2-bffc0796282b",
+            "6658061f-1084-5568-a3e8-fb93a377d922",
+            "45cc3811-ac39-519e-afb2-3618d7825694",
+            "665f4e97-0b0c-54b4-9a0b-e8e58568499c",
+            "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42",
+            "346552af-cd76-55af-a7fa-fc14380bf235",
+            "c263977f-38e8-5b6e-a43d-ac1807241075"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 26.49,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "1c714d77-b0b3-519c-8f84-5b8d46c331c7",
+            "88c76c19-9da3-59f7-9324-d2a7f28b8451",
+            "960d4fc8-5cf1-5159-a16d-dd46abb38f5c",
+            "5666e334-15ae-5bb9-92dc-4baf4a92c405",
+            "e193736e-35da-5c4f-9cd5-4af9da0e6ba2",
+            "c263977f-38e8-5b6e-a43d-ac1807241075",
+            "dd388021-8bee-5d0c-9ab2-bffc0796282b",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "6a7bbbbe-4094-5622-9e6b-9987f5a71b16",
+            "45cc3811-ac39-519e-afb2-3618d7825694"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 7059.15,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "1c714d77-b0b3-519c-8f84-5b8d46c331c7",
+            "88c76c19-9da3-59f7-9324-d2a7f28b8451",
+            "960d4fc8-5cf1-5159-a16d-dd46abb38f5c",
+            "5666e334-15ae-5bb9-92dc-4baf4a92c405",
+            "e193736e-35da-5c4f-9cd5-4af9da0e6ba2",
+            "c263977f-38e8-5b6e-a43d-ac1807241075",
+            "dd388021-8bee-5d0c-9ab2-bffc0796282b",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "6a7bbbbe-4094-5622-9e6b-9987f5a71b16",
+            "45cc3811-ac39-519e-afb2-3618d7825694"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333,
+          "faithfulness": 0.9487,
+          "citation_accuracy": 1.0,
+          "avg_latency_ms": 9048.42,
+          "p95_latency_ms": 11540.33,
+          "answer": "This allows us to be\npragmatic about how good a model linearization is when fine-tuning large lan-\nguage models (LLMs)[1]. Parameter-Efficient Fine-tuning (PEFT) [4–8] is a particularly popular set of tech-\nniques that strive to tackle this computational burden[2]. (1)\nIn practice, A is typically initialized with random Gaus-\nsian values, while B is initialized to zero to ensure a stable\nstart to the fine-tuning process[3]. However, the spe-\ncialized PEFT method for 3D pre-trained models is still\nunder-explored[4]. Thus, we explore the PEFT tech-\nniques in the 3D domain for parameter-efficient fine-tuning[5].",
+          "verification_details": {
+            "citations_verified": 5,
+            "verdict_counts": {
+              "Supported": 5,
+              "Weak Support": 0,
+              "Unsupported": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q27",
+      "query": "What is the role of rank in LoRA adaptation?",
+      "theme": "Fine-tuning",
+      "difficulty": "medium",
+      "relevant_doc_ids": [
+        "2607.11940v1"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "14e224e3-b86d-5189-b1e0-f7b00004a87d",
+            "72989066-93be-52ac-ae66-05ad949847ab",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "c1a2c0ea-0b10-5d3a-8d15-590a6abcbb80",
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "51d147ab-804b-5dbc-9fa0-e4167fc01229",
+            "0cdb7d23-9fca-589f-83c2-92cddc3c5786",
+            "4264612b-a11c-5ff9-9c4d-3019ab302e9b",
+            "94d169f1-95ed-5a76-a856-c5e1ebaac2ba",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 32.89,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "51d147ab-804b-5dbc-9fa0-e4167fc01229",
+            "0cdb7d23-9fca-589f-83c2-92cddc3c5786",
+            "72989066-93be-52ac-ae66-05ad949847ab",
+            "c1a2c0ea-0b10-5d3a-8d15-590a6abcbb80",
+            "14e224e3-b86d-5189-b1e0-f7b00004a87d",
+            "4264612b-a11c-5ff9-9c4d-3019ab302e9b",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "94d169f1-95ed-5a76-a856-c5e1ebaac2ba"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 29.45,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "960d4fc8-5cf1-5159-a16d-dd46abb38f5c",
+            "94d169f1-95ed-5a76-a856-c5e1ebaac2ba",
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "14e224e3-b86d-5189-b1e0-f7b00004a87d",
+            "51d147ab-804b-5dbc-9fa0-e4167fc01229",
+            "6a515540-9fb2-52c6-9ef3-cc94754dae94",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "c8e1a872-86b3-51de-be0c-b6cb29f3a53f",
+            "14c51eb4-53ee-56ce-866b-6660ee674b25"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 7065.85,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "960d4fc8-5cf1-5159-a16d-dd46abb38f5c",
+            "94d169f1-95ed-5a76-a856-c5e1ebaac2ba",
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "14e224e3-b86d-5189-b1e0-f7b00004a87d",
+            "51d147ab-804b-5dbc-9fa0-e4167fc01229",
+            "6a515540-9fb2-52c6-9ef3-cc94754dae94",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "c8e1a872-86b3-51de-be0c-b6cb29f3a53f",
+            "14c51eb4-53ee-56ce-866b-6660ee674b25"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": 0.5641,
+          "citation_accuracy": 0.6,
+          "avg_latency_ms": 9180.4,
+          "p95_latency_ms": 11540.33,
+          "answer": "This has motivated recent work on reducing the ac-\ntivations saved during LoRA-style fine-tuning[1]. This low-rank adaptation\nenables LoRA to achieve performance comparable to full\nfine-tuning while significantly reducing the computational\nand memory overhead[2]. LoRA’s approach ensures that the architecture of the model remains efficient during in-\nference, which is particularly effective for both NLP and vision tasks[3]. Index Terms—Low-rank adaptation, parameter-efficient fine-tuning, activation compression, large language models[1][4]. This\nis due to the fact that adapter matrices A and\nB in LoRA are updated with the same learning\nrate[5].",
+          "verification_details": {
+            "citations_verified": 6,
+            "verdict_counts": {
+              "Supported": 3,
+              "Weak Support": 0,
+              "Unsupported": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q28",
+      "query": "How does LoRA reduce the memory footprint compared to full fine-tuning?",
+      "theme": "Fine-tuning",
+      "difficulty": "simple",
+      "relevant_doc_ids": [
+        "2607.11940v1"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "8b65e28d-ba17-54a6-a515-529db2192ab4",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "cc3951a4-112f-5d41-a491-89fd58174fbd",
+            "2800aee3-0c56-5cf1-9f0f-1cb8dc8abe02",
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "dd388021-8bee-5d0c-9ab2-bffc0796282b",
+            "6d927628-3a84-54fb-81d9-2ccc6094fcc3",
+            "dbbffeaf-9400-5539-b12e-fb281fea7113",
+            "3e750254-c52c-5db2-a899-a8d0e6ca4ce0"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 44.59,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "8b65e28d-ba17-54a6-a515-529db2192ab4",
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "2800aee3-0c56-5cf1-9f0f-1cb8dc8abe02",
+            "6d927628-3a84-54fb-81d9-2ccc6094fcc3",
+            "3e750254-c52c-5db2-a899-a8d0e6ca4ce0",
+            "dbbffeaf-9400-5539-b12e-fb281fea7113",
+            "cc3951a4-112f-5d41-a491-89fd58174fbd",
+            "dd388021-8bee-5d0c-9ab2-bffc0796282b"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 45.78,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "2800aee3-0c56-5cf1-9f0f-1cb8dc8abe02",
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "8b65e28d-ba17-54a6-a515-529db2192ab4",
+            "dbbffeaf-9400-5539-b12e-fb281fea7113",
+            "14c51eb4-53ee-56ce-866b-6660ee674b25",
+            "9a9ffeda-8b95-57a4-b3b7-2a5848f23105",
+            "72989066-93be-52ac-ae66-05ad949847ab",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "2262c875-888b-5fed-aa3f-d0d7b4020522"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 7293.4,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "2800aee3-0c56-5cf1-9f0f-1cb8dc8abe02",
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "8b65e28d-ba17-54a6-a515-529db2192ab4",
+            "dbbffeaf-9400-5539-b12e-fb281fea7113",
+            "14c51eb4-53ee-56ce-866b-6660ee674b25",
+            "9a9ffeda-8b95-57a4-b3b7-2a5848f23105",
+            "72989066-93be-52ac-ae66-05ad949847ab",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "2262c875-888b-5fed-aa3f-d0d7b4020522"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": 0.7104,
+          "citation_accuracy": 0.75,
+          "avg_latency_ms": 9586.43,
+          "p95_latency_ms": 11540.33,
+          "answer": "This has motivated recent work on reducing the ac-\ntivations saved during LoRA-style fine-tuning[1][4]. reduces total peak memory by up to roughly 20% relative to\nstandard LoRA[2]. To address this, we propose CARE-LoRA, a data-aware\nCompressed Activation REconstruction framework[3]. This has motivated recent work on reducing the ac-\ntivations saved during LoRA-style fine-tuning[1][4]. DoRA achieves the second-best\noverall average, yet CARE-LoRA requires 18.7% less peak\nmemory[5].",
+          "verification_details": {
+            "citations_verified": 7,
+            "verdict_counts": {
+              "Supported": 6,
+              "Weak Support": 0,
+              "Unsupported": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q29",
+      "query": "What is the difference between LoRA and prompt tuning?",
+      "theme": "Fine-tuning",
+      "difficulty": "medium",
+      "relevant_doc_ids": [
+        "2411.14961v3",
+        "2210.12607v1"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "486d9476-4cbd-5d2c-948e-9877c7067cf6",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "50611f30-484d-5a07-afcc-ac885cad42b2",
+            "1953a2b9-7b08-5107-bfea-bd85e0567d32",
+            "646082a2-6d83-5e46-badc-a477a35698df",
+            "f02b7dc8-30e2-58b4-94e0-f4a9a9753746",
+            "dd388021-8bee-5d0c-9ab2-bffc0796282b",
+            "dbbffeaf-9400-5539-b12e-fb281fea7113",
+            "a4ab94ce-a09a-59ae-96bd-f226fc736d68",
+            "ff8ffce0-70ee-553f-8211-6360fa983c7b"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.5,
+          "mrr": 0.1429,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 27.69,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "486d9476-4cbd-5d2c-948e-9877c7067cf6",
+            "646082a2-6d83-5e46-badc-a477a35698df",
+            "f02b7dc8-30e2-58b4-94e0-f4a9a9753746",
+            "50611f30-484d-5a07-afcc-ac885cad42b2",
+            "1953a2b9-7b08-5107-bfea-bd85e0567d32",
+            "dd388021-8bee-5d0c-9ab2-bffc0796282b",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "ff8ffce0-70ee-553f-8211-6360fa983c7b",
+            "a4ab94ce-a09a-59ae-96bd-f226fc736d68",
+            "dbbffeaf-9400-5539-b12e-fb281fea7113"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.5,
+          "mrr": 0.1667,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 25.15,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "486d9476-4cbd-5d2c-948e-9877c7067cf6",
+            "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42",
+            "2528a208-abd7-5c39-a4f8-812f54c25900",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "dd388021-8bee-5d0c-9ab2-bffc0796282b",
+            "80dddedd-deae-5904-a66c-545d703cf1cb",
+            "5903a928-20e0-5131-a9cb-f02c2cd5c335",
+            "919165a6-4a9d-5bb8-a581-f0f0ee53e997",
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "dbbffeaf-9400-5539-b12e-fb281fea7113"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 0.5,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 6853.8,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "486d9476-4cbd-5d2c-948e-9877c7067cf6",
+            "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42",
+            "2528a208-abd7-5c39-a4f8-812f54c25900",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "dd388021-8bee-5d0c-9ab2-bffc0796282b",
+            "80dddedd-deae-5904-a66c-545d703cf1cb",
+            "5903a928-20e0-5131-a9cb-f02c2cd5c335",
+            "919165a6-4a9d-5bb8-a581-f0f0ee53e997",
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "dbbffeaf-9400-5539-b12e-fb281fea7113"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 0.5,
+          "faithfulness": 0.9475,
+          "citation_accuracy": 1.0,
+          "avg_latency_ms": 8810.7,
+          "p95_latency_ms": 11540.33,
+          "answer": "Prompt tuning\nPrompt tuning is a PEFT technique that introduces trainable soft prompts into the input\nsequence of a frozen pretrained language model [12][1]. [21] and prompt-tuning [19] add trainable dimensions to the\ninput or hidden layers of the network[2][5]. In LoRA finetuning, only a low rank matrix, called an\nadapter, that is added to the pretrained weights is trainable[3]. This has motivated recent work on reducing the ac-\ntivations saved during LoRA-style fine-tuning[4]. Techniques such as prefix-tuning\n[21] and prompt-tuning [19] add trainable dimensions to the\ninput or hidden layers of the network[5].",
+          "verification_details": {
+            "citations_verified": 6,
+            "verdict_counts": {
+              "Supported": 6,
+              "Weak Support": 0,
+              "Unsupported": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q30",
+      "query": "How does federated learning enhance LoRA fine-tuning?",
+      "theme": "Fine-tuning",
+      "difficulty": "simple",
+      "relevant_doc_ids": [
+        "2411.14961v3"
+      ],
+      "configs": {
+        "Dense": {
+          "retrieved_chunk_ids": [
+            "a98899cd-abc7-56c6-8b5c-a501972392f0",
+            "8ab6056c-9041-5e87-aed7-55284059ee35",
+            "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42",
+            "34684b9a-1740-5517-8ee7-51972b0b8874",
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "57c8725d-cd97-5cf6-84a0-3c2ae0975242",
+            "960d4fc8-5cf1-5159-a16d-dd46abb38f5c",
+            "1ec3c333-4457-5093-8f12-80dd08888683",
+            "c4e5bb19-4adb-5084-ba94-fe31e9cde458",
+            "d63ca26c-1b0d-5232-8623-bdb6222dc320"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 32.31,
+          "p95_latency_ms": 39.03
+        },
+        "Hybrid": {
+          "retrieved_chunk_ids": [
+            "a98899cd-abc7-56c6-8b5c-a501972392f0",
+            "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42",
+            "8ab6056c-9041-5e87-aed7-55284059ee35",
+            "1ec3c333-4457-5093-8f12-80dd08888683",
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "34684b9a-1740-5517-8ee7-51972b0b8874",
+            "960d4fc8-5cf1-5159-a16d-dd46abb38f5c",
+            "57c8725d-cd97-5cf6-84a0-3c2ae0975242",
+            "d63ca26c-1b0d-5232-8623-bdb6222dc320",
+            "c4e5bb19-4adb-5084-ba94-fe31e9cde458"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 28.92,
+          "p95_latency_ms": 33.04
+        },
+        "Hybrid + Rerank": {
+          "retrieved_chunk_ids": [
+            "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42",
+            "960d4fc8-5cf1-5159-a16d-dd46abb38f5c",
+            "d63ca26c-1b0d-5232-8623-bdb6222dc320",
+            "a98899cd-abc7-56c6-8b5c-a501972392f0",
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "8ab6056c-9041-5e87-aed7-55284059ee35",
+            "5ac4acf3-256a-5f64-98f6-1c11a0c8f641",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "34684b9a-1740-5517-8ee7-51972b0b8874",
+            "035d862e-d9b4-51e5-a917-904d4d50b139"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": null,
+          "citation_accuracy": null,
+          "avg_latency_ms": 6891.05,
+          "p95_latency_ms": 7310.19
+        },
+        "Hybrid + Rerank + Verification": {
+          "retrieved_chunk_ids": [
+            "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42",
+            "960d4fc8-5cf1-5159-a16d-dd46abb38f5c",
+            "d63ca26c-1b0d-5232-8623-bdb6222dc320",
+            "a98899cd-abc7-56c6-8b5c-a501972392f0",
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "8ab6056c-9041-5e87-aed7-55284059ee35",
+            "5ac4acf3-256a-5f64-98f6-1c11a0c8f641",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "34684b9a-1740-5517-8ee7-51972b0b8874",
+            "035d862e-d9b4-51e5-a917-904d4d50b139"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "faithfulness": 0.7148,
+          "citation_accuracy": 0.75,
+          "avg_latency_ms": 11568.38,
+          "p95_latency_ms": 11540.33,
+          "answer": "A closely\nrelated area to our work involves federated fine-tuning us-\ning LoRA[1][4]. This low-rank adaptation\nenables LoRA to achieve performance comparable to full\nfine-tuning while significantly reducing the computational\nand memory overhead[2]. Federated fine-tuning of large language mod-\nels under heterogeneous language tasks and client resources[3]. A closely\nrelated area to our work involves federated fine-tuning us-\ning LoRA[1][4]. Parameter-efficient fine-tuning (PEFT)\nmethods like Low-Rank Adaptation (LoRA) reduce this cost\nby introducing low-rank matrices for tuning fewer parame-\nters[5].",
+          "verification_details": {
+            "citations_verified": 7,
+            "verdict_counts": {
+              "Supported": 6,
+              "Weak Support": 0,
+              "Unsupported": 1
+            }
+          }
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "Dense": {
+      "recall_at_3": 0.5167,
+      "recall_at_5": 0.6167,
+      "recall_at_10": 0.7333,
+      "mrr": 0.597,
+      "faithfulness": null,
+      "citation_accuracy": null,
+      "avg_latency_ms": 32.43,
+      "p95_latency_ms": 39.03,
+      "queries": 30
+    },
+    "Hybrid": {
+      "recall_at_3": 0.6,
+      "recall_at_5": 0.65,
+      "recall_at_10": 0.7333,
+      "mrr": 0.6604,
+      "faithfulness": null,
+      "citation_accuracy": null,
+      "avg_latency_ms": 28.11,
+      "p95_latency_ms": 33.04,
+      "queries": 30
+    },
+    "Hybrid + Rerank": {
+      "recall_at_3": 0.6833,
+      "recall_at_5": 0.75,
+      "recall_at_10": 0.7667,
+      "mrr": 0.7278,
+      "faithfulness": null,
+      "citation_accuracy": null,
+      "avg_latency_ms": 6908.84,
+      "p95_latency_ms": 7310.19,
+      "queries": 30
+    },
+    "Hybrid + Rerank + Verification": {
+      "recall_at_3": 0.6833,
+      "recall_at_5": 0.75,
+      "recall_at_10": 0.7667,
+      "mrr": 0.7278,
+      "faithfulness": 0.727,
+      "citation_accuracy": 0.8,
+      "avg_latency_ms": 9524.01,
+      "p95_latency_ms": 11540.33,
+      "queries": 30
+    }
+  }
+}

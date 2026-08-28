@@ -1,0 +1,676 @@
+{
+  "generator": "evaluate_chunks.py",
+  "generated_at": "2026-08-24T18:06:15",
+  "input": {
+    "file": "chunks.json",
+    "generator": "chunk_documents.py",
+    "generated_at": "2026-08-24T16:57:36",
+    "config": {
+      "chars_per_token": 4.0,
+      "target_tokens": 412,
+      "overlap_tokens": 100,
+      "hard_cap_tokens": 512,
+      "min_chunk_tokens": 100,
+      "bge_max_tokens": 512
+    }
+  },
+  "thresholds": {
+    "too_small_tokens": 150,
+    "too_large_tokens": 700,
+    "near_dup_jaccard": 0.6,
+    "shingle_words": 8,
+    "size_bin_width": 100,
+    "docs_min_chunks_warn": 5
+  },
+  "totals": {
+    "chunks": 2026,
+    "documents": 40,
+    "themes": 3,
+    "tokens_est": 862511,
+    "empty_text_chunks": 0
+  },
+  "theme_breakdown": {
+    "agents": {
+      "documents": 13,
+      "chunks": 859,
+      "tokens_est": 366313,
+      "mean_chunks_per_document": 66.1,
+      "mean_tokens_per_chunk": 426.4
+    },
+    "fine_tuning": {
+      "documents": 14,
+      "chunks": 624,
+      "tokens_est": 265158,
+      "mean_chunks_per_document": 44.6,
+      "mean_tokens_per_chunk": 424.9
+    },
+    "rag": {
+      "documents": 13,
+      "chunks": 543,
+      "tokens_est": 231040,
+      "mean_chunks_per_document": 41.8,
+      "mean_tokens_per_chunk": 425.5
+    }
+  },
+  "size_distribution": {
+    "count": 2026,
+    "min": 100,
+    "p05": 402,
+    "p10": 412,
+    "p25": 417,
+    "median": 427,
+    "p75": 440,
+    "p90": 458,
+    "p95": 471,
+    "p99": 509,
+    "max": 512,
+    "mean": 425.7,
+    "histogram_100t_bins": {
+      "100-199": 18,
+      "200-299": 35,
+      "300-399": 43,
+      "400-499": 1892,
+      "500-599": 38
+    }
+  },
+  "pages_per_chunk": {
+    "mean_span_pages": 1.39,
+    "max_span_pages": 15,
+    "multi_page_chunks": 739,
+    "multi_page_pct": 36.5,
+    "single_page_chunks": 1287,
+    "span_distribution": {
+      "1": 1287,
+      "2": 713,
+      "3": 19,
+      "4": 3,
+      "5": 1,
+      "6": 2,
+      "15": 1
+    }
+  },
+  "outliers": {
+    "too_small": {
+      "threshold": 150,
+      "count": 11,
+      "chunks": [
+        {
+          "chunk_id": "a3897811-9035-5620-b210-cdc686cb024f",
+          "document_id": "2602.08239v1",
+          "theme": "fine_tuning",
+          "tokens_est": 100,
+          "span_pages": 1,
+          "preview": "for models in balls around the initial model n hyperparameters dataset cola sst "
+        },
+        {
+          "chunk_id": "478f07b3-004c-5c49-8729-3a7064309dc2",
+          "document_id": "2204.07496v4",
+          "theme": "rag",
+          "tokens_est": 100,
+          "span_pages": 1,
+          "preview": "10 upr re ranking results on the beir benchmark thakur et al 2021 q and e denote"
+        },
+        {
+          "chunk_id": "27998e18-bba9-5af1-bee0-676a22d85eac",
+          "document_id": "2503.01763v2",
+          "theme": "agents",
+          "tokens_est": 108,
+          "span_pages": 1,
+          "preview": "l 2024 single task dense retrieval these methods use dual encoder models trained"
+        },
+        {
+          "chunk_id": "67b7d4a8-793f-5abc-badc-4a947bb027be",
+          "document_id": "2605.28222v1",
+          "theme": "fine_tuning",
+          "tokens_est": 112,
+          "span_pages": 1,
+          "preview": "tables with all configurations are moved to the appendices in order not to overl"
+        },
+        {
+          "chunk_id": "f86f0bb1-20c2-56f3-97dc-3212a8b955d8",
+          "document_id": "2605.28222v1",
+          "theme": "fine_tuning",
+          "tokens_est": 114,
+          "span_pages": 2,
+          "preview": "vs inference vram 64 preprint f1 vs groundedness pass 4 groundedness pass 4 vs l"
+        },
+        {
+          "chunk_id": "13a9e293-985d-53c8-ad6e-3cbfb253b171",
+          "document_id": "2309.15217v2",
+          "theme": "rag",
+          "tokens_est": 120,
+          "span_pages": 1,
+          "preview": "clock tower was built in 1896 the tower was named after chimnabai i 1864 1885 a "
+        },
+        {
+          "chunk_id": "7e561af2-619d-5e11-a229-fdaf5772b29c",
+          "document_id": "2210.12607v1",
+          "theme": "fine_tuning",
+          "tokens_est": 128,
+          "span_pages": 1,
+          "preview": "on em pirical methods in natural language processing pages 2369 2380 brussels be"
+        },
+        {
+          "chunk_id": "fd2a64ec-44a2-552f-add8-aa6a3e404ead",
+          "document_id": "2512.15233v2",
+          "theme": "fine_tuning",
+          "tokens_est": 130,
+          "span_pages": 1,
+          "preview": "luo and qi tian parameter efficient tuning of large scale multimodal foundation "
+        },
+        {
+          "chunk_id": "d8e729a9-775c-5304-9424-05a61aaa8b01",
+          "document_id": "2605.12335v1",
+          "theme": "rag",
+          "tokens_est": 133,
+          "span_pages": 2,
+          "preview": "the selected tasks span both short term and long term clinical outcomes and refl"
+        },
+        {
+          "chunk_id": "2d4ed33e-619a-5f09-8be6-b12aeeca5186",
+          "document_id": "2606.01947v1",
+          "theme": "fine_tuning",
+          "tokens_est": 144,
+          "span_pages": 1,
+          "preview": "oneformer one transformer to rule universal image segmentation in proceedings of"
+        },
+        {
+          "chunk_id": "930720ab-0bf7-54f2-8f61-3026f485ae70",
+          "document_id": "2404.01023v1",
+          "theme": "agents",
+          "tokens_est": 149,
+          "span_pages": 1,
+          "preview": "natural language processing arxiv preprint arxiv 1910 03771 2019 frank f xu uri "
+        }
+      ]
+    },
+    "too_large": {
+      "threshold": 700,
+      "count": 0,
+      "chunks": []
+    }
+  },
+  "duplication": {
+    "near_dup_jaccard_threshold": 0.6,
+    "shingle_words": 8,
+    "exact_duplicate_groups": 0,
+    "exact_redundant_chunks": 0,
+    "exact_examples": [],
+    "near_duplicate_pairs": 17,
+    "near_duplicate_chunks_involved": 18,
+    "near_examples": [
+      {
+        "a": "5bdca5da-1bb3-58a1-bc11-118c9abd7e49",
+        "b": "d7aa0647-b060-52b0-a738-0b4890337902",
+        "document_id": "2512.13930v1",
+        "jaccard": 0.989
+      },
+      {
+        "a": "d7aa0647-b060-52b0-a738-0b4890337902",
+        "b": "f4a2c298-85b2-53a1-a490-ac5f123a7349",
+        "document_id": "2512.13930v1",
+        "jaccard": 0.923
+      },
+      {
+        "a": "5bdca5da-1bb3-58a1-bc11-118c9abd7e49",
+        "b": "f4a2c298-85b2-53a1-a490-ac5f123a7349",
+        "document_id": "2512.13930v1",
+        "jaccard": 0.92
+      },
+      {
+        "a": "83ccd450-8a36-5564-884c-9b7dc4d9d86f",
+        "b": "ebec51f7-a937-5320-a496-42916a5cee42",
+        "document_id": "2512.13930v1",
+        "jaccard": 0.824
+      },
+      {
+        "a": "ab752037-4274-5ad2-9634-1526cba02a5e",
+        "b": "d62ad326-09a3-5799-8b47-1bd41f531d0d",
+        "document_id": "2512.13930v1",
+        "jaccard": 0.763
+      },
+      {
+        "a": "0e4d1e76-d851-50db-9cf4-5479f41d8230",
+        "b": "f4a2c298-85b2-53a1-a490-ac5f123a7349",
+        "document_id": "2512.13930v1",
+        "jaccard": 0.76
+      },
+      {
+        "a": "6243e847-9ad3-5fbf-9a7c-4093858931fe",
+        "b": "e9618278-c82f-5ae1-9b96-d65f1177cb44",
+        "document_id": "2512.13930v1",
+        "jaccard": 0.717
+      },
+      {
+        "a": "0e4d1e76-d851-50db-9cf4-5479f41d8230",
+        "b": "d7aa0647-b060-52b0-a738-0b4890337902",
+        "document_id": "2512.13930v1",
+        "jaccard": 0.713
+      },
+      {
+        "a": "0e4d1e76-d851-50db-9cf4-5479f41d8230",
+        "b": "5bdca5da-1bb3-58a1-bc11-118c9abd7e49",
+        "document_id": "2512.13930v1",
+        "jaccard": 0.711
+      },
+      {
+        "a": "b7f26ce5-152a-572a-ac6d-59abbfa743e7",
+        "b": "d2a8c23b-d277-58c2-aaae-d2ea7dd22a0b",
+        "document_id": "2512.13930v1",
+        "jaccard": 0.661
+      }
+    ],
+    "excessive_duplication": false
+  },
+  "coverage": {
+    "documents": 40,
+    "mean_chunks_per_document": 50.6,
+    "min_chunks_per_document": 11,
+    "max_chunks_per_document": 351,
+    "overall_coverage_pct": 100.0,
+    "docs_below_min_chunks": 5,
+    "thin_documents": {},
+    "per_document": {
+      "1407.5416v1": {
+        "theme": "rag",
+        "chunks": 24,
+        "tokens_est": 10325,
+        "mean_tokens_per_chunk": 430.2,
+        "first_page": 1,
+        "last_page": 6,
+        "pages_covered": 6,
+        "coverage_pct": 100.0
+      },
+      "2010.08191v2": {
+        "theme": "rag",
+        "chunks": 40,
+        "tokens_est": 16995,
+        "mean_tokens_per_chunk": 424.9,
+        "first_page": 1,
+        "last_page": 13,
+        "pages_covered": 13,
+        "coverage_pct": 100.0
+      },
+      "2110.01599v1": {
+        "theme": "rag",
+        "chunks": 21,
+        "tokens_est": 8878,
+        "mean_tokens_per_chunk": 422.8,
+        "first_page": 1,
+        "last_page": 7,
+        "pages_covered": 7,
+        "coverage_pct": 100.0
+      },
+      "2110.06500v2": {
+        "theme": "fine_tuning",
+        "chunks": 49,
+        "tokens_est": 20978,
+        "mean_tokens_per_chunk": 428.1,
+        "first_page": 1,
+        "last_page": 19,
+        "pages_covered": 19,
+        "coverage_pct": 100.0
+      },
+      "2204.07496v4": {
+        "theme": "rag",
+        "chunks": 52,
+        "tokens_est": 21976,
+        "mean_tokens_per_chunk": 422.6,
+        "first_page": 1,
+        "last_page": 18,
+        "pages_covered": 18,
+        "coverage_pct": 100.0
+      },
+      "2208.02070v1": {
+        "theme": "fine_tuning",
+        "chunks": 23,
+        "tokens_est": 9762,
+        "mean_tokens_per_chunk": 424.4,
+        "first_page": 1,
+        "last_page": 8,
+        "pages_covered": 8,
+        "coverage_pct": 100.0
+      },
+      "2210.12607v1": {
+        "theme": "fine_tuning",
+        "chunks": 36,
+        "tokens_est": 15231,
+        "mean_tokens_per_chunk": 423.1,
+        "first_page": 1,
+        "last_page": 11,
+        "pages_covered": 11,
+        "coverage_pct": 100.0
+      },
+      "2308.16118v2": {
+        "theme": "agents",
+        "chunks": 18,
+        "tokens_est": 7860,
+        "mean_tokens_per_chunk": 436.7,
+        "first_page": 1,
+        "last_page": 14,
+        "pages_covered": 14,
+        "coverage_pct": 100.0
+      },
+      "2309.02144v1": {
+        "theme": "agents",
+        "chunks": 47,
+        "tokens_est": 20205,
+        "mean_tokens_per_chunk": 429.9,
+        "first_page": 1,
+        "last_page": 19,
+        "pages_covered": 19,
+        "coverage_pct": 100.0
+      },
+      "2309.15217v2": {
+        "theme": "rag",
+        "chunks": 24,
+        "tokens_est": 10166,
+        "mean_tokens_per_chunk": 423.6,
+        "first_page": 1,
+        "last_page": 8,
+        "pages_covered": 8,
+        "coverage_pct": 100.0
+      },
+      "2310.03059v8": {
+        "theme": "fine_tuning",
+        "chunks": 35,
+        "tokens_est": 14849,
+        "mean_tokens_per_chunk": 424.3,
+        "first_page": 1,
+        "last_page": 11,
+        "pages_covered": 11,
+        "coverage_pct": 100.0
+      },
+      "2312.10793v3": {
+        "theme": "fine_tuning",
+        "chunks": 24,
+        "tokens_est": 10197,
+        "mean_tokens_per_chunk": 424.9,
+        "first_page": 1,
+        "last_page": 8,
+        "pages_covered": 8,
+        "coverage_pct": 100.0
+      },
+      "2402.11651v2": {
+        "theme": "agents",
+        "chunks": 39,
+        "tokens_est": 16508,
+        "mean_tokens_per_chunk": 423.3,
+        "first_page": 1,
+        "last_page": 13,
+        "pages_covered": 13,
+        "coverage_pct": 100.0
+      },
+      "2402.12317v2": {
+        "theme": "rag",
+        "chunks": 54,
+        "tokens_est": 22936,
+        "mean_tokens_per_chunk": 424.7,
+        "first_page": 1,
+        "last_page": 16,
+        "pages_covered": 16,
+        "coverage_pct": 100.0
+      },
+      "2402.12354v2": {
+        "theme": "fine_tuning",
+        "chunks": 59,
+        "tokens_est": 25113,
+        "mean_tokens_per_chunk": 425.6,
+        "first_page": 1,
+        "last_page": 24,
+        "pages_covered": 24,
+        "coverage_pct": 100.0
+      },
+      "2404.01023v1": {
+        "theme": "agents",
+        "chunks": 36,
+        "tokens_est": 15128,
+        "mean_tokens_per_chunk": 420.2,
+        "first_page": 1,
+        "last_page": 12,
+        "pages_covered": 12,
+        "coverage_pct": 100.0
+      },
+      "2404.14464v1": {
+        "theme": "rag",
+        "chunks": 42,
+        "tokens_est": 18136,
+        "mean_tokens_per_chunk": 431.8,
+        "first_page": 1,
+        "last_page": 17,
+        "pages_covered": 17,
+        "coverage_pct": 100.0
+      },
+      "2405.07551v1": {
+        "theme": "agents",
+        "chunks": 40,
+        "tokens_est": 16808,
+        "mean_tokens_per_chunk": 420.2,
+        "first_page": 1,
+        "last_page": 15,
+        "pages_covered": 15,
+        "coverage_pct": 100.0
+      },
+      "2408.07888v2": {
+        "theme": "fine_tuning",
+        "chunks": 25,
+        "tokens_est": 10742,
+        "mean_tokens_per_chunk": 429.7,
+        "first_page": 1,
+        "last_page": 10,
+        "pages_covered": 10,
+        "coverage_pct": 100.0
+      },
+      "2409.11353v3": {
+        "theme": "agents",
+        "chunks": 46,
+        "tokens_est": 19566,
+        "mean_tokens_per_chunk": 425.3,
+        "first_page": 1,
+        "last_page": 24,
+        "pages_covered": 24,
+        "coverage_pct": 100.0
+      },
+      "2411.14961v3": {
+        "theme": "fine_tuning",
+        "chunks": 57,
+        "tokens_est": 23878,
+        "mean_tokens_per_chunk": 418.9,
+        "first_page": 1,
+        "last_page": 15,
+        "pages_covered": 15,
+        "coverage_pct": 100.0
+      },
+      "2411.18583v1": {
+        "theme": "rag",
+        "chunks": 20,
+        "tokens_est": 8316,
+        "mean_tokens_per_chunk": 415.8,
+        "first_page": 1,
+        "last_page": 6,
+        "pages_covered": 6,
+        "coverage_pct": 100.0
+      },
+      "2502.00306v2": {
+        "theme": "rag",
+        "chunks": 84,
+        "tokens_est": 36044,
+        "mean_tokens_per_chunk": 429.1,
+        "first_page": 1,
+        "last_page": 27,
+        "pages_covered": 27,
+        "coverage_pct": 100.0
+      },
+      "2503.01763v2": {
+        "theme": "agents",
+        "chunks": 86,
+        "tokens_est": 36268,
+        "mean_tokens_per_chunk": 421.7,
+        "first_page": 1,
+        "last_page": 28,
+        "pages_covered": 28,
+        "coverage_pct": 100.0
+      },
+      "2504.16021v1": {
+        "theme": "agents",
+        "chunks": 11,
+        "tokens_est": 4522,
+        "mean_tokens_per_chunk": 411.1,
+        "first_page": 1,
+        "last_page": 4,
+        "pages_covered": 4,
+        "coverage_pct": 100.0
+      },
+      "2504.16584v1": {
+        "theme": "fine_tuning",
+        "chunks": 23,
+        "tokens_est": 9798,
+        "mean_tokens_per_chunk": 426.0,
+        "first_page": 1,
+        "last_page": 11,
+        "pages_covered": 11,
+        "coverage_pct": 100.0
+      },
+      "2504.17204v1": {
+        "theme": "rag",
+        "chunks": 14,
+        "tokens_est": 5782,
+        "mean_tokens_per_chunk": 413.0,
+        "first_page": 1,
+        "last_page": 6,
+        "pages_covered": 6,
+        "coverage_pct": 100.0
+      },
+      "2506.06962v3": {
+        "theme": "rag",
+        "chunks": 51,
+        "tokens_est": 22017,
+        "mean_tokens_per_chunk": 431.7,
+        "first_page": 1,
+        "last_page": 18,
+        "pages_covered": 18,
+        "coverage_pct": 100.0
+      },
+      "2507.23334v2": {
+        "theme": "rag",
+        "chunks": 28,
+        "tokens_est": 11843,
+        "mean_tokens_per_chunk": 423.0,
+        "first_page": 1,
+        "last_page": 8,
+        "pages_covered": 8,
+        "coverage_pct": 100.0
+      },
+      "2508.04848v1": {
+        "theme": "agents",
+        "chunks": 34,
+        "tokens_est": 14261,
+        "mean_tokens_per_chunk": 419.4,
+        "first_page": 1,
+        "last_page": 9,
+        "pages_covered": 9,
+        "coverage_pct": 100.0
+      },
+      "2510.00071v2": {
+        "theme": "agents",
+        "chunks": 13,
+        "tokens_est": 5253,
+        "mean_tokens_per_chunk": 404.1,
+        "first_page": 1,
+        "last_page": 7,
+        "pages_covered": 7,
+        "coverage_pct": 100.0
+      },
+      "2512.13930v1": {
+        "theme": "agents",
+        "chunks": 98,
+        "tokens_est": 42049,
+        "mean_tokens_per_chunk": 429.1,
+        "first_page": 1,
+        "last_page": 96,
+        "pages_covered": 96,
+        "coverage_pct": 100.0
+      },
+      "2512.15233v2": {
+        "theme": "fine_tuning",
+        "chunks": 18,
+        "tokens_est": 7487,
+        "mean_tokens_per_chunk": 415.9,
+        "first_page": 1,
+        "last_page": 5,
+        "pages_covered": 5,
+        "coverage_pct": 100.0
+      },
+      "2601.12538v1": {
+        "theme": "agents",
+        "chunks": 351,
+        "tokens_est": 150753,
+        "mean_tokens_per_chunk": 429.5,
+        "first_page": 1,
+        "last_page": 135,
+        "pages_covered": 135,
+        "coverage_pct": 100.0
+      },
+      "2602.08239v1": {
+        "theme": "fine_tuning",
+        "chunks": 50,
+        "tokens_est": 21146,
+        "mean_tokens_per_chunk": 422.9,
+        "first_page": 1,
+        "last_page": 24,
+        "pages_covered": 24,
+        "coverage_pct": 100.0
+      },
+      "2604.14214v1": {
+        "theme": "agents",
+        "chunks": 40,
+        "tokens_est": 17132,
+        "mean_tokens_per_chunk": 428.3,
+        "first_page": 1,
+        "last_page": 16,
+        "pages_covered": 16,
+        "coverage_pct": 100.0
+      },
+      "2605.12335v1": {
+        "theme": "rag",
+        "chunks": 89,
+        "tokens_est": 37626,
+        "mean_tokens_per_chunk": 422.8,
+        "first_page": 1,
+        "last_page": 31,
+        "pages_covered": 31,
+        "coverage_pct": 100.0
+      },
+      "2605.28222v1": {
+        "theme": "fine_tuning",
+        "chunks": 110,
+        "tokens_est": 46369,
+        "mean_tokens_per_chunk": 421.5,
+        "first_page": 1,
+        "last_page": 69,
+        "pages_covered": 69,
+        "coverage_pct": 100.0
+      },
+      "2606.01947v1": {
+        "theme": "fine_tuning",
+        "chunks": 67,
+        "tokens_est": 28788,
+        "mean_tokens_per_chunk": 429.7,
+        "first_page": 1,
+        "last_page": 25,
+        "pages_covered": 25,
+        "coverage_pct": 100.0
+      },
+      "2607.11940v1": {
+        "theme": "fine_tuning",
+        "chunks": 48,
+        "tokens_est": 20820,
+        "mean_tokens_per_chunk": 433.8,
+        "first_page": 1,
+        "last_page": 15,
+        "pages_covered": 15,
+        "coverage_pct": 100.0
+      }
+    }
+  }
+}

@@ -1,0 +1,556 @@
+{
+  "generator": "hybrid_search.py",
+  "generated_at": "2026-08-24T22:05:17",
+  "status": "PASS",
+  "config": {
+    "model_name": "BAAI/bge-small-en-v1.5",
+    "collection_name": "chunks_dense",
+    "device": "auto",
+    "qdrant_url": null,
+    "qdrant_path": null,
+    "fetch_k": 50,
+    "rrf_k": 60,
+    "corpus_sha256": "1e8908db880e7df5b81985a0d0c16262e65a01a71baec15845db9f02ab60a4f1",
+    "bm25_sha256": "62cadcf3294395079a10099402cd2d8036ee155af9f6220ed138eae78af247da",
+    "bge_query_prefix_applied_to_queries_only": true,
+    "tokenizer_source": "build_bm25_index.py"
+  },
+  "indexes": {
+    "dense_collection": "chunks_dense",
+    "bm25_index_sha256": "62cadcf3294395079a10099402cd2d8036ee155af9f6220ed138eae78af247da",
+    "chunks_sha256": "1e8908db880e7df5b81985a0d0c16262e65a01a71baec15845db9f02ab60a4f1"
+  },
+  "versions": {
+    "python_version": "3.13.15",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "sentence_transformers_version": "3.3.1"
+  },
+  "queries": [
+    {
+      "query": "What is retrieval augmented generation?",
+      "latencies_ms": {
+        "query_encoding_ms": 77.28,
+        "dense_ms": 7.28,
+        "bm25_ms": 5.45,
+        "fusion_ms": 0.31,
+        "total_ms": 90.33
+      },
+      "results": [
+        {
+          "rank": 1,
+          "chunk_id": "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+          "document_id": "2506.06962v3",
+          "theme": "rag",
+          "page_start": 9,
+          "page_end": 9,
+          "score_dense": 0.812069122914462,
+          "score_bm25": 7.227010292402982,
+          "rrf_score": 0.030679,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "FAiD shows a more noticeable overhead of 36.03% on a single GPU due to its autoregressive retrieval and feature blending operations. However, this increase rema"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "9bb9381e-a4f1-5a09-aebb-5db962463c16",
+          "document_id": "2506.06962v3",
+          "theme": "rag",
+          "page_start": 2,
+          "page_end": 2,
+          "score_dense": 0.8074757656722499,
+          "score_bm25": 7.290183294056896,
+          "rrf_score": 0.030331,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "images based on user prompts [31, 28, 7, 37, 10, 41, 9, 43, 45, 27, 6]. However, despite these improvements, the generated images often exhibit local distortion"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "6b191ff9-36c3-5816-853a-ea4664b3b495",
+          "document_id": "2605.12335v1",
+          "theme": "rag",
+          "page_start": 12,
+          "page_end": 13,
+          "score_dense": 0.7840369480664161,
+          "score_bm25": 7.823158987241989,
+          "rrf_score": 0.030214,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "Cai, Eliza Rutherford, Katie Millican, George Bm Van Den Driessche, Jean-Baptiste Lespiau, Bogdan Damoc, Aidan Clark, et al. Improving language models by retrie"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "62e3ee38-0c7a-5fb7-90b2-ed07e93e2a12",
+          "document_id": "2605.12335v1",
+          "theme": "rag",
+          "page_start": 11,
+          "page_end": 11,
+          "score_dense": 0.7883981453211781,
+          "score_bm25": 7.785698719999326,
+          "rrf_score": 0.029911,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "Sun, Wei Dong, Kunlun He, and Zhengxing Huang. On clinical event prediction in patient treatment trajectory using longitudinal electronic health records. IEEE J"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "e7352b10-7f6b-56cb-b5d2-7d45301eac3a",
+          "document_id": "2605.12335v1",
+          "theme": "rag",
+          "page_start": 13,
+          "page_end": 13,
+          "score_dense": 0.7913226289826487,
+          "score_bm25": 7.543856466978834,
+          "rrf_score": 0.029877,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "two-step retrieval-augmented text-to-sql generation. arXiv preprint arXiv:2502.21107, 2025. [48] Mohamed Abo El-Enen, Sally Saad, and Taymoor Nazmy. A survey on"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "92b45aeb-ee0f-5284-9609-235407aa14ff",
+          "document_id": "2402.12317v2",
+          "theme": "rag",
+          "page_start": 1,
+          "page_end": 1,
+          "score_dense": 0.7951460273300968,
+          "score_bm25": 7.163489315226314,
+          "rrf_score": 0.02904,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "base. We hope that our studies will inspire more insights into the design of advanced RACG pipelines in future research. Our model, code, and data are available"
+        },
+        {
+          "rank": 7,
+          "chunk_id": "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+          "document_id": "2309.15217v2",
+          "theme": "rag",
+          "page_start": 1,
+          "page_end": 1,
+          "score_dense": 0.7976113414011275,
+          "score_bm25": 7.128852825463541,
+          "rrf_score": 0.028898,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "Ragas: Automated Evaluation of Retrieval Augmented Generation Shahul Es†, Jithin James†, Luis Espinosa-Anke∗♢, Steven Schockaert∗ †Exploding Gradients ∗CardiffN"
+        },
+        {
+          "rank": 8,
+          "chunk_id": "63209bdb-2c42-5f89-a6cd-8d4287e349e8",
+          "document_id": "2506.06962v3",
+          "theme": "rag",
+          "page_start": 9,
+          "page_end": 9,
+          "score_dense": 0.7929460500168617,
+          "score_bm25": 7.148742377295754,
+          "rrf_score": 0.028624,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "images to improve zero-shot generalization to novel domains. Building on this retrieval-augmented framework, more recent methods [49, 33] introduce adaptive ret"
+        },
+        {
+          "rank": 9,
+          "chunk_id": "9dd2c99c-746d-5e9c-9a7b-5e751871528d",
+          "document_id": "2605.28222v1",
+          "theme": "fine_tuning",
+          "page_start": 16,
+          "page_end": 17,
+          "score_dense": 0.8097949733148945,
+          "score_bm25": 6.783468856115955,
+          "rrf_score": 0.028531,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "Linguistics, 2024. Hao Yu, Aoran Gan, Kai Zhang, Shiwei Tong, Qi Liu, and Zhaofeng Liu. Evaluation of retrieval- augmented generation: A survey, 2024. Tianyi Zh"
+        },
+        {
+          "rank": 10,
+          "chunk_id": "5f4162f9-1cfb-5d1d-9db0-d83e54d52a1b",
+          "document_id": "2402.12317v2",
+          "theme": "rag",
+          "page_start": 1,
+          "page_end": 1,
+          "score_dense": 0.7656915655867832,
+          "score_bm25": 7.524832537590745,
+          "rrf_score": 0.027972,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "EVOR: Evolving Retrieval for Code Generation Hongjin Su1, Shuyang Jiang2, Yuhang Lai2, Haoyuan Wu1, Boao Shi1, Che Liu1, Qian Liu3, Tao Yu 1, 1The University of"
+        }
+      ]
+    },
+    {
+      "query": "How does ReAct work?",
+      "latencies_ms": {
+        "query_encoding_ms": 21.7,
+        "dense_ms": 6.91,
+        "bm25_ms": 2.79,
+        "fusion_ms": 0.2,
+        "total_ms": 31.61
+      },
+      "results": [
+        {
+          "rank": 1,
+          "chunk_id": "d2ee94ed-b21f-5007-a58b-a99b61acac1f",
+          "document_id": "2404.14464v1",
+          "theme": "rag",
+          "page_start": 6,
+          "page_end": 6,
+          "score_dense": 0.695672390308274,
+          "score_bm25": 6.291993411317238,
+          "rrf_score": 0.032787,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "methods. Prompting with paragraphs retrieved by the re- triever. ReAct/Self-Ask (Yao et al., 2023b; Press et al., 2023) iteratively execute the following steps "
+        },
+        {
+          "rank": 2,
+          "chunk_id": "c7451c49-1eff-5168-9f30-27c3e576e752",
+          "document_id": "2402.11651v2",
+          "theme": "agents",
+          "page_start": 3,
+          "page_end": 4,
+          "score_dense": 0.6273644510290445,
+          "score_bm25": 4.649578265882799,
+          "rrf_score": 0.031258,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "trajectories if negative examples are incorpo- rated directly. Therefore, we add a prefix or suffix to the query to differentiate positive and negative examples"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "80e9c6bb-7b02-54c7-8b2a-7c8fc4f9a8dc",
+          "document_id": "2402.11651v2",
+          "theme": "agents",
+          "page_start": 8,
+          "page_end": 8,
+          "score_dense": 0.5867467271095849,
+          "score_bm25": 4.493315913573587,
+          "rrf_score": 0.02532,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "the ReAct (Yao et al., 2023) prompt- ing strategy. In this section, we conduct prelimi- nary experiments to explore whether NAT works well with Chain-of-Thought"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "466e7fc0-c04e-5461-8518-37226756a84d",
+          "document_id": "2512.13930v1",
+          "theme": "agents",
+          "page_start": 87,
+          "page_end": 89,
+          "score_dense": 0.6339016934611508,
+          "score_bm25": null,
+          "rrf_score": 0.016129,
+          "channels": [
+            "dense"
+          ],
+          "text_preview": "or repeat the answer in the prompt---respond only in the manner required. - Remain focused, and do not provide extra explanation beyond the single JSON object. "
+        },
+        {
+          "rank": 5,
+          "chunk_id": "86df55ea-a615-5821-b40a-83791337eff2",
+          "document_id": "2601.12538v1",
+          "theme": "agents",
+          "page_start": 50,
+          "page_end": 50,
+          "score_dense": null,
+          "score_bm25": 6.0868748497531495,
+          "rrf_score": 0.016129,
+          "channels": [
+            "bm25"
+          ],
+          "text_preview": "and writing are grounded in existing evidence. For research idea generation, another recent work [531] constrains the process with curated background packets, u"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "2bcaa158-42a0-5228-b9f6-03f49e34e601",
+          "document_id": "2404.14464v1",
+          "theme": "rag",
+          "page_start": 5,
+          "page_end": 6,
+          "score_dense": null,
+          "score_bm25": 5.765948706721548,
+          "rrf_score": 0.015873,
+          "channels": [
+            "bm25"
+          ],
+          "text_preview": "answer directly. CoT prompting (Wei et al., 2022)prompts a Lan- guage Language Model (LLM) to generate the final answer step by step. One-step Retrieval with Di"
+        },
+        {
+          "rank": 7,
+          "chunk_id": "0b9c2d3f-2248-5aae-8e33-e8c4fb1efa6f",
+          "document_id": "2512.13930v1",
+          "theme": "agents",
+          "page_start": 68,
+          "page_end": 70,
+          "score_dense": 0.6192186498821592,
+          "score_bm25": null,
+          "rrf_score": 0.015625,
+          "channels": [
+            "dense"
+          ],
+          "text_preview": "to the user’s target/band, and select the candidate whose form indicates properties closest to or just inside the target region. 5. Refer to previous DFT result"
+        },
+        {
+          "rank": 8,
+          "chunk_id": "ee485dad-cbc8-5c1f-a15a-4fe3b942179a",
+          "document_id": "2601.12538v1",
+          "theme": "agents",
+          "page_start": 2,
+          "page_end": 3,
+          "score_dense": null,
+          "score_bm25": 4.682144097648111,
+          "rrf_score": 0.015625,
+          "channels": [
+            "bm25"
+          ],
+          "text_preview": "their environment. This reframing unifies reasoning with acting, positioning reasoning as the organizing principle for perception, planning, decision, and verif"
+        },
+        {
+          "rank": 9,
+          "chunk_id": "d7aa0647-b060-52b0-a738-0b4890337902",
+          "document_id": "2512.13930v1",
+          "theme": "agents",
+          "page_start": 79,
+          "page_end": 79,
+          "score_dense": 0.6189921339621179,
+          "score_bm25": null,
+          "rrf_score": 0.015385,
+          "channels": [
+            "dense"
+          ],
+          "text_preview": "System Message \"\"\"You are a materials scientist specializing in surface chemistry for materials discovery. Your task is to select the next untested candidate to"
+        },
+        {
+          "rank": 10,
+          "chunk_id": "5bdca5da-1bb3-58a1-bc11-118c9abd7e49",
+          "document_id": "2512.13930v1",
+          "theme": "agents",
+          "page_start": 57,
+          "page_end": 57,
+          "score_dense": 0.618502700447005,
+          "score_bm25": null,
+          "rrf_score": 0.015152,
+          "channels": [
+            "dense"
+          ],
+          "text_preview": "Agent System Message \"\"\"You are a materials scientist specializing in surface chemistry for materials discovery. Your task is to select the next untested candid"
+        }
+      ]
+    },
+    {
+      "query": "What is LoRA fine tuning?",
+      "latencies_ms": {
+        "query_encoding_ms": 26.05,
+        "dense_ms": 7.85,
+        "bm25_ms": 4.18,
+        "fusion_ms": 0.22,
+        "total_ms": 38.31
+      },
+      "results": [
+        {
+          "rank": 1,
+          "chunk_id": "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+          "document_id": "2607.11940v1",
+          "theme": "fine_tuning",
+          "page_start": 1,
+          "page_end": 1,
+          "score_dense": 0.7681518392435299,
+          "score_bm25": 7.74358669808748,
+          "rrf_score": 0.032018,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "tasks demonstrate that, while substantially reducing the overall memory footprint, CARE-LoRA achieves competitive or even superior performance compared with sta"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "8ab6056c-9041-5e87-aed7-55284059ee35",
+          "document_id": "2411.14961v3",
+          "theme": "fine_tuning",
+          "page_start": 2,
+          "page_end": 2,
+          "score_dense": 0.7436639750602773,
+          "score_bm25": 7.819692495774552,
+          "rrf_score": 0.031514,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "the fine-tuned LoRA module remains close to its original averaged value, thereby preserving the average information collected from each client. Through this sim"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "45cc3811-ac39-519e-afb2-3618d7825694",
+          "document_id": "2411.14961v3",
+          "theme": "fine_tuning",
+          "page_start": 1,
+          "page_end": 2,
+          "score_dense": 0.7544011178211608,
+          "score_bm25": 7.723452721816894,
+          "rrf_score": 0.031258,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "the ideal global update ∆W using Eq. (6), finds the residual LoRA module ∆B using Eq. (8), and replaces ̄B with the corrected LoRA modules ̄B′ = ̄B + ∆B. See de"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "cc3951a4-112f-5d41-a491-89fd58174fbd",
+          "document_id": "2605.28222v1",
+          "theme": "fine_tuning",
+          "page_start": 2,
+          "page_end": 3,
+          "score_dense": 0.745548257519826,
+          "score_bm25": 7.463311316001539,
+          "rrf_score": 0.030118,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "documentation-grounded assistants the overall quality is therefore a property of the whole pipeline, not of the generator alone. Parameter-efficient fine-tuning"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+          "document_id": "2411.14961v3",
+          "theme": "fine_tuning",
+          "page_start": 1,
+          "page_end": 1,
+          "score_dense": 0.7376303745786672,
+          "score_bm25": 7.720901597850027,
+          "rrf_score": 0.030077,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "LoRA-FAIR: Federated LoRA Fine-Tuning with Aggregation and Initialization Refinement Jieming Bian1* Lei Wang1* Letian Zhang2 Jie Xu1 1 University of Florida 2Mi"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "a98899cd-abc7-56c6-8b5c-a501972392f0",
+          "document_id": "2411.14961v3",
+          "theme": "fine_tuning",
+          "page_start": 8,
+          "page_end": 9,
+          "score_dense": 0.712770225298336,
+          "score_bm25": 7.745767267651342,
+          "rrf_score": 0.029387,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "studies [2, 7, 17, 33, 42, 43] have explored federated fine-tuning approaches. For ex- ample, Kuang et al. [17] proposes federated fine-tuning with all paramete"
+        },
+        {
+          "rank": 7,
+          "chunk_id": "dd388021-8bee-5d0c-9ab2-bffc0796282b",
+          "document_id": "2411.14961v3",
+          "theme": "fine_tuning",
+          "page_start": 8,
+          "page_end": 8,
+          "score_dense": 0.7319067738501468,
+          "score_bm25": 7.555832923781766,
+          "rrf_score": 0.028992,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "6. Impact of LoRA Rank. LoRA- FAIR outperforms baselines across ranks {4, 8, 16, 32}, with higher ranks not always im- proving performance, consistent with [7]."
+        },
+        {
+          "rank": 8,
+          "chunk_id": "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42",
+          "document_id": "2411.14961v3",
+          "theme": "fine_tuning",
+          "page_start": 8,
+          "page_end": 8,
+          "score_dense": 0.7270098470839697,
+          "score_bm25": 7.427789745565387,
+          "rrf_score": 0.02837,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": " [21] and prompt-tuning [19] add trainable dimensions to the input or hidden layers of the network. Among PEFT meth- ods, a key approach is LoRA [16], which use"
+        },
+        {
+          "rank": 9,
+          "chunk_id": "802323c1-1128-5577-ab0f-433ae92879b8",
+          "document_id": "2607.11940v1",
+          "theme": "fine_tuning",
+          "page_start": 1,
+          "page_end": 1,
+          "score_dense": 0.7034025687286356,
+          "score_bm25": 7.649166773345607,
+          "rrf_score": 0.027425,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "1 CARE-LoRA: Compressed Activation REconstruction for Memory-Efficient LoRA Gengyu Zhang, Haiyin Ran, Zhengbao He, Yuhang Liu, Hanling Tian, Zhehao Huang, and X"
+        },
+        {
+          "rank": 10,
+          "chunk_id": "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+          "document_id": "2607.11940v1",
+          "theme": "fine_tuning",
+          "page_start": 2,
+          "page_end": 2,
+          "score_dense": 0.7112262490908922,
+          "score_bm25": 7.212493200863282,
+          "rrf_score": 0.026857,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "are as follows: • We revisit the memory bottleneck of LoRA fine- tuning and note that, once adapter-side parameters are sufficiently reduced, activation storage"
+        }
+      ]
+    }
+  ],
+  "aggregate_latencies_ms": {
+    "queries": 3,
+    "mean_total_ms": 53.42,
+    "max_total_ms": 90.33,
+    "mean_dense_ms": 7.35,
+    "mean_bm25_ms": 4.14,
+    "mean_fusion_ms": 0.24,
+    "mean_query_encoding_ms": 41.68
+  },
+  "reranker_readiness": {
+    "ready_for_reranking": true,
+    "all_queries_returned_results": true,
+    "text_available_for_all_results": true,
+    "min_dense_candidates": 7,
+    "min_bm25_candidates": 6,
+    "results_total": 30
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "generator": "build_bm25_index.py",
+  "generated_at": "2026-08-24T21:41:39",
+  "status": "PASS",
+  "input": {
+    "file": "chunks.json",
+    "size_bytes": 4034390,
+    "sha256": "1e8908db880e7df5b81985a0d0c16262e65a01a71baec15845db9f02ab60a4f1",
+    "chunks": 2026,
+    "generator": "chunk_documents.py",
+    "generated_at": "2026-08-24T16:57:36"
+  },
+  "tokenizer": {
+    "use_stopwords": true,
+    "stopwords_count": 118,
+    "pattern": "[a-z0-9]+"
+  },
+  "params": {
+    "variant": "BM25Okapi",
+    "k1": 1.5,
+    "b": 0.75
+  },
+  "rank_bm25_version": "0.2.2",
+  "lexical_statistics": {
+    "documents": 2026,
+    "total_tokens": 426550,
+    "vocabulary_size": 25368,
+    "mean_tokens_per_chunk": 210.5,
+    "min_tokens_per_chunk": 46,
+    "max_tokens_per_chunk": 703,
+    "empty_token_documents": 0,
+    "top_terms": [
+      {
+        "term": "0",
+        "count": 9913
+      },
+      {
+        "term": "1",
+        "count": 4456
+      },
+      {
+        "term": "2",
+        "count": 3607
+      },
+      {
+        "term": "arxiv",
+        "count": 2623
+      },
+      {
+        "term": "al",
+        "count": 2483
+      },
+      {
+        "term": "et",
+        "count": 2378
+      },
+      {
+        "term": "3",
+        "count": 2309
+      },
+      {
+        "term": "models",
+        "count": 2200
+      },
+      {
+        "term": "model",
+        "count": 2150
+      },
+      {
+        "term": "4",
+        "count": 2085
+      },
+      {
+        "term": "5",
+        "count": 1994
+      },
+      {
+        "term": "reasoning",
+        "count": 1889
+      },
+      {
+        "term": "language",
+        "count": 1782
+      },
+      {
+        "term": "learning",
+        "count": 1387
+      },
+      {
+        "term": "retrieval",
+        "count": 1377
+      },
+      {
+        "term": "fine",
+        "count": 1376
+      },
+      {
+        "term": "training",
+        "count": 1357
+      },
+      {
+        "term": "t",
+        "count": 1355
+      },
+      {
+        "term": "lora",
+        "count": 1354
+      },
+      {
+        "term": "s",
+        "count": 1346
+      }
+    ]
+  },
+  "output": {
+    "file": "bm25_index.pkl",
+    "size_bytes": 3534355,
+    "sha256": "62cadcf3294395079a10099402cd2d8036ee155af9f6220ed138eae78af247da"
+  },
+  "verification": {
+    "success": true,
+    "sample_query": "retrieval augmented generation",
+    "query_tokens": [
+      "retrieval",
+      "augmented",
+      "generation"
+    ],
+    "checks": {
+      "format_version_ok": true,
+      "bm25_type_ok": true,
+      "chunk_ids_match": true,
+      "tokenizer_config_stored": true,
+      "scores_length_ok": true,
+      "scores_finite": true
+    },
+    "sample_query_top_results": [
+      {
+        "rank": 1,
+        "chunk_id": "46c460a9-3979-572c-8bdb-d7944f94bd46",
+        "score": 7.9964
+      },
+      {
+        "rank": 2,
+        "chunk_id": "6b191ff9-36c3-5816-853a-ea4664b3b495",
+        "score": 7.8232
+      },
+      {
+        "rank": 3,
+        "chunk_id": "f54f207e-b6b1-5e66-a555-10e2f3135d7b",
+        "score": 7.8095
+      }
+    ]
+  },
+  "durations_seconds": {
+    "tokenization": 0.29,
+    "index_build": 0.2,
+    "index_save": 0.21
+  },
+  "environment": {
+    "python_version": "3.13.15",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

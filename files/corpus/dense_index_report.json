@@ -1,0 +1,75 @@
+{
+  "generator": "build_dense_index.py",
+  "generated_at": "2026-08-24T19:17:39",
+  "status": "PASS",
+  "input": {
+    "file": "chunks.json",
+    "size_bytes": 4034390,
+    "sha256": "1e8908db880e7df5b81985a0d0c16262e65a01a71baec15845db9f02ab60a4f1",
+    "chunks": 2026,
+    "generator": "chunk_documents.py",
+    "generated_at": "2026-08-24T16:57:36"
+  },
+  "model": {
+    "name": "BAAI/bge-small-en-v1.5",
+    "dimension": 384,
+    "max_seq_tokens": 512,
+    "normalized_embeddings": true,
+    "query_prefix_applied": false,
+    "device": "cpu",
+    "sentence_transformers_version": "3.3.1",
+    "torch_version": "2.7.1+cpu"
+  },
+  "qdrant": {
+    "mode": "local",
+    "location": "C:\\marwaguidara\\RAG-Citation-Validator\\vector_store\\qdrant",
+    "collection": "chunks_dense",
+    "distance": "Cosine",
+    "hnsw": {
+      "m": 16,
+      "ef_construct": 100
+    }
+  },
+  "indexing": {
+    "embed_batch_size": 64,
+    "upload_batch_size": 200,
+    "recreate_collection": true,
+    "minimal_payload": false,
+    "payload_fields": [
+      "chunk_id",
+      "document_id",
+      "theme",
+      "page_start",
+      "page_end",
+      "tokens_est",
+      "text"
+    ],
+    "points_expected": 2026,
+    "points_uploaded": 2026,
+    "upload_errors": [],
+    "durations_seconds": {
+      "embedding": 315.12,
+      "upsert": 7.44
+    },
+    "throughput_chunks_per_second": 6.4
+  },
+  "verification": {
+    "expected_points": 2026,
+    "indexed_points": 2026,
+    "count_match": true,
+    "sample_size": 5,
+    "sample_found": [
+      "00175e41-5bb1-5e81-8f5f-21cc6cfcc32c",
+      "004c6910-ad5f-55a9-a4d1-c2f353983052",
+      "00656209-ec14-5cd6-82df-b343b017d593",
+      "008f836c-9e8e-5571-88ad-9bf0e24d90dc",
+      "00a212d7-9d47-5707-a5f9-6dcbfd96b3de"
+    ],
+    "sample_all_found": true,
+    "sample_payload_fields_ok": true
+  },
+  "environment": {
+    "python_version": "3.13.15",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

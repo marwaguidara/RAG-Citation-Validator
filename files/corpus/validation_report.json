@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-08-24T15:10:36",
+  "corpus_root": "C:\\marwaguidara\\RAG-Citation-Validator\\files\\corpus",
+  "stats": {
+    "manifest_entries": 40,
+    "pdfs_on_disk": 40,
+    "kept": 40,
+    "total_pages": 828,
+    "invalid": 0,
+    "duplicates": 0,
+    "dropped": 0,
+    "off_topic": 0,
+    "orphans": 0,
+    "text_quality": 0,
+    "quarantined": 0
+  },
+  "per_theme": {
+    "agents": {
+      "total": 13,
+      "kept": 13,
+      "pages": 392
+    },
+    "fine_tuning": {
+      "total": 14,
+      "kept": 14,
+      "pages": 255
+    },
+    "rag": {
+      "total": 13,
+      "kept": 13,
+      "pages": 181
+    }
+  },
+  "issues": [
+    {
+      "entry_id": "2503.01763v2",
+      "title": "Retrieval Models Aren't Tool-Savvy: Benchmarking Tool Retrieval for Large Language Models",
+      "kind": "ambiguous_theme",
+      "message": "le titre évoque surtout le thème 'rag'",
+      "action": "reported",
+      "file": "C:\\marwaguidara\\RAG-Citation-Validator\\files\\corpus\\agents\\2503.01763v2_retrieval_models_aren_t_tool_savvy_benchmarking_tool_retriev.pdf"
+    },
+    {
+      "entry_id": "2605.28222v1",
+      "title": "Analyzing Quality-Latency-Resource Trade-offs in a Technical Documentation RAG Assistant Using LoRA Adaptation",
+      "kind": "ambiguous_theme",
+      "message": "le titre évoque surtout le thème 'rag'",
+      "action": "reported",
+      "file": "C:\\marwaguidara\\RAG-Citation-Validator\\files\\corpus\\fine_tuning\\2605.28222v1_analyzing_quality_latency_resource_trade_offs_in_a_technical.pdf"
+    }
+  ],
+  "quarantined": []
+}

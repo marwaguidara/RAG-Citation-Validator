@@ -1,0 +1,213 @@
+{
+  "configs": [
+    "Dense",
+    "Hybrid",
+    "Hybrid + Rerank",
+    "Hybrid + Rerank + Verification"
+  ],
+  "metrics": [
+    "Recall@3",
+    "Recall@5",
+    "Recall@10",
+    "MRR",
+    "Faithfulness",
+    "Citation Accuracy",
+    "Average Latency",
+    "P95 Latency"
+  ],
+  "best_config_per_metric": {
+    "Recall@3": "Hybrid + Rerank + Verification",
+    "Recall@5": "Hybrid + Rerank + Verification",
+    "Recall@10": "Hybrid + Rerank + Verification",
+    "MRR": "Hybrid + Rerank + Verification",
+    "Faithfulness": "Hybrid + Rerank + Verification",
+    "Citation Accuracy": "Hybrid + Rerank + Verification",
+    "Average Latency": "Hybrid",
+    "P95 Latency": "Hybrid"
+  },
+  "table": {
+    "Dense": {
+      "Recall@3": 51.7,
+      "Recall@5": 61.7,
+      "Recall@10": 73.3,
+      "MRR": 59.7,
+      "Faithfulness": null,
+      "Citation Accuracy": null,
+      "Average Latency": 32.43,
+      "P95 Latency": 39.03
+    },
+    "Hybrid": {
+      "Recall@3": 60.0,
+      "Recall@5": 65.0,
+      "Recall@10": 73.3,
+      "MRR": 66.0,
+      "Faithfulness": null,
+      "Citation Accuracy": null,
+      "Average Latency": 28.11,
+      "P95 Latency": 33.04
+    },
+    "Hybrid + Rerank": {
+      "Recall@3": 68.3,
+      "Recall@5": 75.0,
+      "Recall@10": 76.7,
+      "MRR": 72.8,
+      "Faithfulness": null,
+      "Citation Accuracy": null,
+      "Average Latency": 6908.84,
+      "P95 Latency": 7310.19
+    },
+    "Hybrid + Rerank + Verification": {
+      "Recall@3": 68.3,
+      "Recall@5": 75.0,
+      "Recall@10": 76.7,
+      "MRR": 72.8,
+      "Faithfulness": 72.7,
+      "Citation Accuracy": 80.0,
+      "Average Latency": 9524.01,
+      "P95 Latency": 11540.33
+    }
+  },
+  "gains": {
+    "bm25_gain": {
+      "description": "Gain from adding BM25 (Dense -> Hybrid)",
+      "source_config": "Dense",
+      "target_config": "Hybrid",
+      "metrics": {
+        "Recall@3": {
+          "from": 51.7,
+          "to": 60.0,
+          "gain_pct": 16.1,
+          "direction": "improvement"
+        },
+        "Recall@5": {
+          "from": 61.7,
+          "to": 65.0,
+          "gain_pct": 5.3,
+          "direction": "improvement"
+        },
+        "Recall@10": {
+          "from": 73.3,
+          "to": 73.3,
+          "gain_pct": 0.0,
+          "direction": "improvement"
+        },
+        "MRR": {
+          "from": 59.7,
+          "to": 66.0,
+          "gain_pct": 10.6,
+          "direction": "improvement"
+        },
+        "Average Latency": {
+          "from": 32.43,
+          "to": 28.11,
+          "gain_pct": -13.3,
+          "direction": "cost"
+        },
+        "P95 Latency": {
+          "from": 39.03,
+          "to": 33.04,
+          "gain_pct": -15.3,
+          "direction": "cost"
+        }
+      }
+    },
+    "reranker_gain": {
+      "description": "Gain from adding BGE reranker (Hybrid -> Hybrid + Rerank)",
+      "source_config": "Hybrid",
+      "target_config": "Hybrid + Rerank",
+      "metrics": {
+        "Recall@3": {
+          "from": 60.0,
+          "to": 68.3,
+          "gain_pct": 13.8,
+          "direction": "improvement"
+        },
+        "Recall@5": {
+          "from": 65.0,
+          "to": 75.0,
+          "gain_pct": 15.4,
+          "direction": "improvement"
+        },
+        "Recall@10": {
+          "from": 73.3,
+          "to": 76.7,
+          "gain_pct": 4.6,
+          "direction": "improvement"
+        },
+        "MRR": {
+          "from": 66.0,
+          "to": 72.8,
+          "gain_pct": 10.3,
+          "direction": "improvement"
+        },
+        "Average Latency": {
+          "from": 28.11,
+          "to": 6908.84,
+          "gain_pct": 24477.9,
+          "direction": "cost"
+        },
+        "P95 Latency": {
+          "from": 33.04,
+          "to": 7310.19,
+          "gain_pct": 22025.3,
+          "direction": "cost"
+        }
+      }
+    },
+    "nli_gain": {
+      "description": "Gain from NLI verification (Hybrid + Rerank -> Hybrid + Rerank + Verification)",
+      "source_config": "Hybrid + Rerank",
+      "target_config": "Hybrid + Rerank + Verification",
+      "metrics": {
+        "Recall@3": {
+          "from": 68.3,
+          "to": 68.3,
+          "gain_pct": 0.0,
+          "direction": "improvement"
+        },
+        "Recall@5": {
+          "from": 75.0,
+          "to": 75.0,
+          "gain_pct": 0.0,
+          "direction": "improvement"
+        },
+        "Recall@10": {
+          "from": 76.7,
+          "to": 76.7,
+          "gain_pct": 0.0,
+          "direction": "improvement"
+        },
+        "MRR": {
+          "from": 72.8,
+          "to": 72.8,
+          "gain_pct": 0.0,
+          "direction": "improvement"
+        },
+        "Faithfulness": {
+          "from": null,
+          "to": 72.7,
+          "gain_pct": null,
+          "direction": "new"
+        },
+        "Citation Accuracy": {
+          "from": null,
+          "to": 80.0,
+          "gain_pct": null,
+          "direction": "new"
+        },
+        "Average Latency": {
+          "from": 6908.84,
+          "to": 9524.01,
+          "gain_pct": 37.9,
+          "direction": "cost"
+        },
+        "P95 Latency": {
+          "from": 7310.19,
+          "to": 11540.33,
+          "gain_pct": 57.9,
+          "direction": "cost"
+        }
+      }
+    }
+  }
+}

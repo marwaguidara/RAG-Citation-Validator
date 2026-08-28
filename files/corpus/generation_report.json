@@ -1,0 +1,194 @@
+{
+  "generator": "generate_answer.py",
+  "generated_at": "2026-08-25T15:24:04",
+  "status": "PASS",
+  "provider": {
+    "provider": "template",
+    "model": "offline-template"
+  },
+  "input_traceability": {
+    "chunks_file": "chunks.json",
+    "chunks_sha256": "1e8908db880e7df5b81985a0d0c16262e65a01a71baec15845db9f02ab60a4f1"
+  },
+  "versions": {
+    "python_version": "3.13.15",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "requests_version": "2.34.2"
+  },
+  "aggregate_generation": {
+    "queries": 3,
+    "mean_generation_ms": 0.33,
+    "max_generation_ms": 0.52,
+    "total_citations": 15,
+    "mean_citations_per_answer": 5.0
+  },
+  "citation_verification_readiness": {
+    "ready_for_citation_verification": true,
+    "answers_with_citations": 3,
+    "problems": []
+  },
+  "queries": [
+    {
+      "query": "What is retrieval augmented generation?",
+      "answer": "Based on the retrieved passages, the answer to “What is retrieval augmented generation?” is synthesized from sources [1], [2], [3], [4], [5].",
+      "citations": [
+        {
+          "source_index": 1
+        },
+        {
+          "source_index": 2
+        },
+        {
+          "source_index": 3
+        },
+        {
+          "source_index": 4
+        },
+        {
+          "source_index": 5
+        }
+      ],
+      "sources": [
+        {
+          "document_id": "2309.15217v2",
+          "page_start": 1,
+          "page_end": 1,
+          "extracted": true
+        },
+        {
+          "document_id": "2506.06962v3",
+          "page_start": 2,
+          "page_end": 2,
+          "extracted": true
+        },
+        {
+          "document_id": "2402.12317v2",
+          "page_start": 8,
+          "page_end": 8,
+          "extracted": true
+        },
+        {
+          "document_id": "2402.12317v2",
+          "page_start": 1,
+          "page_end": 1,
+          "extracted": true
+        },
+        {
+          "document_id": "2506.06962v3",
+          "page_start": 9,
+          "page_end": 9,
+          "extracted": true
+        }
+      ],
+      "generation_latency_ms": 0.52
+    },
+    {
+      "query": "How does ReAct work?",
+      "answer": "Based on the retrieved passages, the answer to “How does ReAct work?” is synthesized from sources [1], [2], [3], [4], [5].",
+      "citations": [
+        {
+          "source_index": 1
+        },
+        {
+          "source_index": 2
+        },
+        {
+          "source_index": 3
+        },
+        {
+          "source_index": 4
+        },
+        {
+          "source_index": 5
+        }
+      ],
+      "sources": [
+        {
+          "document_id": "2601.12538v1",
+          "page_start": 49,
+          "page_end": 49,
+          "extracted": true
+        },
+        {
+          "document_id": "2601.12538v1",
+          "page_start": 48,
+          "page_end": 48,
+          "extracted": true
+        },
+        {
+          "document_id": "2601.12538v1",
+          "page_start": 1,
+          "page_end": 2,
+          "extracted": true
+        },
+        {
+          "document_id": "2601.12538v1",
+          "page_start": 2,
+          "page_end": 3,
+          "extracted": true
+        },
+        {
+          "document_id": "2601.12538v1",
+          "page_start": 18,
+          "page_end": 18,
+          "extracted": true
+        }
+      ],
+      "generation_latency_ms": 0.21
+    },
+    {
+      "query": "What is LoRA fine tuning?",
+      "answer": "Based on the retrieved passages, the answer to “What is LoRA fine tuning?” is synthesized from sources [1], [2], [3], [4], [5].",
+      "citations": [
+        {
+          "source_index": 1
+        },
+        {
+          "source_index": 2
+        },
+        {
+          "source_index": 3
+        },
+        {
+          "source_index": 4
+        },
+        {
+          "source_index": 5
+        }
+      ],
+      "sources": [
+        {
+          "document_id": "2607.11940v1",
+          "page_start": 1,
+          "page_end": 1,
+          "extracted": true
+        },
+        {
+          "document_id": "2411.14961v3",
+          "page_start": 1,
+          "page_end": 1,
+          "extracted": true
+        },
+        {
+          "document_id": "2607.11940v1",
+          "page_start": 2,
+          "page_end": 2,
+          "extracted": true
+        },
+        {
+          "document_id": "2402.12354v2",
+          "page_start": 7,
+          "page_end": 7,
+          "extracted": true
+        },
+        {
+          "document_id": "2607.11940v1",
+          "page_start": 1,
+          "page_end": 1,
+          "extracted": true
+        }
+      ],
+      "generation_latency_ms": 0.25
+    }
+  ]
+}

@@ -1,0 +1,1598 @@
+{
+  "metadata": {
+    "project": "RAG Citation Validator",
+    "framework": "evaluate_pipeline.py",
+    "generated_at_utc": "2026-08-26T18:34:44+00:00",
+    "command": "python evaluate_pipeline.py ",
+    "traceability": {
+      "chunks_sha256": "1e8908db880e7df5b81985a0d0c16262e65a01a71baec15845db9f02ab60a4f1",
+      "annotations_sha256": "356e7a898d2c28bbf50c61f2515722b66abddc1e7982c1d50dc699814e4a31bd",
+      "annotations_file": "C:\\marwaguidara\\RAG-Citation-Validator\\files\\annotation_template.json",
+      "versions": {
+        "python": "3.13.15",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "sentence_transformers": "3.3.1",
+        "transformers": "4.47.1",
+        "torch": "2.7.1",
+        "rank_bm25": "0.2.2",
+        "qdrant_client": "1.12.1"
+      }
+    },
+    "parameters": {
+      "top_k_retrieval": 10,
+      "rerank_pool_size": 20,
+      "generation_sources": 5
+    }
+  },
+  "configurations": {
+    "A": {
+      "label": "A · Dense",
+      "description": "Recherche dense seule (BAAI/bge-small-en-v1.5 via Qdrant, cosinus).",
+      "n_questions": 12,
+      "per_question": [
+        {
+          "qid": "q01",
+          "question": "What is the RAGAS framework for automated evaluation of retrieval augmented generation?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "9005306e-cbb4-5c2c-91cc-a606ca7f857d",
+            "34e26985-1cc3-5428-9a92-5eab87267bbc",
+            "513d0e9d-dfa3-5a3c-aa1a-ecb60f4e340c",
+            "2a51cc52-f79f-5bf0-8f9f-f771c250c7b4",
+            "aeeedba9-682d-5c7a-8c30-4b306f6637c9",
+            "d28bd74e-b4c7-5d0b-8b8c-1e93cacc42e7",
+            "78afcd06-f832-5aa6-a895-1775d8b664e4",
+            "63209bdb-2c42-5f89-a6cd-8d4287e349e8",
+            "e9d769e2-f957-5e33-bf87-529e239f758f"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 1.0,
+          "latency_ms": 59.58
+        },
+        {
+          "qid": "q02",
+          "question": "Which metrics does RAGAS define, such as faithfulness and answer relevance?",
+          "n_relevant": 3,
+          "retrieved_chunk_ids": [
+            "cf3f8d6f-6dba-5182-9ea9-4d834b5a6e2f",
+            "82156005-2b61-5ca0-8d84-5d4d843c713f",
+            "bc274f65-1a31-5fef-94a9-d7ee385147b2",
+            "4635f2de-fad3-55d0-8f17-85e9a66c8997",
+            "4e5e143c-38b9-5cfb-bb24-1d586211912a",
+            "7f3a1eba-c572-578d-8f42-1d96b211f82e",
+            "75978629-2dbf-5f6e-aec4-ebb1f1723fc2",
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "528d5755-2733-5a5a-8b35-818bc512d8aa",
+            "78afcd06-f832-5aa6-a895-1775d8b664e4"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.6667,
+          "recall_at_10": 1.0,
+          "mrr": 0.25,
+          "latency_ms": 22.48
+        },
+        {
+          "qid": "q03",
+          "question": "How does RocketQA use denoising of false negatives and cross-batch negatives to improve dense passage retrieval?",
+          "n_relevant": 3,
+          "retrieved_chunk_ids": [
+            "8a1da111-3513-519a-b7e6-54d4fb2d2362",
+            "d0876fe4-b47f-52c1-afc6-cdc1a93825ad",
+            "3eb8212f-1950-5a9d-98ad-771f9875c844",
+            "197f115f-28f9-5398-8506-0410fc9f0c36",
+            "064ece72-30a6-581c-a1cb-034d1c2ef9a1",
+            "06f5fecf-3449-5a84-841c-0eebdf8f8997",
+            "f6531a61-3f02-5231-89ec-0c33009d2301",
+            "dc1a5672-9af6-544a-8836-bd5512577819",
+            "1353f1a7-b220-5e81-a97a-383645d1c9af",
+            "f844ae12-5095-5e72-b0a6-612fed14fec5"
+          ],
+          "recall_at_3": 0.6667,
+          "recall_at_5": 0.6667,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "latency_ms": 25.45
+        },
+        {
+          "qid": "q04",
+          "question": "How does AR-RAG perform context-aware autoregressive retrieval during image generation?",
+          "n_relevant": 3,
+          "retrieved_chunk_ids": [
+            "513d0e9d-dfa3-5a3c-aa1a-ecb60f4e340c",
+            "49d0c998-6c76-504d-a8e0-8a24b4c1fe91",
+            "9bb9381e-a4f1-5a09-aebb-5db962463c16",
+            "f812553d-7a0c-509d-a62e-7cea3d2ac455",
+            "f6283e74-7525-5525-a707-6f7c9c71c45a",
+            "63209bdb-2c42-5f89-a6cd-8d4287e349e8",
+            "6439193e-f677-554e-857a-009677fcdeaf",
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+            "ec53ab53-87da-5c37-bf44-0e2fdbcca2c4",
+            "9a848cbc-ea10-505c-8bcd-688a9bba32cb"
+          ],
+          "recall_at_3": 0.3333,
+          "recall_at_5": 0.3333,
+          "recall_at_10": 0.6667,
+          "mrr": 1.0,
+          "latency_ms": 23.72
+        },
+        {
+          "qid": "q05",
+          "question": "How does ReAct unify reasoning and acting in large language model agents?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "be3d28f6-dced-5680-8f6f-61287e54984e",
+            "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+            "ee485dad-cbc8-5c1f-a15a-4fe3b942179a",
+            "8f2fd5e0-cf43-5d09-8bb1-4c4513ec423b",
+            "9132e454-694e-5220-882d-b830287626f1",
+            "b044d069-9220-57d9-9c57-ba101d22faa6",
+            "1380c9e0-794d-5490-bd40-c90b9cb59d8e",
+            "adc61a14-ff80-5893-9ccc-4abbd75859b8",
+            "882c2d3c-6ee1-5678-afb6-71615e8f52d3",
+            "6a00f614-e6ce-5ae2-bc1e-56da4806c18e"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 0.3333,
+          "latency_ms": 22.24
+        },
+        {
+          "qid": "q06",
+          "question": "What is hierarchical multi-agent collaboration with large language models?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "bdbfa225-e148-5fa3-b546-ab94ed629176",
+            "7293550f-93cb-5db4-917e-d056d39394b1",
+            "b0202a2d-ad4a-5d3f-a5c6-64e53dd24e6f",
+            "61edd2be-f2ae-5b00-8a89-3aa55caa2902",
+            "84ed6792-66b4-551f-ae6a-472ce95be830",
+            "100e2788-e3dd-59c5-8578-33c2db349fa8",
+            "e5eacb9d-5207-5ef2-95ea-21e29dc7e530",
+            "b8a21aca-61b5-5199-b740-0d280d8b5fb3",
+            "47bcde8d-9130-5012-ac61-0b81d012f4ba",
+            "9cee7249-48c9-52be-a89f-539325eb9aba"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 20.77
+        },
+        {
+          "qid": "q07",
+          "question": "What is adaptive reasoning suppression (ARS) and why suppress extended reasoning chains in large reasoning models?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "3644c8ab-ccad-54d8-a097-c28b35b7f97a",
+            "344546af-6868-5957-beca-acdc4b1ada65",
+            "8a327bd1-3e3b-5fae-a816-f0863959b60b",
+            "b41c82a5-1e8f-53e0-a019-eda45833a7a3",
+            "d432b8c8-328b-5427-9c31-e6559659cb96",
+            "7747dab1-b58f-5f31-a4fe-d913f8158025",
+            "697b7419-836d-591a-a3c3-9b77a50c952e",
+            "12d40a83-72b4-53de-ba12-2f6960ebb0e9",
+            "be9ee04f-b4fb-5a85-bfe5-8addf48cb7b6",
+            "00cac72b-6dad-54f5-9fb3-a6b7fa440787"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 22.98
+        },
+        {
+          "qid": "q08",
+          "question": "What distinguishes agentic reasoning from traditional chain-of-thought reasoning in LLMs?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+            "b044d069-9220-57d9-9c57-ba101d22faa6",
+            "2d1ec334-989c-5aeb-b460-8cbd3c02987e",
+            "9cee7249-48c9-52be-a89f-539325eb9aba",
+            "66a06869-b65a-5f99-aa58-fcc402e0b8ed",
+            "3aede794-b963-5f54-a589-e638c2474933",
+            "976e50c0-719d-5b60-a2f7-e602db5ce393",
+            "8f2fd5e0-cf43-5d09-8bb1-4c4513ec423b",
+            "2461ea84-6df7-5260-bb31-a9a47bf36656",
+            "be3d28f6-dced-5680-8f6f-61287e54984e"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 0.5,
+          "latency_ms": 21.73
+        },
+        {
+          "qid": "q09",
+          "question": "What are parameter-efficient fine-tuning approaches such as adapter layers for large models?",
+          "n_relevant": 1,
+          "retrieved_chunk_ids": [
+            "cf8d3cd7-012c-5676-b9c1-b436612e1309",
+            "34e39773-ee5c-5666-8ffd-775928854e40",
+            "05969958-76f6-5ebe-b501-ad0843e2aa74",
+            "ccf1912d-4d7b-552b-956b-0db872fed79c",
+            "63802bc4-85b9-5e57-bd9c-2c6daeb20f68",
+            "ee44a4b8-cfca-56ba-bfcb-6cbcb86067c4",
+            "0a264bcb-ad32-5c17-9272-7a8173d36190",
+            "94d169f1-95ed-5a76-a856-c5e1ebaac2ba",
+            "1c714d77-b0b3-519c-8f84-5b8d46c331c7",
+            "5e2dbede-dbab-5b61-93b8-c4d6b3f0fbd0"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 22.36
+        },
+        {
+          "qid": "q10",
+          "question": "What activation memory bottleneck does CARE-LoRA address in LoRA fine-tuning?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "84a54efa-50bf-54e0-af7b-280984a58f5c",
+            "14c51eb4-53ee-56ce-866b-6660ee674b25",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "8b65e28d-ba17-54a6-a515-529db2192ab4",
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "2800aee3-0c56-5cf1-9f0f-1cb8dc8abe02",
+            "b36284d3-671e-5f9a-a091-cbbd19d0eab7",
+            "a4ab94ce-a09a-59ae-96bd-f226fc736d68",
+            "2fc158eb-4a99-5814-8a97-daa9f10ca629"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 0.2,
+          "latency_ms": 23.17
+        },
+        {
+          "qid": "q11",
+          "question": "How does LoRA-FAIR improve federated LoRA fine-tuning through aggregation and initialization refinement?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "1ec3c333-4457-5093-8f12-80dd08888683",
+            "8ab6056c-9041-5e87-aed7-55284059ee35",
+            "a98899cd-abc7-56c6-8b5c-a501972392f0",
+            "fcc9181c-7917-573f-8562-ec2acbbf405a",
+            "57c8725d-cd97-5cf6-84a0-3c2ae0975242",
+            "c0f08a76-3ca7-56b4-b2f2-8d7b55fad7fc",
+            "34684b9a-1740-5517-8ee7-51972b0b8874",
+            "1d71ac47-6c6d-563c-a377-0f3c27613032",
+            "50f2abdc-b0e3-5534-9140-3509da8f9fb7"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 23.6
+        },
+        {
+          "qid": "q12",
+          "question": "What is client-side initialization lag in federated LoRA fine-tuning?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "a98899cd-abc7-56c6-8b5c-a501972392f0",
+            "1ec3c333-4457-5093-8f12-80dd08888683",
+            "1d71ac47-6c6d-563c-a377-0f3c27613032",
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "57c8725d-cd97-5cf6-84a0-3c2ae0975242",
+            "db17285c-2b7a-52bd-99de-f5a28d306f2d",
+            "50f2abdc-b0e3-5534-9140-3509da8f9fb7",
+            "8ab6056c-9041-5e87-aed7-55284059ee35",
+            "34684b9a-1740-5517-8ee7-51972b0b8874",
+            "c4e5bb19-4adb-5084-ba94-fe31e9cde458"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "latency_ms": 22.54
+        }
+      ],
+      "verification_aggregate": null,
+      "not_computed": {
+        "faithfulness": "étape de génération absente de cette configuration",
+        "citation_accuracy": "étape de vérification NLI absente de cette configuration"
+      }
+    },
+    "B": {
+      "label": "B · Hybrid (Dense+BM25)",
+      "description": "Fusion Reciprocal Rank Fusion des canaux dense et BM25.",
+      "n_questions": 12,
+      "per_question": [
+        {
+          "qid": "q01",
+          "question": "What is the RAGAS framework for automated evaluation of retrieval augmented generation?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "9005306e-cbb4-5c2c-91cc-a606ca7f857d",
+            "e9d769e2-f957-5e33-bf87-529e239f758f",
+            "d28bd74e-b4c7-5d0b-8b8c-1e93cacc42e7",
+            "cf3f8d6f-6dba-5182-9ea9-4d834b5a6e2f",
+            "4635f2de-fad3-55d0-8f17-85e9a66c8997",
+            "2a51cc52-f79f-5bf0-8f9f-f771c250c7b4",
+            "63209bdb-2c42-5f89-a6cd-8d4287e349e8",
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+            "b44ebdd4-c4c6-5912-9360-b20a02395575"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 25.95
+        },
+        {
+          "qid": "q02",
+          "question": "Which metrics does RAGAS define, such as faithfulness and answer relevance?",
+          "n_relevant": 3,
+          "retrieved_chunk_ids": [
+            "cf3f8d6f-6dba-5182-9ea9-4d834b5a6e2f",
+            "82156005-2b61-5ca0-8d84-5d4d843c713f",
+            "bc274f65-1a31-5fef-94a9-d7ee385147b2",
+            "75978629-2dbf-5f6e-aec4-ebb1f1723fc2",
+            "7f3a1eba-c572-578d-8f42-1d96b211f82e",
+            "4635f2de-fad3-55d0-8f17-85e9a66c8997",
+            "4e5e143c-38b9-5cfb-bb24-1d586211912a",
+            "528d5755-2733-5a5a-8b35-818bc512d8aa",
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "deb49095-57b7-53a4-bc4d-dcf2b48352f1"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.3333,
+          "recall_at_10": 1.0,
+          "mrr": 0.2,
+          "latency_ms": 26.59
+        },
+        {
+          "qid": "q03",
+          "question": "How does RocketQA use denoising of false negatives and cross-batch negatives to improve dense passage retrieval?",
+          "n_relevant": 3,
+          "retrieved_chunk_ids": [
+            "8a1da111-3513-519a-b7e6-54d4fb2d2362",
+            "3eb8212f-1950-5a9d-98ad-771f9875c844",
+            "06f5fecf-3449-5a84-841c-0eebdf8f8997",
+            "d0876fe4-b47f-52c1-afc6-cdc1a93825ad",
+            "dc1a5672-9af6-544a-8836-bd5512577819",
+            "064ece72-30a6-581c-a1cb-034d1c2ef9a1",
+            "c5c1ca14-5a85-5410-bab7-d33943376712",
+            "197f115f-28f9-5398-8506-0410fc9f0c36",
+            "f844ae12-5095-5e72-b0a6-612fed14fec5",
+            "1353f1a7-b220-5e81-a97a-383645d1c9af"
+          ],
+          "recall_at_3": 0.3333,
+          "recall_at_5": 0.6667,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "latency_ms": 32.06
+        },
+        {
+          "qid": "q04",
+          "question": "How does AR-RAG perform context-aware autoregressive retrieval during image generation?",
+          "n_relevant": 3,
+          "retrieved_chunk_ids": [
+            "513d0e9d-dfa3-5a3c-aa1a-ecb60f4e340c",
+            "49d0c998-6c76-504d-a8e0-8a24b4c1fe91",
+            "f812553d-7a0c-509d-a62e-7cea3d2ac455",
+            "9bb9381e-a4f1-5a09-aebb-5db962463c16",
+            "f6283e74-7525-5525-a707-6f7c9c71c45a",
+            "63209bdb-2c42-5f89-a6cd-8d4287e349e8",
+            "92f95142-ddf0-5096-bc3d-d8edbfc7f2f8",
+            "6439193e-f677-554e-857a-009677fcdeaf",
+            "7893affd-76fd-52da-8230-cbbcea970716",
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692"
+          ],
+          "recall_at_3": 0.3333,
+          "recall_at_5": 0.3333,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 30.76
+        },
+        {
+          "qid": "q05",
+          "question": "How does ReAct unify reasoning and acting in large language model agents?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "ee485dad-cbc8-5c1f-a15a-4fe3b942179a",
+            "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+            "adc61a14-ff80-5893-9ccc-4abbd75859b8",
+            "882c2d3c-6ee1-5678-afb6-71615e8f52d3",
+            "9132e454-694e-5220-882d-b830287626f1",
+            "1f72ae45-58fe-550f-bc55-d60b888b69b4",
+            "cf4b6944-e403-5a51-ab37-89a1dab44ac4",
+            "4ee7784a-8666-51af-9916-d7c79e95a7f8",
+            "6a00f614-e6ce-5ae2-bc1e-56da4806c18e",
+            "be3d28f6-dced-5680-8f6f-61287e54984e"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 1.0,
+          "latency_ms": 29.69
+        },
+        {
+          "qid": "q06",
+          "question": "What is hierarchical multi-agent collaboration with large language models?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "100e2788-e3dd-59c5-8578-33c2db349fa8",
+            "7293550f-93cb-5db4-917e-d056d39394b1",
+            "b0202a2d-ad4a-5d3f-a5c6-64e53dd24e6f",
+            "e5eacb9d-5207-5ef2-95ea-21e29dc7e530",
+            "84ed6792-66b4-551f-ae6a-472ce95be830",
+            "566951fd-89c5-5736-b8f9-41d39eaeb0b2",
+            "61edd2be-f2ae-5b00-8a89-3aa55caa2902",
+            "b8a21aca-61b5-5199-b740-0d280d8b5fb3",
+            "9cee7249-48c9-52be-a89f-539325eb9aba",
+            "6ee09dc8-04c9-58b3-9e8c-734c6a226671"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 26.45
+        },
+        {
+          "qid": "q07",
+          "question": "What is adaptive reasoning suppression (ARS) and why suppress extended reasoning chains in large reasoning models?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "3644c8ab-ccad-54d8-a097-c28b35b7f97a",
+            "344546af-6868-5957-beca-acdc4b1ada65",
+            "8a327bd1-3e3b-5fae-a816-f0863959b60b",
+            "7747dab1-b58f-5f31-a4fe-d913f8158025",
+            "b41c82a5-1e8f-53e0-a019-eda45833a7a3",
+            "697b7419-836d-591a-a3c3-9b77a50c952e",
+            "d432b8c8-328b-5427-9c31-e6559659cb96",
+            "00cac72b-6dad-54f5-9fb3-a6b7fa440787",
+            "12d40a83-72b4-53de-ba12-2f6960ebb0e9",
+            "be9ee04f-b4fb-5a85-bfe5-8addf48cb7b6"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 28.0
+        },
+        {
+          "qid": "q08",
+          "question": "What distinguishes agentic reasoning from traditional chain-of-thought reasoning in LLMs?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "b044d069-9220-57d9-9c57-ba101d22faa6",
+            "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+            "be7dd503-e8a3-5fa4-b869-1a8a27dd392a",
+            "976e50c0-719d-5b60-a2f7-e602db5ce393",
+            "2d1ec334-989c-5aeb-b460-8cbd3c02987e",
+            "9cee7249-48c9-52be-a89f-539325eb9aba",
+            "3aede794-b963-5f54-a589-e638c2474933",
+            "d4ed3e4b-9809-54dd-aaca-992ca34139e4",
+            "be3d28f6-dced-5680-8f6f-61287e54984e",
+            "56c81085-722e-5ea0-9f4e-48933ba5d824"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 1.0,
+          "latency_ms": 27.0
+        },
+        {
+          "qid": "q09",
+          "question": "What are parameter-efficient fine-tuning approaches such as adapter layers for large models?",
+          "n_relevant": 1,
+          "retrieved_chunk_ids": [
+            "05969958-76f6-5ebe-b501-ad0843e2aa74",
+            "ccf1912d-4d7b-552b-956b-0db872fed79c",
+            "cf8d3cd7-012c-5676-b9c1-b436612e1309",
+            "94d169f1-95ed-5a76-a856-c5e1ebaac2ba",
+            "34e39773-ee5c-5666-8ffd-775928854e40",
+            "1c714d77-b0b3-519c-8f84-5b8d46c331c7",
+            "c9589e8a-1cc6-50b9-b9fe-411ddcc8e970",
+            "88c76c19-9da3-59f7-9324-d2a7f28b8451",
+            "0a264bcb-ad32-5c17-9272-7a8173d36190",
+            "63802bc4-85b9-5e57-bd9c-2c6daeb20f68"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 27.54
+        },
+        {
+          "qid": "q10",
+          "question": "What activation memory bottleneck does CARE-LoRA address in LoRA fine-tuning?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "84a54efa-50bf-54e0-af7b-280984a58f5c",
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "2800aee3-0c56-5cf1-9f0f-1cb8dc8abe02",
+            "14c51eb4-53ee-56ce-866b-6660ee674b25",
+            "b36284d3-671e-5f9a-a091-cbbd19d0eab7",
+            "2fc158eb-4a99-5814-8a97-daa9f10ca629",
+            "2f941c31-f0e6-50d0-9c2e-3f66f2b4409d",
+            "3e750254-c52c-5db2-a899-a8d0e6ca4ce0"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 0.5,
+          "latency_ms": 29.52
+        },
+        {
+          "qid": "q11",
+          "question": "How does LoRA-FAIR improve federated LoRA fine-tuning through aggregation and initialization refinement?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "1ec3c333-4457-5093-8f12-80dd08888683",
+            "a98899cd-abc7-56c6-8b5c-a501972392f0",
+            "8ab6056c-9041-5e87-aed7-55284059ee35",
+            "fcc9181c-7917-573f-8562-ec2acbbf405a",
+            "1d71ac47-6c6d-563c-a377-0f3c27613032",
+            "57c8725d-cd97-5cf6-84a0-3c2ae0975242",
+            "34684b9a-1740-5517-8ee7-51972b0b8874",
+            "c0f08a76-3ca7-56b4-b2f2-8d7b55fad7fc",
+            "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 28.82
+        },
+        {
+          "qid": "q12",
+          "question": "What is client-side initialization lag in federated LoRA fine-tuning?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "a98899cd-abc7-56c6-8b5c-a501972392f0",
+            "1ec3c333-4457-5093-8f12-80dd08888683",
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "1d71ac47-6c6d-563c-a377-0f3c27613032",
+            "34684b9a-1740-5517-8ee7-51972b0b8874",
+            "50f2abdc-b0e3-5534-9140-3509da8f9fb7",
+            "db17285c-2b7a-52bd-99de-f5a28d306f2d",
+            "12755cca-2beb-5c12-aa01-eba4661cc4f3",
+            "427fceca-7334-5a0e-8e8d-267e5f365728",
+            "ec806c16-1f4a-50b7-94b0-c464e70533e9"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "latency_ms": 27.12
+        }
+      ],
+      "verification_aggregate": null,
+      "not_computed": {
+        "faithfulness": "étape de génération absente de cette configuration",
+        "citation_accuracy": "étape de vérification NLI absente de cette configuration"
+      }
+    },
+    "C": {
+      "label": "C · Hybrid + Rerank",
+      "description": "Pool hybride top-20 re-scoré par BAAI/bge-reranker-base.",
+      "n_questions": 12,
+      "per_question": [
+        {
+          "qid": "q01",
+          "question": "What is the RAGAS framework for automated evaluation of retrieval augmented generation?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "9005306e-cbb4-5c2c-91cc-a606ca7f857d",
+            "4635f2de-fad3-55d0-8f17-85e9a66c8997",
+            "1b62540d-d57e-52d4-92cb-831f69356a3f",
+            "cf3f8d6f-6dba-5182-9ea9-4d834b5a6e2f",
+            "e9d769e2-f957-5e33-bf87-529e239f758f",
+            "0b5cb77a-1c9b-5a6c-a137-fcb4538fdbb7",
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+            "d28bd74e-b4c7-5d0b-8b8c-1e93cacc42e7",
+            "2a51cc52-f79f-5bf0-8f9f-f771c250c7b4"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 5778.2
+        },
+        {
+          "qid": "q02",
+          "question": "Which metrics does RAGAS define, such as faithfulness and answer relevance?",
+          "n_relevant": 3,
+          "retrieved_chunk_ids": [
+            "82156005-2b61-5ca0-8d84-5d4d843c713f",
+            "0bb48109-1c54-5630-8d6d-611970396f41",
+            "cf3f8d6f-6dba-5182-9ea9-4d834b5a6e2f",
+            "ed16c57d-2564-5410-8529-b42b9a8e717e",
+            "bc274f65-1a31-5fef-94a9-d7ee385147b2",
+            "7f3a1eba-c572-578d-8f42-1d96b211f82e",
+            "75978629-2dbf-5f6e-aec4-ebb1f1723fc2",
+            "528d5755-2733-5a5a-8b35-818bc512d8aa",
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "deb49095-57b7-53a4-bc4d-dcf2b48352f1"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.3333,
+          "mrr": 0.1667,
+          "latency_ms": 6567.58
+        },
+        {
+          "qid": "q03",
+          "question": "How does RocketQA use denoising of false negatives and cross-batch negatives to improve dense passage retrieval?",
+          "n_relevant": 3,
+          "retrieved_chunk_ids": [
+            "f844ae12-5095-5e72-b0a6-612fed14fec5",
+            "3eb8212f-1950-5a9d-98ad-771f9875c844",
+            "197f115f-28f9-5398-8506-0410fc9f0c36",
+            "064ece72-30a6-581c-a1cb-034d1c2ef9a1",
+            "d0876fe4-b47f-52c1-afc6-cdc1a93825ad",
+            "c42269ee-9daf-59fe-b45f-a3f26c4f7b2e",
+            "8a1da111-3513-519a-b7e6-54d4fb2d2362",
+            "06f5fecf-3449-5a84-841c-0eebdf8f8997",
+            "903251d1-bea1-54c8-a8b8-048f87a57d0f",
+            "b2b6d298-760d-58c4-bd3b-e1f3f771b922"
+          ],
+          "recall_at_3": 0.6667,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 6667.64
+        },
+        {
+          "qid": "q04",
+          "question": "How does AR-RAG perform context-aware autoregressive retrieval during image generation?",
+          "n_relevant": 3,
+          "retrieved_chunk_ids": [
+            "6439193e-f677-554e-857a-009677fcdeaf",
+            "513d0e9d-dfa3-5a3c-aa1a-ecb60f4e340c",
+            "f812553d-7a0c-509d-a62e-7cea3d2ac455",
+            "92f95142-ddf0-5096-bc3d-d8edbfc7f2f8",
+            "63209bdb-2c42-5f89-a6cd-8d4287e349e8",
+            "ec53ab53-87da-5c37-bf44-0e2fdbcca2c4",
+            "49d0c998-6c76-504d-a8e0-8a24b4c1fe91",
+            "f6283e74-7525-5525-a707-6f7c9c71c45a",
+            "9bb9381e-a4f1-5a09-aebb-5db962463c16",
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692"
+          ],
+          "recall_at_3": 0.6667,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 6808.96
+        },
+        {
+          "qid": "q05",
+          "question": "How does ReAct unify reasoning and acting in large language model agents?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+            "ee485dad-cbc8-5c1f-a15a-4fe3b942179a",
+            "882c2d3c-6ee1-5678-afb6-71615e8f52d3",
+            "4ee7784a-8666-51af-9916-d7c79e95a7f8",
+            "cf4b6944-e403-5a51-ab37-89a1dab44ac4",
+            "be3d28f6-dced-5680-8f6f-61287e54984e",
+            "9132e454-694e-5220-882d-b830287626f1",
+            "2f751470-5584-5d26-953a-802a1c337b18",
+            "b044d069-9220-57d9-9c57-ba101d22faa6",
+            "63524b99-10f9-5b1c-a6cf-8df204f0e16c"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "latency_ms": 6842.21
+        },
+        {
+          "qid": "q06",
+          "question": "What is hierarchical multi-agent collaboration with large language models?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "7293550f-93cb-5db4-917e-d056d39394b1",
+            "47bcde8d-9130-5012-ac61-0b81d012f4ba",
+            "84ed6792-66b4-551f-ae6a-472ce95be830",
+            "566951fd-89c5-5736-b8f9-41d39eaeb0b2",
+            "11860d77-a23d-522f-91b3-e3397492a228",
+            "bdbfa225-e148-5fa3-b546-ab94ed629176",
+            "a5c6a2b5-101d-5eb9-94e9-df2e416c5dda",
+            "6ee09dc8-04c9-58b3-9e8c-734c6a226671",
+            "1380c9e0-794d-5490-bd40-c90b9cb59d8e",
+            "100e2788-e3dd-59c5-8578-33c2db349fa8"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 7126.52
+        },
+        {
+          "qid": "q07",
+          "question": "What is adaptive reasoning suppression (ARS) and why suppress extended reasoning chains in large reasoning models?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "3644c8ab-ccad-54d8-a097-c28b35b7f97a",
+            "344546af-6868-5957-beca-acdc4b1ada65",
+            "8a327bd1-3e3b-5fae-a816-f0863959b60b",
+            "d432b8c8-328b-5427-9c31-e6559659cb96",
+            "b41c82a5-1e8f-53e0-a019-eda45833a7a3",
+            "7747dab1-b58f-5f31-a4fe-d913f8158025",
+            "697b7419-836d-591a-a3c3-9b77a50c952e",
+            "3c7518c1-077f-5216-a0f4-cf731311c2cb",
+            "2aa33232-5a00-5e9c-ab4f-f7fff31ae0e0",
+            "329e036b-4b75-5055-84fe-4423d8afd471"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 7377.32
+        },
+        {
+          "qid": "q08",
+          "question": "What distinguishes agentic reasoning from traditional chain-of-thought reasoning in LLMs?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "b044d069-9220-57d9-9c57-ba101d22faa6",
+            "be3d28f6-dced-5680-8f6f-61287e54984e",
+            "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+            "be7dd503-e8a3-5fa4-b869-1a8a27dd392a",
+            "2d1ec334-989c-5aeb-b460-8cbd3c02987e",
+            "1e0f8403-22da-5560-a30a-3cb7387fb9b2",
+            "9cee7249-48c9-52be-a89f-539325eb9aba",
+            "976e50c0-719d-5b60-a2f7-e602db5ce393",
+            "0b7a88e8-2027-577e-9868-afa98eb459b4",
+            "3aede794-b963-5f54-a589-e638c2474933"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 1.0,
+          "latency_ms": 6513.42
+        },
+        {
+          "qid": "q09",
+          "question": "What are parameter-efficient fine-tuning approaches such as adapter layers for large models?",
+          "n_relevant": 1,
+          "retrieved_chunk_ids": [
+            "1c714d77-b0b3-519c-8f84-5b8d46c331c7",
+            "94d169f1-95ed-5a76-a856-c5e1ebaac2ba",
+            "88c76c19-9da3-59f7-9324-d2a7f28b8451",
+            "05969958-76f6-5ebe-b501-ad0843e2aa74",
+            "ccf1912d-4d7b-552b-956b-0db872fed79c",
+            "63802bc4-85b9-5e57-bd9c-2c6daeb20f68",
+            "45cc3811-ac39-519e-afb2-3618d7825694",
+            "6a7bbbbe-4094-5622-9e6b-9987f5a71b16",
+            "6658061f-1084-5568-a3e8-fb93a377d922",
+            "ba7967fb-5c5e-5efd-b1f6-f9e2f6e4a375"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 5781.44
+        },
+        {
+          "qid": "q10",
+          "question": "What activation memory bottleneck does CARE-LoRA address in LoRA fine-tuning?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "2800aee3-0c56-5cf1-9f0f-1cb8dc8abe02",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "14c51eb4-53ee-56ce-866b-6660ee674b25",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "84a54efa-50bf-54e0-af7b-280984a58f5c",
+            "2953c5d5-9732-52d0-93e9-96e9e7fbeab4",
+            "8b65e28d-ba17-54a6-a515-529db2192ab4",
+            "f0b0d107-41ac-5b19-a297-6b11c38dba1b",
+            "9a9ffeda-8b95-57a4-b3b7-2a5848f23105"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 7039.27
+        },
+        {
+          "qid": "q11",
+          "question": "How does LoRA-FAIR improve federated LoRA fine-tuning through aggregation and initialization refinement?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "1ec3c333-4457-5093-8f12-80dd08888683",
+            "8ab6056c-9041-5e87-aed7-55284059ee35",
+            "a98899cd-abc7-56c6-8b5c-a501972392f0",
+            "fcc9181c-7917-573f-8562-ec2acbbf405a",
+            "ec806c16-1f4a-50b7-94b0-c464e70533e9",
+            "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42",
+            "1d71ac47-6c6d-563c-a377-0f3c27613032",
+            "c0f08a76-3ca7-56b4-b2f2-8d7b55fad7fc",
+            "50f2abdc-b0e3-5534-9140-3509da8f9fb7"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 1.0,
+          "latency_ms": 7300.27
+        },
+        {
+          "qid": "q12",
+          "question": "What is client-side initialization lag in federated LoRA fine-tuning?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "34684b9a-1740-5517-8ee7-51972b0b8874",
+            "a98899cd-abc7-56c6-8b5c-a501972392f0",
+            "1ec3c333-4457-5093-8f12-80dd08888683",
+            "89609e70-5c89-5001-88a2-08ad529e2331",
+            "427fceca-7334-5a0e-8e8d-267e5f365728",
+            "db17285c-2b7a-52bd-99de-f5a28d306f2d",
+            "fcc9181c-7917-573f-8562-ec2acbbf405a",
+            "12755cca-2beb-5c12-aa01-eba4661cc4f3",
+            "9bc3ee32-632f-5a8c-9996-df516a459210"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "latency_ms": 7228.78
+        }
+      ],
+      "verification_aggregate": null,
+      "not_computed": {
+        "faithfulness": "étape de génération absente de cette configuration",
+        "citation_accuracy": "étape de vérification NLI absente de cette configuration"
+      }
+    },
+    "D": {
+      "label": "D · Hybrid + Rerank + Verification",
+      "description": "Pipeline complet : C + génération extractive avec citations + vérification NLI roberta-large-mnli.",
+      "n_questions": 12,
+      "per_question": [
+        {
+          "qid": "q01",
+          "question": "What is the RAGAS framework for automated evaluation of retrieval augmented generation?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "9005306e-cbb4-5c2c-91cc-a606ca7f857d",
+            "4635f2de-fad3-55d0-8f17-85e9a66c8997",
+            "1b62540d-d57e-52d4-92cb-831f69356a3f",
+            "cf3f8d6f-6dba-5182-9ea9-4d834b5a6e2f",
+            "e9d769e2-f957-5e33-bf87-529e239f758f",
+            "0b5cb77a-1c9b-5a6c-a137-fcb4538fdbb7",
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+            "d28bd74e-b4c7-5d0b-8b8c-1e93cacc42e7",
+            "2a51cc52-f79f-5bf0-8f9f-f771c250c7b4"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 13490.36,
+          "answer": "With Ragas, we put forward a suite\nof metrics which can be used to evaluate these\ndifferent dimensions without having to rely on\nground truth human annotations[1]. Automated evaluation of\nretrieval-augmented systems is thus paramount[2]. For instance,\nBARTScore (Yuan et al., 2021) estimates factuality\nby looking at the conditional probability of the gen-\nerated text given the input[3]. RAGAs: Automated evaluation\nof retrieval augmented generation[4]. 6\nConclusions\nWe have highlighted the need for automated\nreference-free evaluation of RAG systems[5].",
+          "verification": {
+            "citations_verified": 5,
+            "mean_support_score": 0.1654,
+            "citation_accuracy": 0.0,
+            "supported_rate": 0.0,
+            "weak_support_rate": 0.2,
+            "unsupported_rate": 0.8,
+            "faithfulness": 0.1654
+          }
+        },
+        {
+          "qid": "q02",
+          "question": "Which metrics does RAGAS define, such as faithfulness and answer relevance?",
+          "n_relevant": 3,
+          "retrieved_chunk_ids": [
+            "82156005-2b61-5ca0-8d84-5d4d843c713f",
+            "0bb48109-1c54-5630-8d6d-611970396f41",
+            "cf3f8d6f-6dba-5182-9ea9-4d834b5a6e2f",
+            "ed16c57d-2564-5410-8529-b42b9a8e717e",
+            "bc274f65-1a31-5fef-94a9-d7ee385147b2",
+            "7f3a1eba-c572-578d-8f42-1d96b211f82e",
+            "75978629-2dbf-5f6e-aec4-ebb1f1723fc2",
+            "528d5755-2733-5a5a-8b35-818bc512d8aa",
+            "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+            "deb49095-57b7-53a4-bc4d-dcf2b48352f1"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.3333,
+          "mrr": 0.1667,
+          "latency_ms": 15922.22,
+          "answer": "They are based on\nthe metrics detailed in the RAGAS [Es et al., 2023] framework[1][2]. They are based on\nthe metrics detailed in the RAGAS [Es et al., 2023] framework[1][2]. does the answer address the ques-\ntion) and context relevance (i.e[3]. The first set includes metrics based on those\ndefined by RAGAS [Es et al., 2023]: answer faithfulness, relevancy, semantic similarity, and\ncorrectness[4]. Given an answer and context, assign a\nscore for faithfulness in the range 0-10[5].",
+          "verification": {
+            "citations_verified": 7,
+            "mean_support_score": 0.104,
+            "citation_accuracy": 0.0,
+            "supported_rate": 0.0,
+            "weak_support_rate": 0.0,
+            "unsupported_rate": 1.0,
+            "faithfulness": 0.0907
+          }
+        },
+        {
+          "qid": "q03",
+          "question": "How does RocketQA use denoising of false negatives and cross-batch negatives to improve dense passage retrieval?",
+          "n_relevant": 3,
+          "retrieved_chunk_ids": [
+            "f844ae12-5095-5e72-b0a6-612fed14fec5",
+            "3eb8212f-1950-5a9d-98ad-771f9875c844",
+            "197f115f-28f9-5398-8506-0410fc9f0c36",
+            "064ece72-30a6-581c-a1cb-034d1c2ef9a1",
+            "d0876fe4-b47f-52c1-afc6-cdc1a93825ad",
+            "c42269ee-9daf-59fe-b45f-a3f26c4f7b2e",
+            "8a1da111-3513-519a-b7e6-54d4fb2d2362",
+            "06f5fecf-3449-5a84-841c-0eebdf8f8997",
+            "903251d1-bea1-54c8-a8b8-048f87a57d0f",
+            "b2b6d298-760d-58c4-bd3b-e1f3f771b922"
+          ],
+          "recall_at_3": 0.6667,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 15650.18,
+          "answer": "To address these chal-\nlenges, we propose an optimized training ap-\nproach, called RocketQA, to improving dense\npassage retrieval[1]. We propose an opti-\nmized training approach, called RocketQA, to im-\nproving dense passage retrieval[2]. We have made three major technical contributions\nin RocketQA, namely cross-batch negatives, de-\nnoised hard negatives and data augmentation[3][4]. We have made three major technical contributions\nin RocketQA, namely cross-batch negatives, de-\nnoised hard negatives and data augmentation[3][4]. Experimental results show that\nthe three strategies are effective to improve\nthe performance of dense passage retrieval[5].",
+          "verification": {
+            "citations_verified": 7,
+            "mean_support_score": 0.1936,
+            "citation_accuracy": 0.0,
+            "supported_rate": 0.0,
+            "weak_support_rate": 0.1429,
+            "unsupported_rate": 0.8571,
+            "faithfulness": 0.239
+          }
+        },
+        {
+          "qid": "q04",
+          "question": "How does AR-RAG perform context-aware autoregressive retrieval during image generation?",
+          "n_relevant": 3,
+          "retrieved_chunk_ids": [
+            "6439193e-f677-554e-857a-009677fcdeaf",
+            "513d0e9d-dfa3-5a3c-aa1a-ecb60f4e340c",
+            "f812553d-7a0c-509d-a62e-7cea3d2ac455",
+            "92f95142-ddf0-5096-bc3d-d8edbfc7f2f8",
+            "63209bdb-2c42-5f89-a6cd-8d4287e349e8",
+            "ec53ab53-87da-5c37-bf44-0e2fdbcca2c4",
+            "49d0c998-6c76-504d-a8e0-8a24b4c1fe91",
+            "f6283e74-7525-5525-a707-6f7c9c71c45a",
+            "9bb9381e-a4f1-5a09-aebb-5db962463c16",
+            "f4d08b51-1d40-58aa-8209-8b050ccf8692"
+          ],
+          "recall_at_3": 0.6667,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 13020.14,
+          "answer": "We validate the effectiveness of AR-RAG on widely adopted benchmarks,\n1Jingyuan Qi and Zhiyang Xu contributed equally to this work[1]. Augmentation\nGeneration\nPrompt\nGenerated Image\nGenerated Image\n(b) Image-Based Retrieval Augmentation\nPrompt\nGenerated Image\nRetrieved Images\n[2]. retrieved references, despite being irrelevant to the\ninput prompt, unintentionally appears in the generated image[3]. 2 scores computed for each retrieved patch to quantify their alignment with the current generation\ncontext[4]. These methods enable context-aware and prompt-sensitive guidance during generation[5].",
+          "verification": {
+            "citations_verified": 5,
+            "mean_support_score": 0.1614,
+            "citation_accuracy": 0.0,
+            "supported_rate": 0.0,
+            "weak_support_rate": 0.0,
+            "unsupported_rate": 1.0,
+            "faithfulness": 0.1614
+          }
+        },
+        {
+          "qid": "q05",
+          "question": "How does ReAct unify reasoning and acting in large language model agents?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+            "ee485dad-cbc8-5c1f-a15a-4fe3b942179a",
+            "882c2d3c-6ee1-5678-afb6-71615e8f52d3",
+            "4ee7784a-8666-51af-9916-d7c79e95a7f8",
+            "cf4b6944-e403-5a51-ab37-89a1dab44ac4",
+            "be3d28f6-dced-5680-8f6f-61287e54984e",
+            "9132e454-694e-5220-882d-b830287626f1",
+            "2f751470-5584-5d26-953a-802a1c337b18",
+            "b044d069-9220-57d9-9c57-ba101d22faa6",
+            "63524b99-10f9-5b1c-a6cf-8df204f0e16c"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "latency_ms": 15815.64,
+          "answer": "This reframing unifies reasoning with acting, positioning\nreasoning as the organizing principle for perception, planning, decision, and verification[1][2]. This reframing unifies reasoning with acting, positioning\nreasoning as the organizing principle for perception, planning, decision, and verification[1][2]. 8 Agentic Reasoning for Large Language Models\nIn-Context Reasoning: Inference-Time Search[3]. However, LLMs are optimized for lan-\nguage generation instead of tool use during\ntraining or alignment, limiting their effective-\nness as agents[4]. reasoning and acting in language models[5].",
+          "verification": {
+            "citations_verified": 7,
+            "mean_support_score": 0.2461,
+            "citation_accuracy": 0.0,
+            "supported_rate": 0.0,
+            "weak_support_rate": 0.2857,
+            "unsupported_rate": 0.7143,
+            "faithfulness": 0.2571
+          }
+        },
+        {
+          "qid": "q06",
+          "question": "What is hierarchical multi-agent collaboration with large language models?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "7293550f-93cb-5db4-917e-d056d39394b1",
+            "47bcde8d-9130-5012-ac61-0b81d012f4ba",
+            "84ed6792-66b4-551f-ae6a-472ce95be830",
+            "566951fd-89c5-5736-b8f9-41d39eaeb0b2",
+            "11860d77-a23d-522f-91b3-e3397492a228",
+            "bdbfa225-e148-5fa3-b546-ab94ed629176",
+            "a5c6a2b5-101d-5eb9-94e9-df2e416c5dda",
+            "6ee09dc8-04c9-58b3-9e8c-734c6a226671",
+            "1380c9e0-794d-5490-bd40-c90b9cb59d8e",
+            "100e2788-e3dd-59c5-8578-33c2db349fa8"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 13047.84,
+          "answer": "Labor\nCollaboration and division of labor constitute a central organizing principle in modern multi-agent systems[1]. Unleashing cogni-\ntive synergy in large language models: A task-solving agent through multi-persona self-collaboration[2]. Reflective multi-agent collaboration based on large language models[3]. Recent work highlighted that\nprevailing multi-agent memory mechanisms were overly simplistic and lacked per-agent customization [425][4]. 44\n5 Agentic Reasoning for Large Language Models\n6.2\nScientific Discovery Agents [5].",
+          "verification": {
+            "citations_verified": 5,
+            "mean_support_score": 0.3332,
+            "citation_accuracy": 0.0,
+            "supported_rate": 0.0,
+            "weak_support_rate": 0.4,
+            "unsupported_rate": 0.6,
+            "faithfulness": 0.3332
+          }
+        },
+        {
+          "qid": "q07",
+          "question": "What is adaptive reasoning suppression (ARS) and why suppress extended reasoning chains in large reasoning models?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "3644c8ab-ccad-54d8-a097-c28b35b7f97a",
+            "344546af-6868-5957-beca-acdc4b1ada65",
+            "8a327bd1-3e3b-5fae-a816-f0863959b60b",
+            "d432b8c8-328b-5427-9c31-e6559659cb96",
+            "b41c82a5-1e8f-53e0-a019-eda45833a7a3",
+            "7747dab1-b58f-5f31-a4fe-d913f8158025",
+            "697b7419-836d-591a-a3c3-9b77a50c952e",
+            "3c7518c1-077f-5216-a0f4-cf731311c2cb",
+            "2aa33232-5a00-5e9c-ab4f-f7fff31ae0e0",
+            "329e036b-4b75-5055-84fe-4423d8afd471"
+          ],
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 11123.96,
+          "answer": "Existing efficient reasoning methods\nface the challenge of balancing reasoning quality with inference cost reduction[1]. 4\nConclusion\nWe propose Adaptive Reasoning Suppression (ARS), a training-free method for improving efficiency\nin Large Reasoning Models (LRMs)[2]. During reasoning, models\nexhibit reflection behaviors triggered by specific keywords T = {\"Wait\", \"But\", \"Alternatively\", [3]. Evaluating large\nlanguage models trained on code[4].",
+          "verification": {
+            "citations_verified": 4,
+            "mean_support_score": 0.2994,
+            "citation_accuracy": 0.0,
+            "supported_rate": 0.0,
+            "weak_support_rate": 0.25,
+            "unsupported_rate": 0.75,
+            "faithfulness": 0.2994
+          }
+        },
+        {
+          "qid": "q08",
+          "question": "What distinguishes agentic reasoning from traditional chain-of-thought reasoning in LLMs?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "b044d069-9220-57d9-9c57-ba101d22faa6",
+            "be3d28f6-dced-5680-8f6f-61287e54984e",
+            "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+            "be7dd503-e8a3-5fa4-b869-1a8a27dd392a",
+            "2d1ec334-989c-5aeb-b460-8cbd3c02987e",
+            "1e0f8403-22da-5560-a30a-3cb7387fb9b2",
+            "9cee7249-48c9-52be-a89f-539325eb9aba",
+            "976e50c0-719d-5b60-a2f7-e602db5ce393",
+            "0b7a88e8-2027-577e-9868-afa98eb459b4",
+            "3aede794-b963-5f54-a589-e638c2474933"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 1.0,
+          "latency_ms": 13928.67,
+          "answer": "Agentic reasoning, in contrast, emphasizes scaling test-time interaction[1]. In\nthis survey, we provide a systematic roadmap by organizing agentic reasoning along three complementary\ndimensions[2]. Conventional LLMs lack mechanisms to act, adapt, or\nimprove in open-ended environments where information evolves over time[3]. The foundation of in-context agentic reasoning lies in augmenting\nthe Chain-of-Thought (CoT) process with the ability to take action.[1][4]. Existing surveys on LLM reasoning mainly investigate how to elicit\nor enhance reasoning within a model’s internal computation process[5].",
+          "verification": {
+            "citations_verified": 6,
+            "mean_support_score": 0.1989,
+            "citation_accuracy": 0.0,
+            "supported_rate": 0.0,
+            "weak_support_rate": 0.3333,
+            "unsupported_rate": 0.6667,
+            "faithfulness": 0.228
+          }
+        },
+        {
+          "qid": "q09",
+          "question": "What are parameter-efficient fine-tuning approaches such as adapter layers for large models?",
+          "n_relevant": 1,
+          "retrieved_chunk_ids": [
+            "1c714d77-b0b3-519c-8f84-5b8d46c331c7",
+            "94d169f1-95ed-5a76-a856-c5e1ebaac2ba",
+            "88c76c19-9da3-59f7-9324-d2a7f28b8451",
+            "05969958-76f6-5ebe-b501-ad0843e2aa74",
+            "ccf1912d-4d7b-552b-956b-0db872fed79c",
+            "63802bc4-85b9-5e57-bd9c-2c6daeb20f68",
+            "45cc3811-ac39-519e-afb2-3618d7825694",
+            "6a7bbbbe-4094-5622-9e6b-9987f5a71b16",
+            "6658061f-1084-5568-a3e8-fb93a377d922",
+            "ba7967fb-5c5e-5efd-b1f6-f9e2f6e4a375"
+          ],
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "mrr": 0.0,
+          "latency_ms": 14126.0,
+          "answer": "This allows us to be\npragmatic about how good a model linearization is when fine-tuning large lan-\nguage models (LLMs)[1]. They are small, trainable networks\n(adapter layers) between the layers of a pretrained model[2]. Motivated by this, we give spectral perturbation\nbounds on the NTK induced by the choice of layers selected for fine-tuning[1][3]. importance of convergence for efficient fine-tuning[4]. Theoretical explanation of the success of parameter-efficient fine-tuning methods is an active area of research\nin deep learning[5].",
+          "verification": {
+            "citations_verified": 6,
+            "mean_support_score": 0.1729,
+            "citation_accuracy": 0.0,
+            "supported_rate": 0.0,
+            "weak_support_rate": 0.0,
+            "unsupported_rate": 1.0,
+            "faithfulness": 0.1926
+          }
+        },
+        {
+          "qid": "q10",
+          "question": "What activation memory bottleneck does CARE-LoRA address in LoRA fine-tuning?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "802323c1-1128-5577-ab0f-433ae92879b8",
+            "2800aee3-0c56-5cf1-9f0f-1cb8dc8abe02",
+            "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+            "14c51eb4-53ee-56ce-866b-6660ee674b25",
+            "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+            "84a54efa-50bf-54e0-af7b-280984a58f5c",
+            "2953c5d5-9732-52d0-93e9-96e9e7fbeab4",
+            "8b65e28d-ba17-54a6-a515-529db2192ab4",
+            "f0b0d107-41ac-5b19-a297-6b11c38dba1b",
+            "9a9ffeda-8b95-57a4-b3b7-2a5848f23105"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 1.0,
+          "mrr": 1.0,
+          "latency_ms": 13145.79,
+          "answer": "To address this, we propose CARE-LoRA, a data-aware\nCompressed Activation REconstruction framework[1]. Moreover, reducing memory consump-\ntion allows CARE-LoRA to use a higher rank for stronger\nperformance[2]. This has motivated recent work on reducing the ac-\ntivations saved during LoRA-style fine-tuning[3]. Wang et al., “HyC-LoRA: Memory efficient LoRA fine-tuning\nwith hybrid activation compression,” in Proceedings of Machine\nLearning and Systems, vol[4]. We\nfurther prove that its projection-down subspace can\nevolve during fine-tuning[5].",
+          "verification": {
+            "citations_verified": 5,
+            "mean_support_score": 0.174,
+            "citation_accuracy": 0.0,
+            "supported_rate": 0.0,
+            "weak_support_rate": 0.2,
+            "unsupported_rate": 0.8,
+            "faithfulness": 0.174
+          }
+        },
+        {
+          "qid": "q11",
+          "question": "How does LoRA-FAIR improve federated LoRA fine-tuning through aggregation and initialization refinement?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "1ec3c333-4457-5093-8f12-80dd08888683",
+            "8ab6056c-9041-5e87-aed7-55284059ee35",
+            "a98899cd-abc7-56c6-8b5c-a501972392f0",
+            "fcc9181c-7917-573f-8562-ec2acbbf405a",
+            "ec806c16-1f4a-50b7-94b0-c464e70533e9",
+            "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42",
+            "1d71ac47-6c6d-563c-a377-0f3c27613032",
+            "c0f08a76-3ca7-56b4-b2f2-8d7b55fad7fc",
+            "50f2abdc-b0e3-5534-9140-3509da8f9fb7"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "mrr": 1.0,
+          "latency_ms": 13222.9,
+          "answer": "We propose LoRA-FAIR, a novel method that tackles both is-\nsues by introducing a correction term on the server, enhanc-\ning aggregation efficiency and accuracy[1]. Ex-\nisting FL methods for fine-tuning fail to consider these two\nkey points simultaneously[2]. Our key contributions are summarized as follows:\n• We investigate the problem of fine-tuning with LoRA in\nfederated learning setting[3]. A closely\nrelated area to our work involves federated fine-tuning us-\ning LoRA[4]. In this section, we outline the key steps\nof LoRA-FAIR and demonstrate how it simultaneously ad-\ndresses both Challenge 1 and Challenge 2[5].",
+          "verification": {
+            "citations_verified": 5,
+            "mean_support_score": 0.2737,
+            "citation_accuracy": 0.0,
+            "supported_rate": 0.0,
+            "weak_support_rate": 0.4,
+            "unsupported_rate": 0.6,
+            "faithfulness": 0.2737
+          }
+        },
+        {
+          "qid": "q12",
+          "question": "What is client-side initialization lag in federated LoRA fine-tuning?",
+          "n_relevant": 2,
+          "retrieved_chunk_ids": [
+            "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+            "34684b9a-1740-5517-8ee7-51972b0b8874",
+            "a98899cd-abc7-56c6-8b5c-a501972392f0",
+            "1ec3c333-4457-5093-8f12-80dd08888683",
+            "89609e70-5c89-5001-88a2-08ad529e2331",
+            "427fceca-7334-5a0e-8e8d-267e5f365728",
+            "db17285c-2b7a-52bd-99de-f5a28d306f2d",
+            "fcc9181c-7917-573f-8562-ec2acbbf405a",
+            "12755cca-2beb-5c12-aa01-eba4661cc4f3",
+            "9bc3ee32-632f-5a8c-9996-df516a459210"
+          ],
+          "recall_at_3": 0.5,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "mrr": 0.5,
+          "latency_ms": 14283.5,
+          "answer": "Parameter-efficient fine-tuning (PEFT)\nmethods like Low-Rank Adaptation (LoRA) reduce this cost\nby introducing low-rank matrices for tuning fewer parame-\nters[1]. In this paper, we investigate traditional FL in conjunction\nwith parameter-efficient fine-tuning methods, specifically\nfocusing on LoRA[2]. A closely\nrelated area to our work involves federated fine-tuning us-\ning LoRA[3]. Ex-\nisting FL methods for fine-tuning fail to consider these two\nkey points simultaneously[2][4]. This reinitialization strategy\ncan lead to Client-Side Initialization Lag[5].",
+          "verification": {
+            "citations_verified": 6,
+            "mean_support_score": 0.2936,
+            "citation_accuracy": 0.0,
+            "supported_rate": 0.0,
+            "weak_support_rate": 0.3333,
+            "unsupported_rate": 0.6667,
+            "faithfulness": 0.2209
+          }
+        }
+      ],
+      "verification_aggregate": {
+        "citations_verified": 68,
+        "mean_support_score": 0.2137,
+        "citation_accuracy": 0.0,
+        "supported_rate": 0.0,
+        "weak_support_rate": 0.2059,
+        "unsupported_rate": 0.7941,
+        "faithfulness": 0.2196
+      },
+      "not_computed": {}
+    }
+  },
+  "metrics": {
+    "A": {
+      "recall_at_3": 0.375,
+      "recall_at_5": 0.4722,
+      "recall_at_10": 0.7222,
+      "mrr": 0.5236,
+      "faithfulness": null,
+      "citation_accuracy": null,
+      "mean_support_score": null,
+      "supported_rate": null,
+      "weak_support_rate": null,
+      "unsupported_rate": null,
+      "average_latency_ms": 25.89,
+      "p95_latency_ms": 25.45,
+      "not_computed": {
+        "faithfulness": "étape de génération absente de cette configuration",
+        "citation_accuracy": "étape de vérification NLI absente de cette configuration"
+      }
+    },
+    "B": {
+      "recall_at_3": 0.3889,
+      "recall_at_5": 0.4861,
+      "recall_at_10": 0.7083,
+      "mrr": 0.6417,
+      "faithfulness": null,
+      "citation_accuracy": null,
+      "mean_support_score": null,
+      "supported_rate": null,
+      "weak_support_rate": null,
+      "unsupported_rate": null,
+      "average_latency_ms": 28.29,
+      "p95_latency_ms": 30.76,
+      "not_computed": {
+        "faithfulness": "étape de génération absente de cette configuration",
+        "citation_accuracy": "étape de vérification NLI absente de cette configuration"
+      }
+    },
+    "C": {
+      "recall_at_3": 0.4861,
+      "recall_at_5": 0.5833,
+      "recall_at_10": 0.6944,
+      "mrr": 0.6806,
+      "faithfulness": null,
+      "citation_accuracy": null,
+      "mean_support_score": null,
+      "supported_rate": null,
+      "weak_support_rate": null,
+      "unsupported_rate": null,
+      "average_latency_ms": 6752.63,
+      "p95_latency_ms": 7300.27,
+      "not_computed": {
+        "faithfulness": "étape de génération absente de cette configuration",
+        "citation_accuracy": "étape de vérification NLI absente de cette configuration"
+      }
+    },
+    "D": {
+      "recall_at_3": 0.4861,
+      "recall_at_5": 0.5833,
+      "recall_at_10": 0.6944,
+      "mrr": 0.6806,
+      "faithfulness": 0.2196,
+      "citation_accuracy": 0.0,
+      "mean_support_score": 0.2137,
+      "supported_rate": 0.0,
+      "weak_support_rate": 0.2059,
+      "unsupported_rate": 0.7941,
+      "average_latency_ms": 13898.1,
+      "p95_latency_ms": 15815.64
+    }
+  },
+  "summary": {
+    "questions_evaluated": 12,
+    "questions_skipped": [
+      {
+        "qid": "q04",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q05",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q06",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q07",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q08",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q09",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q10",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q11",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q12",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q13",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q14",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q15",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q16",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q17",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q18",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q19",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q20",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q21",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q22",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q23",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q24",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q25",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q26",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q27",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q28",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q29",
+        "reason": "slot vide (non encore annoté)"
+      },
+      {
+        "qid": "q30",
+        "reason": "slot vide (non encore annoté)"
+      }
+    ],
+    "chunks_in_corpus": 2026,
+    "relevant_chunks_annotated": 26,
+    "gains": [
+      {
+        "step": "gain_bm25",
+        "description": "Ajout du canal BM25 (fusion RRF)",
+        "from_config": "A · Dense",
+        "to_config": "B · Hybrid (Dense+BM25)",
+        "metrics": {
+          "recall_at_3": {
+            "from": 0.375,
+            "to": 0.3889,
+            "delta_abs": 0.0139,
+            "delta_pct": 3.7
+          },
+          "recall_at_5": {
+            "from": 0.4722,
+            "to": 0.4861,
+            "delta_abs": 0.0139,
+            "delta_pct": 2.9
+          },
+          "recall_at_10": {
+            "from": 0.7222,
+            "to": 0.7083,
+            "delta_abs": -0.0139,
+            "delta_pct": -1.9
+          },
+          "mrr": {
+            "from": 0.5236,
+            "to": 0.6417,
+            "delta_abs": 0.1181,
+            "delta_pct": 22.6
+          }
+        },
+        "latency": {
+          "from_ms": 25.89,
+          "to_ms": 28.29,
+          "delta_ms": 2.4
+        }
+      },
+      {
+        "step": "gain_reranker",
+        "description": "Ajout du reranker cross-encoder BGE",
+        "from_config": "B · Hybrid (Dense+BM25)",
+        "to_config": "C · Hybrid + Rerank",
+        "metrics": {
+          "recall_at_3": {
+            "from": 0.3889,
+            "to": 0.4861,
+            "delta_abs": 0.0972,
+            "delta_pct": 25.0
+          },
+          "recall_at_5": {
+            "from": 0.4861,
+            "to": 0.5833,
+            "delta_abs": 0.0972,
+            "delta_pct": 20.0
+          },
+          "recall_at_10": {
+            "from": 0.7083,
+            "to": 0.6944,
+            "delta_abs": -0.0139,
+            "delta_pct": -2.0
+          },
+          "mrr": {
+            "from": 0.6417,
+            "to": 0.6806,
+            "delta_abs": 0.0389,
+            "delta_pct": 6.1
+          }
+        },
+        "latency": {
+          "from_ms": 28.29,
+          "to_ms": 6752.63,
+          "delta_ms": 6724.34
+        }
+      },
+      {
+        "step": "gain_nli",
+        "description": "Ajout génération + vérification NLI des citations",
+        "from_config": "C · Hybrid + Rerank",
+        "to_config": "D · Hybrid + Rerank + Verification",
+        "metrics": {
+          "recall_at_3": {
+            "from": 0.4861,
+            "to": 0.4861,
+            "delta_abs": 0.0,
+            "delta_pct": 0.0
+          },
+          "recall_at_5": {
+            "from": 0.5833,
+            "to": 0.5833,
+            "delta_abs": 0.0,
+            "delta_pct": 0.0
+          },
+          "recall_at_10": {
+            "from": 0.6944,
+            "to": 0.6944,
+            "delta_abs": 0.0,
+            "delta_pct": 0.0
+          },
+          "mrr": {
+            "from": 0.6806,
+            "to": 0.6806,
+            "delta_abs": 0.0,
+            "delta_pct": 0.0
+          },
+          "faithfulness": {
+            "from": null,
+            "to": 0.2196,
+            "delta_abs": null,
+            "delta_pct": null
+          },
+          "citation_accuracy": {
+            "from": null,
+            "to": 0.0,
+            "delta_abs": null,
+            "delta_pct": null
+          }
+        },
+        "latency": {
+          "from_ms": 6752.63,
+          "to_ms": 13898.1,
+          "delta_ms": 7145.47
+        }
+      }
+    ],
+    "best_configuration": {
+      "best_per_quality_metric": {
+        "recall_at_3": "D",
+        "recall_at_5": "D",
+        "recall_at_10": "A",
+        "mrr": "D",
+        "faithfulness": "D",
+        "citation_accuracy": "D"
+      },
+      "overall_best_quality": "D · Hybrid + Rerank + Verification",
+      "fastest_config": "A · Dense"
+    },
+    "tradeoffs_precision_latency": {
+      "bm25": {
+        "delta_recall_at_5_points": 1.39,
+        "delta_avg_latency_ms": 2.4,
+        "latency_ms_per_recall_point": 1.7
+      },
+      "reranker": {
+        "delta_recall_at_5_points": 9.72,
+        "delta_avg_latency_ms": 6724.34,
+        "latency_ms_per_recall_point": 691.8
+      },
+      "nli": {
+        "delta_recall_at_5_points": 0.0,
+        "delta_avg_latency_ms": 7145.47,
+        "latency_ms_per_recall_point": "pas de gain de recall (coût pur)"
+      }
+    },
+    "chunks_judged_across_queries": 149
+  }
+}

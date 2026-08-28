@@ -1,0 +1,1536 @@
+[
+  {
+    "id": "2308.16118v2",
+    "theme": "agents",
+    "title": "Response: Emergent analogical reasoning in large language models",
+    "authors": [
+      "Damian Hodel",
+      "Jevin West"
+    ],
+    "summary": "",
+    "num_pages": 14,
+    "pdf_url": "https://arxiv.org/pdf/2308.16118v2",
+    "file_path": "agents/2308.16118v2_response_emergent_analogical_reasoning_in_large_language_mod.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "reason"
+      ],
+      "best_theme": "agents",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 20871,
+      "words": 3977,
+      "letter_ratio": 0.93,
+      "pages_with_text": 14,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 1490.8,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2309.02144v1",
+    "theme": "agents",
+    "title": "Making Large Language Models Better Reasoners with Alignment",
+    "authors": [
+      "Peiyi Wang",
+      "Lei Li",
+      "Liang Chen",
+      "Feifan Song",
+      "Binghuai Lin",
+      "Yunbo Cao",
+      "Tianyu Liu",
+      "Zhifang Sui"
+    ],
+    "summary": "",
+    "num_pages": 19,
+    "pdf_url": "https://arxiv.org/pdf/2309.02144v1",
+    "file_path": "agents/2309.02144v1_making_large_language_models_better_reasoners_with_alignment.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "reason"
+      ],
+      "best_theme": "agents",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 53038,
+      "words": 10049,
+      "letter_ratio": 0.867,
+      "pages_with_text": 19,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 2791.5,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2402.11651v2",
+    "theme": "agents",
+    "title": "Learning From Failure: Integrating Negative Examples when Fine-tuning Large Language Models as Agents",
+    "authors": [
+      "Renxi Wang",
+      "Haonan Li",
+      "Xudong Han",
+      "Yixuan Zhang",
+      "Timothy Baldwin"
+    ],
+    "summary": "",
+    "num_pages": 13,
+    "pdf_url": "https://arxiv.org/pdf/2402.11651v2",
+    "file_path": "agents/2402.11651v2_learning_from_failure_integrating_negative_examples_when_fin.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "agent"
+      ],
+      "best_theme": "agents",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 43573,
+      "words": 7964,
+      "letter_ratio": 0.888,
+      "pages_with_text": 13,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3351.8,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2404.01023v1",
+    "theme": "agents",
+    "title": "Large Language Model Evaluation Via Multi AI Agents: Preliminary results",
+    "authors": [
+      "Zeeshan Rasheed",
+      "Muhammad Waseem",
+      "Kari Systä",
+      "Pekka Abrahamsson"
+    ],
+    "summary": "",
+    "num_pages": 12,
+    "pdf_url": "https://arxiv.org/pdf/2404.01023v1",
+    "file_path": "agents/2404.01023v1_large_language_model_evaluation_via_multi_ai_agents_prelimin.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "agent"
+      ],
+      "best_theme": "agents",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 39893,
+      "words": 7076,
+      "letter_ratio": 0.941,
+      "pages_with_text": 12,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3324.4,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2405.07551v1",
+    "theme": "agents",
+    "title": "MuMath-Code: Combining Tool-Use Large Language Models with Multi-perspective Data Augmentation for Mathematical Reasoning",
+    "authors": [
+      "Shuo Yin",
+      "Weihao You",
+      "Zhilong Ji",
+      "Guoqiang Zhong",
+      "Jinfeng Bai"
+    ],
+    "summary": "",
+    "num_pages": 15,
+    "pdf_url": "https://arxiv.org/pdf/2405.07551v1",
+    "file_path": "agents/2405.07551v1_mumath_code_combining_tool_use_large_language_models_with_mu.pdf",
+    "relevance": {
+      "own_score": 2,
+      "hits": [
+        "tool",
+        "reason"
+      ],
+      "best_theme": "agents",
+      "best_score": 2
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 44122,
+      "words": 8068,
+      "letter_ratio": 0.869,
+      "pages_with_text": 15,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 2941.5,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2409.11353v3",
+    "theme": "agents",
+    "title": "THaMES: An End-to-End Tool for Hallucination Mitigation and Evaluation in Large Language Models",
+    "authors": [
+      "Mengfei Liang",
+      "Archish Arun",
+      "Zekun Wu",
+      "Cristian Munoz",
+      "Jonathan Lutch",
+      "Emre Kazim",
+      "Adriano Koshiyama",
+      "Philip Treleaven"
+    ],
+    "summary": "",
+    "num_pages": 24,
+    "pdf_url": "https://arxiv.org/pdf/2409.11353v3",
+    "file_path": "agents/2409.11353v3_thames_an_end_to_end_tool_for_hallucination_mitigation_and_e.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "tool"
+      ],
+      "best_theme": "agents",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 52472,
+      "words": 9081,
+      "letter_ratio": 0.851,
+      "pages_with_text": 24,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 2186.3,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2503.01763v2",
+    "theme": "agents",
+    "title": "Retrieval Models Aren't Tool-Savvy: Benchmarking Tool Retrieval for Large Language Models",
+    "authors": [
+      "Zhengliang Shi",
+      "Yuhan Wang",
+      "Lingyong Yan",
+      "Pengjie Ren",
+      "Shuaiqiang Wang",
+      "Dawei Yin",
+      "Zhaochun Ren"
+    ],
+    "summary": "",
+    "num_pages": 28,
+    "pdf_url": "https://arxiv.org/pdf/2503.01763v2",
+    "file_path": "agents/2503.01763v2_retrieval_models_aren_t_tool_savvy_benchmarking_tool_retriev.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "tool"
+      ],
+      "best_theme": "rag",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 97463,
+      "words": 16758,
+      "letter_ratio": 0.778,
+      "pages_with_text": 28,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3480.8,
+      "c1_controls": 2,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2504.16021v1",
+    "theme": "agents",
+    "title": "Navigating the State of Cognitive Flow: Context-Aware AI Interventions for Effective Reasoning Support",
+    "authors": [
+      "Dinithi Dissanayake",
+      "Suranga Nanayakkara"
+    ],
+    "summary": "",
+    "num_pages": 4,
+    "pdf_url": "https://arxiv.org/pdf/2504.16021v1",
+    "file_path": "agents/2504.16021v1_navigating_the_state_of_cognitive_flow_context_aware_ai_inte.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "reason"
+      ],
+      "best_theme": "agents",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 12282,
+      "words": 1982,
+      "letter_ratio": 0.946,
+      "pages_with_text": 4,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3070.5,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2508.04848v1",
+    "theme": "agents",
+    "title": "Large Language Models Reasoning Abilities Under Non-Ideal Conditions After RL-Fine-Tuning",
+    "authors": [
+      "Chang Tian",
+      "Matthew B. Blaschko",
+      "Mingzhe Xing",
+      "Xiuxing Li",
+      "Yinliang Yue",
+      "Marie-Francine Moens"
+    ],
+    "summary": "",
+    "num_pages": 9,
+    "pdf_url": "https://arxiv.org/pdf/2508.04848v1",
+    "file_path": "agents/2508.04848v1_large_language_models_reasoning_abilities_under_non_ideal_co.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "reason"
+      ],
+      "best_theme": "agents",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 38457,
+      "words": 6489,
+      "letter_ratio": 0.867,
+      "pages_with_text": 9,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 4273.0,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2510.00071v2",
+    "theme": "agents",
+    "title": "ARS: Adaptive Reasoning Suppression for Efficient Large Reasoning Language Models",
+    "authors": [
+      "Dongqi Zheng"
+    ],
+    "summary": "",
+    "num_pages": 7,
+    "pdf_url": "https://arxiv.org/pdf/2510.00071v2",
+    "file_path": "agents/2510.00071v2_ars_adaptive_reasoning_suppression_for_efficient_large_reaso.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "reason"
+      ],
+      "best_theme": "agents",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 14119,
+      "words": 2225,
+      "letter_ratio": 0.862,
+      "pages_with_text": 7,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 2017.0,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2512.13930v1",
+    "theme": "agents",
+    "title": "Hierarchical Multi-agent Large Language Model Reasoning for Autonomous Functional Materials Discovery",
+    "authors": [
+      "Samuel Rothfarb",
+      "Megan C. Davis",
+      "Ivana Matanovic",
+      "Baikun Li",
+      "Edward F. Holby",
+      "Wilton J. M. Kort-Kamp"
+    ],
+    "summary": "",
+    "num_pages": 96,
+    "pdf_url": "https://arxiv.org/pdf/2512.13930v1",
+    "file_path": "agents/2512.13930v1_hierarchical_multi_agent_large_language_model_reasoning_for_.pdf",
+    "relevance": {
+      "own_score": 3,
+      "hits": [
+        "agent",
+        "reason",
+        "multi-agent"
+      ],
+      "best_theme": "agents",
+      "best_score": 3
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 112321,
+      "words": 18902,
+      "letter_ratio": 0.882,
+      "pages_with_text": 96,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 1170.0,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2601.12538v1",
+    "theme": "agents",
+    "title": "Agentic Reasoning for Large Language Models",
+    "authors": [
+      "Tianxin Wei",
+      "Ting-Wei Li",
+      "Zhining Liu",
+      "Xuying Ning",
+      "Ze Yang",
+      "Jiaru Zou",
+      "Zhichen Zeng",
+      "Ruizhong Qiu",
+      "Xiao Lin",
+      "Dongqi Fu",
+      "Zihao Li",
+      "Mengting Ai",
+      "Duo Zhou",
+      "Wenxuan Bao",
+      "Yunzhe Li",
+      "Gaotang Li",
+      "Cheng Qian",
+      "Yu Wang",
+      "Xiangru Tang",
+      "Yin Xiao",
+      "Liri Fang",
+      "Hui Liu",
+      "Xianfeng Tang",
+      "Yuji Zhang",
+      "Chi Wang",
+      "Jiaxuan You",
+      "Heng Ji",
+      "Hanghang Tong",
+      "Jingrui He"
+    ],
+    "summary": "",
+    "num_pages": 135,
+    "pdf_url": "https://arxiv.org/pdf/2601.12538v1",
+    "file_path": "agents/2601.12538v1_agentic_reasoning_for_large_language_models.pdf",
+    "relevance": {
+      "own_score": 2,
+      "hits": [
+        "agent",
+        "reason"
+      ],
+      "best_theme": "agents",
+      "best_score": 2
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 401751,
+      "words": 62981,
+      "letter_ratio": 0.888,
+      "pages_with_text": 135,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 2975.9,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2604.14214v1",
+    "theme": "agents",
+    "title": "CROP: Token-Efficient Reasoning in Large Language Models via Regularized Prompt Optimization",
+    "authors": [
+      "Deep Shah",
+      "Sanket Badhe",
+      "Nehal Kathrotia",
+      "Priyanka Tiwari"
+    ],
+    "summary": "",
+    "num_pages": 16,
+    "pdf_url": "https://arxiv.org/pdf/2604.14214v1",
+    "file_path": "agents/2604.14214v1_crop_token_efficient_reasoning_in_large_language_models_via_.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "reason"
+      ],
+      "best_theme": "agents",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 46088,
+      "words": 7708,
+      "letter_ratio": 0.907,
+      "pages_with_text": 16,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 2880.5,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2110.06500v2",
+    "theme": "fine_tuning",
+    "title": "Differentially Private Fine-tuning of Language Models",
+    "authors": [
+      "Da Yu",
+      "Saurabh Naik",
+      "Arturs Backurs",
+      "Sivakanth Gopi",
+      "Huseyin A. Inan",
+      "Gautam Kamath",
+      "Janardhan Kulkarni",
+      "Yin Tat Lee",
+      "Andre Manoel",
+      "Lukas Wutschitz",
+      "Sergey Yekhanin",
+      "Huishuai Zhang"
+    ],
+    "summary": "",
+    "num_pages": 19,
+    "pdf_url": "https://arxiv.org/pdf/2110.06500v2",
+    "file_path": "fine_tuning/2110.06500v2_differentially_private_fine_tuning_of_language_models.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "fine-tun"
+      ],
+      "best_theme": "fine_tuning",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 55103,
+      "words": 10165,
+      "letter_ratio": 0.876,
+      "pages_with_text": 19,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 2900.2,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2208.02070v1",
+    "theme": "fine_tuning",
+    "title": "Efficient Fine-Tuning of Compressed Language Models with Learners",
+    "authors": [
+      "Danilo Vucetic",
+      "Mohammadreza Tayaranian",
+      "Maryam Ziaeefard",
+      "James J. Clark",
+      "Brett H. Meyer",
+      "Warren J. Gross"
+    ],
+    "summary": "",
+    "num_pages": 8,
+    "pdf_url": "https://arxiv.org/pdf/2208.02070v1",
+    "file_path": "fine_tuning/2208.02070v1_efficient_fine_tuning_of_compressed_language_models_with_lea.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "fine-tun"
+      ],
+      "best_theme": "fine_tuning",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 25860,
+      "words": 4803,
+      "letter_ratio": 0.854,
+      "pages_with_text": 8,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3232.5,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2210.12607v1",
+    "theme": "fine_tuning",
+    "title": "Learning to Perform Complex Tasks through Compositional Fine-Tuning of Language Models",
+    "authors": [
+      "Victor S. Bursztyn",
+      "David Demeter",
+      "Doug Downey",
+      "Larry Birnbaum"
+    ],
+    "summary": "",
+    "num_pages": 11,
+    "pdf_url": "https://arxiv.org/pdf/2210.12607v1",
+    "file_path": "fine_tuning/2210.12607v1_learning_to_perform_complex_tasks_through_compositional_fine.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "fine-tun"
+      ],
+      "best_theme": "fine_tuning",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 40131,
+      "words": 7530,
+      "letter_ratio": 0.901,
+      "pages_with_text": 11,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3648.3,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2310.03059v8",
+    "theme": "fine_tuning",
+    "title": "Point-PEFT: Parameter-Efficient Fine-Tuning for 3D Pre-trained Models",
+    "authors": [
+      "Yiwen Tang",
+      "Ray Zhang",
+      "Zoey Guo",
+      "Dong Wang",
+      "Zhigang Wang",
+      "Bin Zhao",
+      "Xuelong Li"
+    ],
+    "summary": "",
+    "num_pages": 11,
+    "pdf_url": "https://arxiv.org/pdf/2310.03059v8",
+    "file_path": "fine_tuning/2310.03059v8_point_peft_parameter_efficient_fine_tuning_for_3d_pre_traine.pdf",
+    "relevance": {
+      "own_score": 3,
+      "hits": [
+        "fine-tun",
+        "peft",
+        "parameter-efficient"
+      ],
+      "best_theme": "fine_tuning",
+      "best_score": 3
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 39324,
+      "words": 7087,
+      "letter_ratio": 0.875,
+      "pages_with_text": 11,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3574.9,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2312.10793v3",
+    "theme": "fine_tuning",
+    "title": "Demystifying Instruction Mixing for Fine-tuning Large Language Models",
+    "authors": [
+      "Renxi Wang",
+      "Haonan Li",
+      "Minghao Wu",
+      "Yuxia Wang",
+      "Xudong Han",
+      "Chiyu Zhang",
+      "Timothy Baldwin"
+    ],
+    "summary": "",
+    "num_pages": 8,
+    "pdf_url": "https://arxiv.org/pdf/2312.10793v3",
+    "file_path": "fine_tuning/2312.10793v3_demystifying_instruction_mixing_for_fine_tuning_large_langua.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "fine-tun"
+      ],
+      "best_theme": "fine_tuning",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 27232,
+      "words": 4835,
+      "letter_ratio": 0.874,
+      "pages_with_text": 8,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3404.0,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2402.12354v2",
+    "theme": "fine_tuning",
+    "title": "LoRA+: Efficient Low Rank Adaptation of Large Models",
+    "authors": [
+      "Soufiane Hayou",
+      "Nikhil Ghosh",
+      "Bin Yu"
+    ],
+    "summary": "",
+    "num_pages": 24,
+    "pdf_url": "https://arxiv.org/pdf/2402.12354v2",
+    "file_path": "fine_tuning/2402.12354v2_lora_efficient_low_rank_adaptation_of_large_models.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "lora"
+      ],
+      "best_theme": "fine_tuning",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 65156,
+      "words": 13450,
+      "letter_ratio": 0.813,
+      "pages_with_text": 24,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 2714.8,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2408.07888v2",
+    "theme": "fine_tuning",
+    "title": "Evaluating Fine-Tuning Efficiency of Human-Inspired Learning Strategies in Medical Question Answering",
+    "authors": [
+      "Yushi Yang",
+      "Andrew M. Bean",
+      "Robert McCraith",
+      "Adam Mahdi"
+    ],
+    "summary": "",
+    "num_pages": 10,
+    "pdf_url": "https://arxiv.org/pdf/2408.07888v2",
+    "file_path": "fine_tuning/2408.07888v2_evaluating_fine_tuning_efficiency_of_human_inspired_learning.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "fine-tun"
+      ],
+      "best_theme": "fine_tuning",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 29163,
+      "words": 4829,
+      "letter_ratio": 0.873,
+      "pages_with_text": 10,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 2916.3,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2411.14961v3",
+    "theme": "fine_tuning",
+    "title": "LoRA-FAIR: Federated LoRA Fine-Tuning with Aggregation and Initialization Refinement",
+    "authors": [
+      "Jieming Bian",
+      "Lei Wang",
+      "Letian Zhang",
+      "Jie Xu"
+    ],
+    "summary": "",
+    "num_pages": 15,
+    "pdf_url": "https://arxiv.org/pdf/2411.14961v3",
+    "file_path": "fine_tuning/2411.14961v3_lora_fair_federated_lora_fine_tuning_with_aggregation_and_in.pdf",
+    "relevance": {
+      "own_score": 2,
+      "hits": [
+        "fine-tun",
+        "lora"
+      ],
+      "best_theme": "fine_tuning",
+      "best_score": 2
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 62048,
+      "words": 11842,
+      "letter_ratio": 0.814,
+      "pages_with_text": 15,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 4136.5,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2504.16584v1",
+    "theme": "fine_tuning",
+    "title": "Case Study: Fine-tuning Small Language Models for Accurate and Private CWE Detection in Python Code",
+    "authors": [
+      "Md. Azizul Hakim Bappy",
+      "Hossen A Mustafa",
+      "Prottoy Saha",
+      "Rajinus Salehat"
+    ],
+    "summary": "",
+    "num_pages": 11,
+    "pdf_url": "https://arxiv.org/pdf/2504.16584v1",
+    "file_path": "fine_tuning/2504.16584v1_case_study_fine_tuning_small_language_models_for_accurate_an.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "fine-tun"
+      ],
+      "best_theme": "fine_tuning",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 26498,
+      "words": 4261,
+      "letter_ratio": 0.9,
+      "pages_with_text": 11,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 2408.9,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2512.15233v2",
+    "theme": "fine_tuning",
+    "title": "Null-LoRA: Low-Rank Adaptation on Null Space",
+    "authors": [
+      "Yi Zhang",
+      "Yulei Kang",
+      "Haoxuan Chen",
+      "Jinxuan Li",
+      "Jian-Fang Hu"
+    ],
+    "summary": "",
+    "num_pages": 5,
+    "pdf_url": "https://arxiv.org/pdf/2512.15233v2",
+    "file_path": "fine_tuning/2512.15233v2_null_lora_low_rank_adaptation_on_null_space.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "lora"
+      ],
+      "best_theme": "fine_tuning",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 19846,
+      "words": 3580,
+      "letter_ratio": 0.868,
+      "pages_with_text": 5,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3969.2,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2602.08239v1",
+    "theme": "fine_tuning",
+    "title": "Linearization Explains Fine-Tuning in Large Language Models",
+    "authors": [
+      "Zahra Rahimi Afzal",
+      "Tara Esmaeilbeig",
+      "Mojtaba Soltanalian",
+      "Mesrob I. Ohannessian"
+    ],
+    "summary": "",
+    "num_pages": 24,
+    "pdf_url": "https://arxiv.org/pdf/2602.08239v1",
+    "file_path": "fine_tuning/2602.08239v1_linearization_explains_fine_tuning_in_large_language_models.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "fine-tun"
+      ],
+      "best_theme": "fine_tuning",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 54189,
+      "words": 11196,
+      "letter_ratio": 0.822,
+      "pages_with_text": 24,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 2257.9,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2605.28222v1",
+    "theme": "fine_tuning",
+    "title": "Analyzing Quality-Latency-Resource Trade-offs in a Technical Documentation RAG Assistant Using LoRA Adaptation",
+    "authors": [
+      "Evgenii Palnikov",
+      "Elizaveta Gavrilova"
+    ],
+    "summary": "",
+    "num_pages": 69,
+    "pdf_url": "https://arxiv.org/pdf/2605.28222v1",
+    "file_path": "fine_tuning/2605.28222v1_analyzing_quality_latency_resource_trade_offs_in_a_technical.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "lora"
+      ],
+      "best_theme": "rag",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 117405,
+      "words": 22791,
+      "letter_ratio": 0.76,
+      "pages_with_text": 69,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 1701.5,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2606.01947v1",
+    "theme": "fine_tuning",
+    "title": "Parameter-Efficient Fine-Tuning of Large Pretrained Models for Instance Segmentation Tasks",
+    "authors": [
+      "Nermeen Abou Baker",
+      "David Rohrschneider",
+      "Uwe Handmann"
+    ],
+    "summary": "",
+    "num_pages": 25,
+    "pdf_url": "https://arxiv.org/pdf/2606.01947v1",
+    "file_path": "fine_tuning/2606.01947v1_parameter_efficient_fine_tuning_of_large_pretrained_models_f.pdf",
+    "relevance": {
+      "own_score": 3,
+      "hits": [
+        "fine-tun",
+        "parameter-efficient",
+        "pretrain"
+      ],
+      "best_theme": "fine_tuning",
+      "best_score": 3
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 76632,
+      "words": 13480,
+      "letter_ratio": 0.909,
+      "pages_with_text": 25,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3065.3,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2607.11940v1",
+    "theme": "fine_tuning",
+    "title": "CARE-LoRA: Compressed Activation REconstruction for Memory-Efficient LoRA",
+    "authors": [
+      "Gengyu Zhang",
+      "Haiyin Ran",
+      "Zhengbao He",
+      "Yuhang Liu",
+      "Hanling Tian",
+      "Zhehao Huang",
+      "Xiaolin Huang"
+    ],
+    "summary": "",
+    "num_pages": 15,
+    "pdf_url": "https://arxiv.org/pdf/2607.11940v1",
+    "file_path": "fine_tuning/2607.11940v1_care_lora_compressed_activation_reconstruction_for_memory_ef.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "lora"
+      ],
+      "best_theme": "fine_tuning",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 54897,
+      "words": 10448,
+      "letter_ratio": 0.87,
+      "pages_with_text": 15,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3659.8,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "1407.5416v1",
+    "theme": "rag",
+    "title": "Privacy-Preserving Important Passage Retrieval",
+    "authors": [
+      "Luis Marujo",
+      "José Portêlo",
+      "David Martins de Matos",
+      "João P. Neto",
+      "Anatole Gershman",
+      "Jaime Carbonell",
+      "Isabel Trancoso",
+      "Bhiksha Raj"
+    ],
+    "summary": "",
+    "num_pages": 6,
+    "pdf_url": "https://arxiv.org/pdf/1407.5416v1",
+    "file_path": "rag/1407.5416v1_privacy_preserving_important_passage_retrieval.pdf",
+    "relevance": {
+      "own_score": 2,
+      "hits": [
+        "retriev",
+        "passage"
+      ],
+      "best_theme": "rag",
+      "best_score": 2
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 27377,
+      "words": 5080,
+      "letter_ratio": 0.903,
+      "pages_with_text": 6,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 4562.8,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2010.08191v2",
+    "theme": "rag",
+    "title": "RocketQA: An Optimized Training Approach to Dense Passage Retrieval for Open-Domain Question Answering",
+    "authors": [
+      "Yingqi Qu",
+      "Yuchen Ding",
+      "Jing Liu",
+      "Kai Liu",
+      "Ruiyang Ren",
+      "Wayne Xin Zhao",
+      "Daxiang Dong",
+      "Hua Wu",
+      "Haifeng Wang"
+    ],
+    "summary": "",
+    "num_pages": 13,
+    "pdf_url": "https://arxiv.org/pdf/2010.08191v2",
+    "file_path": "rag/2010.08191v2_rocketqa_an_optimized_training_approach_to_dense_passage_ret.pdf",
+    "relevance": {
+      "own_score": 2,
+      "hits": [
+        "retriev",
+        "passage"
+      ],
+      "best_theme": "rag",
+      "best_score": 2
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 44854,
+      "words": 8376,
+      "letter_ratio": 0.895,
+      "pages_with_text": 13,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3450.3,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2110.01599v1",
+    "theme": "rag",
+    "title": "Encoder Adaptation of Dense Passage Retrieval for Open-Domain Question Answering",
+    "authors": [
+      "Minghan Li",
+      "Jimmy Lin"
+    ],
+    "summary": "",
+    "num_pages": 7,
+    "pdf_url": "https://arxiv.org/pdf/2110.01599v1",
+    "file_path": "rag/2110.01599v1_encoder_adaptation_of_dense_passage_retrieval_for_open_domai.pdf",
+    "relevance": {
+      "own_score": 2,
+      "hits": [
+        "retriev",
+        "passage"
+      ],
+      "best_theme": "rag",
+      "best_score": 2
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 24250,
+      "words": 4264,
+      "letter_ratio": 0.867,
+      "pages_with_text": 7,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3464.3,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2204.07496v4",
+    "theme": "rag",
+    "title": "Improving Passage Retrieval with Zero-Shot Question Generation",
+    "authors": [
+      "Devendra Singh Sachan",
+      "Mike Lewis",
+      "Mandar Joshi",
+      "Armen Aghajanyan",
+      "Wen-tau Yih",
+      "Joelle Pineau",
+      "Luke Zettlemoyer"
+    ],
+    "summary": "",
+    "num_pages": 18,
+    "pdf_url": "https://arxiv.org/pdf/2204.07496v4",
+    "file_path": "rag/2204.07496v4_improving_passage_retrieval_with_zero_shot_question_generati.pdf",
+    "relevance": {
+      "own_score": 3,
+      "hits": [
+        "retriev",
+        "passage",
+        "generation"
+      ],
+      "best_theme": "rag",
+      "best_score": 3
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 57627,
+      "words": 10760,
+      "letter_ratio": 0.878,
+      "pages_with_text": 18,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3201.5,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2309.15217v2",
+    "theme": "rag",
+    "title": "Ragas: Automated Evaluation of Retrieval Augmented Generation",
+    "authors": [
+      "Shahul Es",
+      "Jithin James",
+      "Luis Espinosa-Anke",
+      "Steven Schockaert"
+    ],
+    "summary": "",
+    "num_pages": 8,
+    "pdf_url": "https://arxiv.org/pdf/2309.15217v2",
+    "file_path": "rag/2309.15217v2_ragas_automated_evaluation_of_retrieval_augmented_generation.pdf",
+    "relevance": {
+      "own_score": 3,
+      "hits": [
+        "rag",
+        "retriev",
+        "generation"
+      ],
+      "best_theme": "rag",
+      "best_score": 3
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 27024,
+      "words": 4919,
+      "letter_ratio": 0.919,
+      "pages_with_text": 8,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3378.0,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2402.12317v2",
+    "theme": "rag",
+    "title": "EVOR: Evolving Retrieval for Code Generation",
+    "authors": [
+      "Hongjin Su",
+      "Shuyang Jiang",
+      "Yuhang Lai",
+      "Haoyuan Wu",
+      "Boao Shi",
+      "Che Liu",
+      "Qian Liu",
+      "Tao Yu"
+    ],
+    "summary": "",
+    "num_pages": 16,
+    "pdf_url": "https://arxiv.org/pdf/2402.12317v2",
+    "file_path": "rag/2402.12317v2_evor_evolving_retrieval_for_code_generation.pdf",
+    "relevance": {
+      "own_score": 2,
+      "hits": [
+        "retriev",
+        "generation"
+      ],
+      "best_theme": "rag",
+      "best_score": 2
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 60688,
+      "words": 10979,
+      "letter_ratio": 0.895,
+      "pages_with_text": 16,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3793.0,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2404.14464v1",
+    "theme": "rag",
+    "title": "Tree of Reviews: A Tree-based Dynamic Iterative Retrieval Framework for Multi-hop Question Answering",
+    "authors": [
+      "Li Jiapeng",
+      "Liu Runze",
+      "Li Yabo",
+      "Zhou Tong",
+      "Li Mingling",
+      "Chen Xiang"
+    ],
+    "summary": "",
+    "num_pages": 17,
+    "pdf_url": "https://arxiv.org/pdf/2404.14464v1",
+    "file_path": "rag/2404.14464v1_tree_of_reviews_a_tree_based_dynamic_iterative_retrieval_fra.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "retriev"
+      ],
+      "best_theme": "rag",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 48387,
+      "words": 8608,
+      "letter_ratio": 0.91,
+      "pages_with_text": 17,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 2846.3,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2411.18583v1",
+    "theme": "rag",
+    "title": "Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation",
+    "authors": [
+      "Nurshat Fateh Ali",
+      "Md. Mahdi Mohtasim",
+      "Shakil Mosharrof",
+      "T. Gopi Krishna"
+    ],
+    "summary": "",
+    "num_pages": 6,
+    "pdf_url": "https://arxiv.org/pdf/2411.18583v1",
+    "file_path": "rag/2411.18583v1_automated_literature_review_using_nlp_techniques_and_llm_bas.pdf",
+    "relevance": {
+      "own_score": 2,
+      "hits": [
+        "retriev",
+        "generation"
+      ],
+      "best_theme": "rag",
+      "best_score": 2
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 22085,
+      "words": 3906,
+      "letter_ratio": 0.943,
+      "pages_with_text": 6,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3680.8,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2502.00306v2",
+    "theme": "rag",
+    "title": "Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation",
+    "authors": [
+      "Ali Naseh",
+      "Yuefeng Peng",
+      "Anshuman Suri",
+      "Harsh Chaudhari",
+      "Alina Oprea",
+      "Amir Houmansadr"
+    ],
+    "summary": "",
+    "num_pages": 27,
+    "pdf_url": "https://arxiv.org/pdf/2502.00306v2",
+    "file_path": "rag/2502.00306v2_riddle_me_this_stealthy_membership_inference_for_retrieval_a.pdf",
+    "relevance": {
+      "own_score": 2,
+      "hits": [
+        "retriev",
+        "generation"
+      ],
+      "best_theme": "rag",
+      "best_score": 2
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 95286,
+      "words": 17106,
+      "letter_ratio": 0.892,
+      "pages_with_text": 27,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3529.1,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2504.17204v1",
+    "theme": "rag",
+    "title": "Factually: Exploring Wearable Fact-Checking for Augmented Truth Discernment",
+    "authors": [
+      "Chitralekha Gupta",
+      "Hanjun Wu",
+      "Praveen Sasikumar",
+      "Shreyas Sridhar",
+      "Priambudi Bagaskara",
+      "Suranga Nanayakkara"
+    ],
+    "summary": "",
+    "num_pages": 6,
+    "pdf_url": "https://arxiv.org/pdf/2504.17204v1",
+    "file_path": "rag/2504.17204v1_factually_exploring_wearable_fact_checking_for_augmented_tru.pdf",
+    "relevance": {
+      "own_score": 1,
+      "hits": [
+        "fact"
+      ],
+      "best_theme": "rag",
+      "best_score": 1
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 15756,
+      "words": 2441,
+      "letter_ratio": 0.94,
+      "pages_with_text": 6,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 2626.0,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2506.06962v3",
+    "theme": "rag",
+    "title": "AR-RAG: Autoregressive Retrieval Augmentation for Image Generation",
+    "authors": [
+      "Jingyuan Qi",
+      "Zhiyang Xu",
+      "Qifan Wang",
+      "Lifu Huang"
+    ],
+    "summary": "",
+    "num_pages": 18,
+    "pdf_url": "https://arxiv.org/pdf/2506.06962v3",
+    "file_path": "rag/2506.06962v3_ar_rag_autoregressive_retrieval_augmentation_for_image_gener.pdf",
+    "relevance": {
+      "own_score": 3,
+      "hits": [
+        "rag",
+        "retriev",
+        "generation"
+      ],
+      "best_theme": "rag",
+      "best_score": 3
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 58896,
+      "words": 9876,
+      "letter_ratio": 0.902,
+      "pages_with_text": 18,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3272.0,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2507.23334v2",
+    "theme": "rag",
+    "title": "MUST-RAG: MUSical Text Question Answering with Retrieval Augmented Generation",
+    "authors": [
+      "Daeyong Kwon",
+      "SeungHeon Doh",
+      "Juhan Nam"
+    ],
+    "summary": "",
+    "num_pages": 8,
+    "pdf_url": "https://arxiv.org/pdf/2507.23334v2",
+    "file_path": "rag/2507.23334v2_must_rag_musical_text_question_answering_with_retrieval_augm.pdf",
+    "relevance": {
+      "own_score": 3,
+      "hits": [
+        "rag",
+        "retriev",
+        "generation"
+      ],
+      "best_theme": "rag",
+      "best_score": 3
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 31534,
+      "words": 5514,
+      "letter_ratio": 0.88,
+      "pages_with_text": 8,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3941.8,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  },
+  {
+    "id": "2605.12335v1",
+    "theme": "rag",
+    "title": "EHR-RAGp: Retrieval-Augmented Prototype-Guided Foundation Model for Electronic Health Records",
+    "authors": [
+      "Saeed Shurrab",
+      "Mariam Al-Omari",
+      "Dana El Samad",
+      "Farah E. Shamout"
+    ],
+    "summary": "",
+    "num_pages": 31,
+    "pdf_url": "https://arxiv.org/pdf/2605.12335v1",
+    "file_path": "rag/2605.12335v1_ehr_ragp_retrieval_augmented_prototype_guided_foundation_mod.pdf",
+    "relevance": {
+      "own_score": 2,
+      "hits": [
+        "rag",
+        "retriev"
+      ],
+      "best_theme": "rag",
+      "best_score": 2
+    },
+    "text_quality": {
+      "extractable": true,
+      "chars": 99311,
+      "words": 17318,
+      "letter_ratio": 0.855,
+      "pages_with_text": 31,
+      "empty_pages": 0,
+      "empty_pages_idx": [],
+      "avg_chars_per_page": 3203.6,
+      "c1_controls": 0,
+      "mojibake": false
+    },
+    "status": "valid"
+  }
+]

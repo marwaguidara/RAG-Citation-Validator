@@ -1,0 +1,121 @@
+query_id,query,theme,difficulty,config,recall_at_3,recall_at_5,recall_at_10,mrr,faithfulness,citation_accuracy,avg_latency_ms,p95_latency_ms
+q01,What is retrieval augmented generation?,RAG,simple,Dense,0.5,1.0,1.0,1.0,,,50.51,39.03
+q01,What is retrieval augmented generation?,RAG,simple,Hybrid,0.5,0.5,1.0,1.0,,,22.09,33.04
+q01,What is retrieval augmented generation?,RAG,simple,Hybrid + Rerank,1.0,1.0,1.0,1.0,,,5866.39,7310.19
+q01,What is retrieval augmented generation?,RAG,simple,Hybrid + Rerank + Verification,1.0,1.0,1.0,1.0,0.7247,0.8,8003.25,11540.33
+q02,What are the key components of a RAG system?,RAG,simple,Dense,0.0,0.0,0.0,0.0,,,25.88,39.03
+q02,What are the key components of a RAG system?,RAG,simple,Hybrid,0.0,0.0,0.0,0.0,,,22.93,33.04
+q02,What are the key components of a RAG system?,RAG,simple,Hybrid + Rerank,0.0,0.0,0.0,0.0,,,5994.22,7310.19
+q02,What are the key components of a RAG system?,RAG,simple,Hybrid + Rerank + Verification,0.0,0.0,0.0,0.0,0.6617,0.8,8987.75,11540.33
+q03,How does RAG combine retrieval and generation?,RAG,multi-chunk,Dense,0.5,1.0,1.0,1.0,,,38.61,39.03
+q03,How does RAG combine retrieval and generation?,RAG,multi-chunk,Hybrid,1.0,1.0,1.0,1.0,,,30.86,33.04
+q03,How does RAG combine retrieval and generation?,RAG,multi-chunk,Hybrid + Rerank,0.5,1.0,1.0,1.0,,,7192.68,7310.19
+q03,How does RAG combine retrieval and generation?,RAG,multi-chunk,Hybrid + Rerank + Verification,0.5,1.0,1.0,1.0,0.7228,0.8,9004.85,11540.33
+q04,What is the RAGAS framework for evaluating RAG?,RAG,simple,Dense,1.0,1.0,1.0,1.0,,,27.5,39.03
+q04,What is the RAGAS framework for evaluating RAG?,RAG,simple,Hybrid,1.0,1.0,1.0,1.0,,,26.74,33.04
+q04,What is the RAGAS framework for evaluating RAG?,RAG,simple,Hybrid + Rerank,1.0,1.0,1.0,1.0,,,6764.01,7310.19
+q04,What is the RAGAS framework for evaluating RAG?,RAG,simple,Hybrid + Rerank + Verification,1.0,1.0,1.0,1.0,0.6484,0.6,8738.09,11540.33
+q05,How does AR-RAG differ from standard RAG for image generation?,RAG,simple,Dense,1.0,1.0,1.0,1.0,,,31.49,39.03
+q05,How does AR-RAG differ from standard RAG for image generation?,RAG,simple,Hybrid,1.0,1.0,1.0,1.0,,,27.74,33.04
+q05,How does AR-RAG differ from standard RAG for image generation?,RAG,simple,Hybrid + Rerank,1.0,1.0,1.0,1.0,,,6682.47,7310.19
+q05,How does AR-RAG differ from standard RAG for image generation?,RAG,simple,Hybrid + Rerank + Verification,1.0,1.0,1.0,1.0,0.731,1.0,9210.5,11540.33
+q06,What is the EVOR framework for code generation?,RAG,simple,Dense,1.0,1.0,1.0,1.0,,,33.36,39.03
+q06,What is the EVOR framework for code generation?,RAG,simple,Hybrid,1.0,1.0,1.0,1.0,,,24.55,33.04
+q06,What is the EVOR framework for code generation?,RAG,simple,Hybrid + Rerank,1.0,1.0,1.0,1.0,,,6837.74,7310.19
+q06,What is the EVOR framework for code generation?,RAG,simple,Hybrid + Rerank + Verification,1.0,1.0,1.0,1.0,0.7001,0.8,8440.76,11540.33
+q07,What improvements does RocketQA bring to passage retrieval?,RAG,medium,Dense,1.0,1.0,1.0,1.0,,,32.31,39.03
+q07,What improvements does RocketQA bring to passage retrieval?,RAG,medium,Hybrid,1.0,1.0,1.0,1.0,,,28.33,33.04
+q07,What improvements does RocketQA bring to passage retrieval?,RAG,medium,Hybrid + Rerank,1.0,1.0,1.0,1.0,,,6868.61,7310.19
+q07,What improvements does RocketQA bring to passage retrieval?,RAG,medium,Hybrid + Rerank + Verification,1.0,1.0,1.0,1.0,0.5956,0.6,8836.98,11540.33
+q08,What are dense passage retrieval models for RAG?,RAG,medium,Dense,0.0,0.0,1.0,0.125,,,29.71,39.03
+q08,What are dense passage retrieval models for RAG?,RAG,medium,Hybrid,0.0,1.0,1.0,0.2,,,30.22,33.04
+q08,What are dense passage retrieval models for RAG?,RAG,medium,Hybrid + Rerank,0.0,0.0,0.0,0.0,,,6751.7,7310.19
+q08,What are dense passage retrieval models for RAG?,RAG,medium,Hybrid + Rerank + Verification,0.0,0.0,0.0,0.0,0.6666,0.8,9058.87,11540.33
+q09,What is the difference between extractive and generative QA in RAG?,RAG,medium,Dense,0.0,0.0,0.0,0.0,,,30.58,39.03
+q09,What is the difference between extractive and generative QA in RAG?,RAG,medium,Hybrid,0.0,0.0,0.0,0.0,,,28.33,33.04
+q09,What is the difference between extractive and generative QA in RAG?,RAG,medium,Hybrid + Rerank,0.0,0.0,0.0,0.0,,,6693.82,7310.19
+q09,What is the difference between extractive and generative QA in RAG?,RAG,medium,Hybrid + Rerank + Verification,0.0,0.0,0.0,0.0,0.6911,0.8,8192.44,11540.33
+q10,How does retrieval quality affect RAG generation quality?,RAG,multi-chunk,Dense,0.5,0.5,0.5,1.0,,,30.29,39.03
+q10,How does retrieval quality affect RAG generation quality?,RAG,multi-chunk,Hybrid,0.5,0.5,0.5,0.5,,,26.36,33.04
+q10,How does retrieval quality affect RAG generation quality?,RAG,multi-chunk,Hybrid + Rerank,0.5,0.5,0.5,1.0,,,6715.98,7310.19
+q10,How does retrieval quality affect RAG generation quality?,RAG,multi-chunk,Hybrid + Rerank + Verification,0.5,0.5,0.5,1.0,0.574,0.6,8936.06,11540.33
+q11,How does ReAct combine reasoning and action in language models?,Agents,multi-chunk,Dense,1.0,1.0,1.0,1.0,,,32.8,39.03
+q11,How does ReAct combine reasoning and action in language models?,Agents,multi-chunk,Hybrid,1.0,1.0,1.0,1.0,,,25.25,33.04
+q11,How does ReAct combine reasoning and action in language models?,Agents,multi-chunk,Hybrid + Rerank,1.0,1.0,1.0,1.0,,,6941.48,7310.19
+q11,How does ReAct combine reasoning and action in language models?,Agents,multi-chunk,Hybrid + Rerank + Verification,1.0,1.0,1.0,1.0,0.6693,0.8,9171.19,11540.33
+q12,What is the difference between ReAct and chain-of-thought prompting?,Agents,simple,Dense,0.0,0.0,0.0,0.0,,,30.18,39.03
+q12,What is the difference between ReAct and chain-of-thought prompting?,Agents,simple,Hybrid,0.0,0.0,0.0,0.0,,,23.51,33.04
+q12,What is the difference between ReAct and chain-of-thought prompting?,Agents,simple,Hybrid + Rerank,1.0,1.0,1.0,0.5,,,6953.37,7310.19
+q12,What is the difference between ReAct and chain-of-thought prompting?,Agents,simple,Hybrid + Rerank + Verification,1.0,1.0,1.0,0.5,0.6597,0.75,14525.24,11540.33
+q13,How do LLM agents use external tools for information retrieval?,Agents,medium,Dense,0.0,0.5,0.5,0.25,,,39.03,39.03
+q13,How do LLM agents use external tools for information retrieval?,Agents,medium,Hybrid,0.5,0.5,0.5,1.0,,,36.26,33.04
+q13,How do LLM agents use external tools for information retrieval?,Agents,medium,Hybrid + Rerank,0.5,0.5,0.5,1.0,,,7310.71,7310.19
+q13,How do LLM agents use external tools for information retrieval?,Agents,medium,Hybrid + Rerank + Verification,0.5,0.5,0.5,1.0,0.9077,1.0,8966.57,11540.33
+q14,What role does reasoning play in agentic systems?,Agents,simple,Dense,1.0,1.0,1.0,1.0,,,27.93,39.03
+q14,What role does reasoning play in agentic systems?,Agents,simple,Hybrid,1.0,1.0,1.0,1.0,,,24.86,33.04
+q14,What role does reasoning play in agentic systems?,Agents,simple,Hybrid + Rerank,1.0,1.0,1.0,1.0,,,6449.71,7310.19
+q14,What role does reasoning play in agentic systems?,Agents,simple,Hybrid + Rerank + Verification,1.0,1.0,1.0,1.0,0.9471,1.0,8460.38,11540.33
+q15,What is hierarchical multi-agent collaboration?,Agents,medium,Dense,0.0,0.0,0.0,0.0,,,28.79,39.03
+q15,What is hierarchical multi-agent collaboration?,Agents,medium,Hybrid,0.0,0.0,0.0,0.0,,,24.97,33.04
+q15,What is hierarchical multi-agent collaboration?,Agents,medium,Hybrid + Rerank,1.0,1.0,1.0,1.0,,,6959.65,7310.19
+q15,What is hierarchical multi-agent collaboration?,Agents,medium,Hybrid + Rerank + Verification,1.0,1.0,1.0,1.0,0.7756,1.0,8998.16,11540.33
+q16,How does adaptive reasoning suppression work in LLM agents?,Agents,simple,Dense,1.0,1.0,1.0,1.0,,,30.72,39.03
+q16,How does adaptive reasoning suppression work in LLM agents?,Agents,simple,Hybrid,1.0,1.0,1.0,1.0,,,32.73,33.04
+q16,How does adaptive reasoning suppression work in LLM agents?,Agents,simple,Hybrid + Rerank,1.0,1.0,1.0,1.0,,,6963.71,7310.19
+q16,How does adaptive reasoning suppression work in LLM agents?,Agents,simple,Hybrid + Rerank + Verification,1.0,1.0,1.0,1.0,0.934,1.0,8347.16,11540.33
+q17,What are the limitations of agentic reasoning in large language models?,Agents,medium,Dense,0.5,0.5,1.0,1.0,,,29.85,39.03
+q17,What are the limitations of agentic reasoning in large language models?,Agents,medium,Hybrid,0.5,0.5,1.0,1.0,,,28.24,33.04
+q17,What are the limitations of agentic reasoning in large language models?,Agents,medium,Hybrid + Rerank,1.0,1.0,1.0,1.0,,,6996.17,7310.19
+q17,What are the limitations of agentic reasoning in large language models?,Agents,medium,Hybrid + Rerank + Verification,1.0,1.0,1.0,1.0,0.7462,1.0,10265.56,11540.33
+q18,How do LLM agents retrieve code for programming tasks?,Agents,simple,Dense,0.0,0.0,0.0,0.0,,,31.31,39.03
+q18,How do LLM agents retrieve code for programming tasks?,Agents,simple,Hybrid,0.0,0.0,0.0,0.0,,,27.55,33.04
+q18,How do LLM agents retrieve code for programming tasks?,Agents,simple,Hybrid + Rerank,0.0,0.0,0.0,0.0,,,7038.45,7310.19
+q18,How do LLM agents retrieve code for programming tasks?,Agents,simple,Hybrid + Rerank + Verification,0.0,0.0,0.0,0.0,0.7203,0.75,9369.19,11540.33
+q19,What is the importance of token efficiency in agent architectures?,Agents,medium,Dense,0.0,0.0,0.5,0.1429,,,35.52,39.03
+q19,What is the importance of token efficiency in agent architectures?,Agents,medium,Hybrid,0.0,0.0,0.5,0.1111,,,33.04,33.04
+q19,What is the importance of token efficiency in agent architectures?,Agents,medium,Hybrid + Rerank,0.0,0.5,0.5,0.25,,,6941.03,7310.19
+q19,What is the importance of token efficiency in agent architectures?,Agents,medium,Hybrid + Rerank + Verification,0.0,0.5,0.5,0.25,0.7859,0.8,11334.51,11540.33
+q20,How does tool-use affect retrieval-augmented agents?,Agents,multi-chunk,Dense,0.0,0.0,0.0,0.0,,,33.58,39.03
+q20,How does tool-use affect retrieval-augmented agents?,Agents,multi-chunk,Hybrid,0.0,0.0,0.0,0.0,,,31.1,33.04
+q20,How does tool-use affect retrieval-augmented agents?,Agents,multi-chunk,Hybrid + Rerank,0.0,0.0,0.0,0.0,,,7491.81,7310.19
+q20,How does tool-use affect retrieval-augmented agents?,Agents,multi-chunk,Hybrid + Rerank + Verification,0.0,0.0,0.0,0.0,0.7357,0.8,9453.44,11540.33
+q21,What is LoRA fine tuning and how does it work?,Fine-tuning,simple,Dense,1.0,1.0,1.0,1.0,,,29.21,39.03
+q21,What is LoRA fine tuning and how does it work?,Fine-tuning,simple,Hybrid,1.0,1.0,1.0,1.0,,,27.34,33.04
+q21,What is LoRA fine tuning and how does it work?,Fine-tuning,simple,Hybrid + Rerank,1.0,1.0,1.0,1.0,,,7146.36,7310.19
+q21,What is LoRA fine tuning and how does it work?,Fine-tuning,simple,Hybrid + Rerank + Verification,1.0,1.0,1.0,1.0,0.7404,0.8,10000.32,11540.33
+q22,How does Low-Rank Adaptation reduce model parameters?,Fine-tuning,simple,Dense,0.0,0.0,1.0,0.1667,,,34.1,39.03
+q22,How does Low-Rank Adaptation reduce model parameters?,Fine-tuning,simple,Hybrid,1.0,1.0,1.0,0.5,,,28.36,33.04
+q22,How does Low-Rank Adaptation reduce model parameters?,Fine-tuning,simple,Hybrid + Rerank,0.0,1.0,1.0,0.25,,,7118.42,7310.19
+q22,How does Low-Rank Adaptation reduce model parameters?,Fine-tuning,simple,Hybrid + Rerank + Verification,0.0,1.0,1.0,0.25,0.7386,0.75,9812.82,11540.33
+q23,What is the difference between LoRA and full fine-tuning?,Fine-tuning,medium,Dense,0.5,1.0,1.0,0.5,,,29.55,39.03
+q23,What is the difference between LoRA and full fine-tuning?,Fine-tuning,medium,Hybrid,0.5,0.5,1.0,1.0,,,26.23,33.04
+q23,What is the difference between LoRA and full fine-tuning?,Fine-tuning,medium,Hybrid + Rerank,1.0,1.0,1.0,1.0,,,7052.03,7310.19
+q23,What is the difference between LoRA and full fine-tuning?,Fine-tuning,medium,Hybrid + Rerank + Verification,1.0,1.0,1.0,1.0,0.5203,0.6,10329.45,11540.33
+q24,What are the memory benefits of LoRA fine tuning?,Fine-tuning,simple,Dense,1.0,1.0,1.0,1.0,,,32.54,39.03
+q24,What are the memory benefits of LoRA fine tuning?,Fine-tuning,simple,Hybrid,1.0,1.0,1.0,1.0,,,24.0,33.04
+q24,What are the memory benefits of LoRA fine tuning?,Fine-tuning,simple,Hybrid + Rerank,1.0,1.0,1.0,1.0,,,7310.19,7310.19
+q24,What are the memory benefits of LoRA fine tuning?,Fine-tuning,simple,Hybrid + Rerank + Verification,1.0,1.0,1.0,1.0,0.6122,0.5,9541.99,11540.33
+q25,How does federated LoRA fine-tuning work?,Fine-tuning,simple,Dense,1.0,1.0,1.0,1.0,,,29.52,39.03
+q25,How does federated LoRA fine-tuning work?,Fine-tuning,simple,Hybrid,1.0,1.0,1.0,1.0,,,26.07,33.04
+q25,How does federated LoRA fine-tuning work?,Fine-tuning,simple,Hybrid + Rerank,1.0,1.0,1.0,1.0,,,7061.24,7310.19
+q25,How does federated LoRA fine-tuning work?,Fine-tuning,simple,Hybrid + Rerank + Verification,1.0,1.0,1.0,1.0,0.7148,0.75,11540.33,11540.33
+q26,What is parameter-efficient fine-tuning (PEFT)?,Fine-tuning,medium,Dense,0.0,1.0,1.0,0.25,,,30.47,39.03
+q26,What is parameter-efficient fine-tuning (PEFT)?,Fine-tuning,medium,Hybrid,0.5,1.0,1.0,0.3333,,,26.49,33.04
+q26,What is parameter-efficient fine-tuning (PEFT)?,Fine-tuning,medium,Hybrid + Rerank,0.5,0.5,1.0,0.3333,,,7059.15,7310.19
+q26,What is parameter-efficient fine-tuning (PEFT)?,Fine-tuning,medium,Hybrid + Rerank + Verification,0.5,0.5,1.0,0.3333,0.9487,1.0,9048.42,11540.33
+q27,What is the role of rank in LoRA adaptation?,Fine-tuning,medium,Dense,1.0,1.0,1.0,0.3333,,,32.89,39.03
+q27,What is the role of rank in LoRA adaptation?,Fine-tuning,medium,Hybrid,1.0,1.0,1.0,1.0,,,29.45,33.04
+q27,What is the role of rank in LoRA adaptation?,Fine-tuning,medium,Hybrid + Rerank,1.0,1.0,1.0,1.0,,,7065.85,7310.19
+q27,What is the role of rank in LoRA adaptation?,Fine-tuning,medium,Hybrid + Rerank + Verification,1.0,1.0,1.0,1.0,0.5641,0.6,9180.4,11540.33
+q28,How does LoRA reduce the memory footprint compared to full fine-tuning?,Fine-tuning,simple,Dense,1.0,1.0,1.0,1.0,,,44.59,39.03
+q28,How does LoRA reduce the memory footprint compared to full fine-tuning?,Fine-tuning,simple,Hybrid,1.0,1.0,1.0,1.0,,,45.78,33.04
+q28,How does LoRA reduce the memory footprint compared to full fine-tuning?,Fine-tuning,simple,Hybrid + Rerank,1.0,1.0,1.0,1.0,,,7293.4,7310.19
+q28,How does LoRA reduce the memory footprint compared to full fine-tuning?,Fine-tuning,simple,Hybrid + Rerank + Verification,1.0,1.0,1.0,1.0,0.7104,0.75,9586.43,11540.33
+q29,What is the difference between LoRA and prompt tuning?,Fine-tuning,medium,Dense,0.0,0.0,0.5,0.1429,,,27.69,39.03
+q29,What is the difference between LoRA and prompt tuning?,Fine-tuning,medium,Hybrid,0.0,0.0,0.5,0.1667,,,25.15,33.04
+q29,What is the difference between LoRA and prompt tuning?,Fine-tuning,medium,Hybrid + Rerank,0.5,0.5,0.5,0.5,,,6853.8,7310.19
+q29,What is the difference between LoRA and prompt tuning?,Fine-tuning,medium,Hybrid + Rerank + Verification,0.5,0.5,0.5,0.5,0.9475,1.0,8810.7,11540.33
+q30,How does federated learning enhance LoRA fine-tuning?,Fine-tuning,simple,Dense,1.0,1.0,1.0,1.0,,,32.31,39.03
+q30,How does federated learning enhance LoRA fine-tuning?,Fine-tuning,simple,Hybrid,1.0,1.0,1.0,1.0,,,28.92,33.04
+q30,How does federated learning enhance LoRA fine-tuning?,Fine-tuning,simple,Hybrid + Rerank,1.0,1.0,1.0,1.0,,,6891.05,7310.19
+q30,How does federated learning enhance LoRA fine-tuning?,Fine-tuning,simple,Hybrid + Rerank + Verification,1.0,1.0,1.0,1.0,0.7148,0.75,11568.38,11540.33

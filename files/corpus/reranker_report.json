@@ -1,0 +1,616 @@
+{
+  "generator": "rerank_results.py",
+  "generated_at": "2026-08-25T13:25:32",
+  "status": "PASS",
+  "config": {
+    "model": "BAAI/bge-reranker-base",
+    "device": "cpu",
+    "pool_size": 20,
+    "top_k": 5,
+    "batch_size": 16,
+    "max_seq_length": 512
+  },
+  "input_traceability": {
+    "chunks_file": "chunks.json",
+    "chunks_sha256": "1e8908db880e7df5b81985a0d0c16262e65a01a71baec15845db9f02ab60a4f1"
+  },
+  "versions": {
+    "python_version": "3.13.15",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "transformers_version": "4.47.1",
+    "torch_version": "2.7.1+cpu"
+  },
+  "aggregate_metrics": {
+    "queries": 3,
+    "mean_reranker_ms": 5743.1,
+    "max_reranker_ms": 5781.65,
+    "mean_total_ms": 5743.21,
+    "mean_abs_rank_change": 7.4,
+    "pairs_scored_total": 60
+  },
+  "generation_readiness": {
+    "ready_for_generation": true,
+    "results_with_full_text": 15,
+    "problems": []
+  },
+  "queries": [
+    {
+      "query": "What is retrieval augmented generation?",
+      "metrics": {
+        "pool_initial_size": 20,
+        "pool_final_size": 5,
+        "pairs_scored": 20,
+        "reranker_ms": 5724.26,
+        "total_ms": 5724.4,
+        "mean_abs_rank_change": 5.8
+      },
+      "before_ranking": [
+        {
+          "hybrid_rank": 1,
+          "chunk_id": "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+          "rrf_score": 0.030679
+        },
+        {
+          "hybrid_rank": 2,
+          "chunk_id": "9bb9381e-a4f1-5a09-aebb-5db962463c16",
+          "rrf_score": 0.030331
+        },
+        {
+          "hybrid_rank": 3,
+          "chunk_id": "6b191ff9-36c3-5816-853a-ea4664b3b495",
+          "rrf_score": 0.030214
+        },
+        {
+          "hybrid_rank": 4,
+          "chunk_id": "62e3ee38-0c7a-5fb7-90b2-ed07e93e2a12",
+          "rrf_score": 0.029911
+        },
+        {
+          "hybrid_rank": 5,
+          "chunk_id": "e7352b10-7f6b-56cb-b5d2-7d45301eac3a",
+          "rrf_score": 0.029877
+        },
+        {
+          "hybrid_rank": 6,
+          "chunk_id": "92b45aeb-ee0f-5284-9609-235407aa14ff",
+          "rrf_score": 0.02904
+        },
+        {
+          "hybrid_rank": 7,
+          "chunk_id": "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+          "rrf_score": 0.028898
+        },
+        {
+          "hybrid_rank": 8,
+          "chunk_id": "63209bdb-2c42-5f89-a6cd-8d4287e349e8",
+          "rrf_score": 0.028624
+        },
+        {
+          "hybrid_rank": 9,
+          "chunk_id": "9dd2c99c-746d-5e9c-9a7b-5e751871528d",
+          "rrf_score": 0.028531
+        },
+        {
+          "hybrid_rank": 10,
+          "chunk_id": "5f4162f9-1cfb-5d1d-9db0-d83e54d52a1b",
+          "rrf_score": 0.027972
+        },
+        {
+          "hybrid_rank": 11,
+          "chunk_id": "9005306e-cbb4-5c2c-91cc-a606ca7f857d",
+          "rrf_score": 0.027418
+        },
+        {
+          "hybrid_rank": 12,
+          "chunk_id": "46c460a9-3979-572c-8bdb-d7944f94bd46",
+          "rrf_score": 0.016393
+        },
+        {
+          "hybrid_rank": 13,
+          "chunk_id": "513d0e9d-dfa3-5a3c-aa1a-ecb60f4e340c",
+          "rrf_score": 0.016129
+        },
+        {
+          "hybrid_rank": 14,
+          "chunk_id": "f54f207e-b6b1-5e66-a555-10e2f3135d7b",
+          "rrf_score": 0.015873
+        },
+        {
+          "hybrid_rank": 15,
+          "chunk_id": "e9d769e2-f957-5e33-bf87-529e239f758f",
+          "rrf_score": 0.014925
+        },
+        {
+          "hybrid_rank": 16,
+          "chunk_id": "d28bd74e-b4c7-5d0b-8b8c-1e93cacc42e7",
+          "rrf_score": 0.014706
+        },
+        {
+          "hybrid_rank": 17,
+          "chunk_id": "d3cf0699-1dca-5d57-b9ae-9cb199368b5b",
+          "rrf_score": 0.014493
+        },
+        {
+          "hybrid_rank": 18,
+          "chunk_id": "08ae5625-8a53-5a65-9961-7afd1aba11f9",
+          "rrf_score": 0.013889
+        },
+        {
+          "hybrid_rank": 19,
+          "chunk_id": "910b4589-6df0-5e4c-96d0-a49183113def",
+          "rrf_score": 0.013699
+        },
+        {
+          "hybrid_rank": 20,
+          "chunk_id": "f812553d-7a0c-509d-a62e-7cea3d2ac455",
+          "rrf_score": 0.013514
+        }
+      ],
+      "after_ranking": [
+        {
+          "final_rank": 1,
+          "chunk_id": "0ef01ac4-80e3-5dcb-8498-35f17e2f1369",
+          "document_id": "2309.15217v2",
+          "theme": "rag",
+          "page_start": 1,
+          "page_end": 1,
+          "hybrid_rank": 7,
+          "hybrid_score": 0.028898,
+          "reranker_score": 2.9496,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "Ragas: Automated Evaluation of Retrieval Augmented Generation Shahul Es†, Jithin James†, Luis Espinosa-Anke∗♢, Steven Schockaert∗ †Exploding Gradients ∗CardiffN"
+        },
+        {
+          "final_rank": 2,
+          "chunk_id": "9bb9381e-a4f1-5a09-aebb-5db962463c16",
+          "document_id": "2506.06962v3",
+          "theme": "rag",
+          "page_start": 2,
+          "page_end": 2,
+          "hybrid_rank": 2,
+          "hybrid_score": 0.030331,
+          "reranker_score": 1.8286,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "images based on user prompts [31, 28, 7, 37, 10, 41, 9, 43, 45, 27, 6]. However, despite these improvements, the generated images often exhibit local distortion"
+        },
+        {
+          "final_rank": 3,
+          "chunk_id": "d28bd74e-b4c7-5d0b-8b8c-1e93cacc42e7",
+          "document_id": "2402.12317v2",
+          "theme": "rag",
+          "page_start": 8,
+          "page_end": 8,
+          "hybrid_rank": 16,
+          "hybrid_score": 0.014706,
+          "reranker_score": 1.5497,
+          "channels": [
+            "dense"
+          ],
+          "text_preview": "et al., 2023; Li et al., 2023a; Zhang et al., 2023c; Chen et al., 2023; Key et al., 2022) However, most of these works set up the evaluation in scenar- ios LLMs"
+        },
+        {
+          "final_rank": 4,
+          "chunk_id": "5f4162f9-1cfb-5d1d-9db0-d83e54d52a1b",
+          "document_id": "2402.12317v2",
+          "theme": "rag",
+          "page_start": 1,
+          "page_end": 1,
+          "hybrid_rank": 10,
+          "hybrid_score": 0.027972,
+          "reranker_score": 1.5298,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "EVOR: Evolving Retrieval for Code Generation Hongjin Su1, Shuyang Jiang2, Yuhang Lai2, Haoyuan Wu1, Boao Shi1, Che Liu1, Qian Liu3, Tao Yu 1, 1The University of"
+        },
+        {
+          "final_rank": 5,
+          "chunk_id": "f4d08b51-1d40-58aa-8209-8b050ccf8692",
+          "document_id": "2506.06962v3",
+          "theme": "rag",
+          "page_start": 9,
+          "page_end": 9,
+          "hybrid_rank": 1,
+          "hybrid_score": 0.030679,
+          "reranker_score": 0.9351,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "FAiD shows a more noticeable overhead of 36.03% on a single GPU due to its autoregressive retrieval and feature blending operations. However, this increase rema"
+        }
+      ]
+    },
+    {
+      "query": "How does ReAct work?",
+      "metrics": {
+        "pool_initial_size": 20,
+        "pool_final_size": 5,
+        "pairs_scored": 20,
+        "reranker_ms": 5723.39,
+        "total_ms": 5723.49,
+        "mean_abs_rank_change": 9.8
+      },
+      "before_ranking": [
+        {
+          "hybrid_rank": 1,
+          "chunk_id": "d2ee94ed-b21f-5007-a58b-a99b61acac1f",
+          "rrf_score": 0.032787
+        },
+        {
+          "hybrid_rank": 2,
+          "chunk_id": "c7451c49-1eff-5168-9f30-27c3e576e752",
+          "rrf_score": 0.031258
+        },
+        {
+          "hybrid_rank": 3,
+          "chunk_id": "466e7fc0-c04e-5461-8518-37226756a84d",
+          "rrf_score": 0.016129
+        },
+        {
+          "hybrid_rank": 4,
+          "chunk_id": "86df55ea-a615-5821-b40a-83791337eff2",
+          "rrf_score": 0.016129
+        },
+        {
+          "hybrid_rank": 5,
+          "chunk_id": "2bcaa158-42a0-5228-b9f6-03f49e34e601",
+          "rrf_score": 0.015873
+        },
+        {
+          "hybrid_rank": 6,
+          "chunk_id": "0b9c2d3f-2248-5aae-8e33-e8c4fb1efa6f",
+          "rrf_score": 0.015625
+        },
+        {
+          "hybrid_rank": 7,
+          "chunk_id": "ee485dad-cbc8-5c1f-a15a-4fe3b942179a",
+          "rrf_score": 0.015625
+        },
+        {
+          "hybrid_rank": 8,
+          "chunk_id": "d7aa0647-b060-52b0-a738-0b4890337902",
+          "rrf_score": 0.015385
+        },
+        {
+          "hybrid_rank": 9,
+          "chunk_id": "5bdca5da-1bb3-58a1-bc11-118c9abd7e49",
+          "rrf_score": 0.015152
+        },
+        {
+          "hybrid_rank": 10,
+          "chunk_id": "adc61a14-ff80-5893-9ccc-4abbd75859b8",
+          "rrf_score": 0.015152
+        },
+        {
+          "hybrid_rank": 11,
+          "chunk_id": "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+          "rrf_score": 0.014925
+        },
+        {
+          "hybrid_rank": 12,
+          "chunk_id": "d62ad326-09a3-5799-8b47-1bd41f531d0d",
+          "rrf_score": 0.014925
+        },
+        {
+          "hybrid_rank": 13,
+          "chunk_id": "b7e10b56-22c2-50b3-b30f-6957ed92a3a5",
+          "rrf_score": 0.014706
+        },
+        {
+          "hybrid_rank": 14,
+          "chunk_id": "b7f26ce5-152a-572a-ac6d-59abbfa743e7",
+          "rrf_score": 0.014706
+        },
+        {
+          "hybrid_rank": 15,
+          "chunk_id": "2f751470-5584-5d26-953a-802a1c337b18",
+          "rrf_score": 0.014493
+        },
+        {
+          "hybrid_rank": 16,
+          "chunk_id": "eb86034b-a6d3-5beb-b9d6-9b148707ec8d",
+          "rrf_score": 0.014493
+        },
+        {
+          "hybrid_rank": 17,
+          "chunk_id": "24dbb812-d584-543d-abd9-b0f339eed7f3",
+          "rrf_score": 0.014286
+        },
+        {
+          "hybrid_rank": 18,
+          "chunk_id": "976e50c0-719d-5b60-a2f7-e602db5ce393",
+          "rrf_score": 0.014286
+        },
+        {
+          "hybrid_rank": 19,
+          "chunk_id": "80e9c6bb-7b02-54c7-8b2a-7c8fc4f9a8dc",
+          "rrf_score": 0.014085
+        },
+        {
+          "hybrid_rank": 20,
+          "chunk_id": "d8dabef8-8445-5d41-a1e8-976aaa1e48ff",
+          "rrf_score": 0.014085
+        }
+      ],
+      "after_ranking": [
+        {
+          "final_rank": 1,
+          "chunk_id": "b7e10b56-22c2-50b3-b30f-6957ed92a3a5",
+          "document_id": "2601.12538v1",
+          "theme": "agents",
+          "page_start": 49,
+          "page_end": 49,
+          "hybrid_rank": 13,
+          "hybrid_score": 0.014706,
+          "reranker_score": 6.1209,
+          "channels": [
+            "bm25"
+          ],
+          "text_preview": "integrate it into solving scientific tasks. Through domain-specific tools, ChemCrow [33] chains various expert chemistry tools so intermediate calculations beco"
+        },
+        {
+          "final_rank": 2,
+          "chunk_id": "976e50c0-719d-5b60-a2f7-e602db5ce393",
+          "document_id": "2601.12538v1",
+          "theme": "agents",
+          "page_start": 48,
+          "page_end": 48,
+          "hybrid_rank": 18,
+          "hybrid_score": 0.014286,
+          "reranker_score": 5.6908,
+          "channels": [
+            "bm25"
+          ],
+          "text_preview": "interaction with scientific resources, search and retrieval mechanisms including RAG-based systems and execution-time integration with laboratory hardware. Buil"
+        },
+        {
+          "final_rank": 3,
+          "chunk_id": "d554ea60-a87f-50fa-8701-5983a96c9aa9",
+          "document_id": "2601.12538v1",
+          "theme": "agents",
+          "page_start": 1,
+          "page_end": 2,
+          "hybrid_rank": 11,
+          "hybrid_score": 0.014925,
+          "reranker_score": 3.9766,
+          "channels": [
+            "bm25"
+          ],
+          "text_preview": "world modeling, scalable multi-agent training, and governance frameworks for real-world deployment. Keywords: Agentic AI, LLM Agent, Agentic Reasoning, Self-evo"
+        },
+        {
+          "final_rank": 4,
+          "chunk_id": "ee485dad-cbc8-5c1f-a15a-4fe3b942179a",
+          "document_id": "2601.12538v1",
+          "theme": "agents",
+          "page_start": 2,
+          "page_end": 3,
+          "hybrid_rank": 7,
+          "hybrid_score": 0.015625,
+          "reranker_score": 3.2732,
+          "channels": [
+            "bm25"
+          ],
+          "text_preview": "their environment. This reframing unifies reasoning with acting, positioning reasoning as the organizing principle for perception, planning, decision, and verif"
+        },
+        {
+          "final_rank": 5,
+          "chunk_id": "2f751470-5584-5d26-953a-802a1c337b18",
+          "document_id": "2601.12538v1",
+          "theme": "agents",
+          "page_start": 18,
+          "page_end": 18,
+          "hybrid_rank": 15,
+          "hybrid_score": 0.014493,
+          "reranker_score": 3.0732,
+          "channels": [
+            "bm25"
+          ],
+          "text_preview": "agentic search introduces autonomous decision-making for when, what, and how to retrieve, enabling dynamic search, in-context retrieval, critique-and-adapt loop"
+        }
+      ]
+    },
+    {
+      "query": "What is LoRA fine tuning?",
+      "metrics": {
+        "pool_initial_size": 20,
+        "pool_final_size": 5,
+        "pairs_scored": 20,
+        "reranker_ms": 5781.65,
+        "total_ms": 5781.75,
+        "mean_abs_rank_change": 6.6
+      },
+      "before_ranking": [
+        {
+          "hybrid_rank": 1,
+          "chunk_id": "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+          "rrf_score": 0.032018
+        },
+        {
+          "hybrid_rank": 2,
+          "chunk_id": "8ab6056c-9041-5e87-aed7-55284059ee35",
+          "rrf_score": 0.031514
+        },
+        {
+          "hybrid_rank": 3,
+          "chunk_id": "45cc3811-ac39-519e-afb2-3618d7825694",
+          "rrf_score": 0.031258
+        },
+        {
+          "hybrid_rank": 4,
+          "chunk_id": "cc3951a4-112f-5d41-a491-89fd58174fbd",
+          "rrf_score": 0.030118
+        },
+        {
+          "hybrid_rank": 5,
+          "chunk_id": "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+          "rrf_score": 0.030077
+        },
+        {
+          "hybrid_rank": 6,
+          "chunk_id": "a98899cd-abc7-56c6-8b5c-a501972392f0",
+          "rrf_score": 0.029387
+        },
+        {
+          "hybrid_rank": 7,
+          "chunk_id": "dd388021-8bee-5d0c-9ab2-bffc0796282b",
+          "rrf_score": 0.028992
+        },
+        {
+          "hybrid_rank": 8,
+          "chunk_id": "4a7b0f49-ada0-5bfd-8177-29d81a4d6e42",
+          "rrf_score": 0.02837
+        },
+        {
+          "hybrid_rank": 9,
+          "chunk_id": "802323c1-1128-5577-ab0f-433ae92879b8",
+          "rrf_score": 0.027425
+        },
+        {
+          "hybrid_rank": 10,
+          "chunk_id": "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+          "rrf_score": 0.026857
+        },
+        {
+          "hybrid_rank": 11,
+          "chunk_id": "34684b9a-1740-5517-8ee7-51972b0b8874",
+          "rrf_score": 0.016393
+        },
+        {
+          "hybrid_rank": 12,
+          "chunk_id": "39204042-5f8f-5f6e-adb5-cf0788577a44",
+          "rrf_score": 0.016129
+        },
+        {
+          "hybrid_rank": 13,
+          "chunk_id": "960d4fc8-5cf1-5159-a16d-dd46abb38f5c",
+          "rrf_score": 0.015152
+        },
+        {
+          "hybrid_rank": 14,
+          "chunk_id": "72989066-93be-52ac-ae66-05ad949847ab",
+          "rrf_score": 0.014706
+        },
+        {
+          "hybrid_rank": 15,
+          "chunk_id": "d662e6ac-e436-511f-b5a9-c3810531daef",
+          "rrf_score": 0.014493
+        },
+        {
+          "hybrid_rank": 16,
+          "chunk_id": "a1c8c89c-8f7a-5401-942e-fd3eaef20065",
+          "rrf_score": 0.014085
+        },
+        {
+          "hybrid_rank": 17,
+          "chunk_id": "008f836c-9e8e-5571-88ad-9bf0e24d90dc",
+          "rrf_score": 0.013889
+        },
+        {
+          "hybrid_rank": 18,
+          "chunk_id": "1953a2b9-7b08-5107-bfea-bd85e0567d32",
+          "rrf_score": 0.013889
+        },
+        {
+          "hybrid_rank": 19,
+          "chunk_id": "4dba9e45-31ed-58f5-b3e2-2bdab7efbad9",
+          "rrf_score": 0.013699
+        },
+        {
+          "hybrid_rank": 20,
+          "chunk_id": "7c516146-4482-5188-a917-3d7373badefd",
+          "rrf_score": 0.013514
+        }
+      ],
+      "after_ranking": [
+        {
+          "final_rank": 1,
+          "chunk_id": "802323c1-1128-5577-ab0f-433ae92879b8",
+          "document_id": "2607.11940v1",
+          "theme": "fine_tuning",
+          "page_start": 1,
+          "page_end": 1,
+          "hybrid_rank": 9,
+          "hybrid_score": 0.027425,
+          "reranker_score": 1.656,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "1 CARE-LoRA: Compressed Activation REconstruction for Memory-Efficient LoRA Gengyu Zhang, Haiyin Ran, Zhengbao He, Yuhang Liu, Hanling Tian, Zhehao Huang, and X"
+        },
+        {
+          "final_rank": 2,
+          "chunk_id": "e4306afb-eee1-564b-8fcf-cf0cbf27e7d2",
+          "document_id": "2411.14961v3",
+          "theme": "fine_tuning",
+          "page_start": 1,
+          "page_end": 1,
+          "hybrid_rank": 5,
+          "hybrid_score": 0.030077,
+          "reranker_score": 0.511,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "LoRA-FAIR: Federated LoRA Fine-Tuning with Aggregation and Initialization Refinement Jieming Bian1* Lei Wang1* Letian Zhang2 Jie Xu1 1 University of Florida 2Mi"
+        },
+        {
+          "final_rank": 3,
+          "chunk_id": "3e9e1caf-940b-52e6-bd4f-9c113264deb9",
+          "document_id": "2607.11940v1",
+          "theme": "fine_tuning",
+          "page_start": 2,
+          "page_end": 2,
+          "hybrid_rank": 10,
+          "hybrid_score": 0.026857,
+          "reranker_score": 0.0774,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "are as follows: • We revisit the memory bottleneck of LoRA fine- tuning and note that, once adapter-side parameters are sufficiently reduced, activation storage"
+        },
+        {
+          "final_rank": 4,
+          "chunk_id": "d662e6ac-e436-511f-b5a9-c3810531daef",
+          "document_id": "2402.12354v2",
+          "theme": "fine_tuning",
+          "page_start": 7,
+          "page_end": 7,
+          "hybrid_rank": 15,
+          "hybrid_score": 0.014493,
+          "reranker_score": 0.0247,
+          "channels": [
+            "dense"
+          ],
+          "text_preview": "leads to the following definition of efficient learning with LoRA. Definition 5 (Efficient Learning). We say that LoRA fine- tuning is efficient if it is stable"
+        },
+        {
+          "final_rank": 5,
+          "chunk_id": "39c8e76e-ebf4-5ef0-8107-e04c123a8a8e",
+          "document_id": "2607.11940v1",
+          "theme": "fine_tuning",
+          "page_start": 1,
+          "page_end": 1,
+          "hybrid_rank": 1,
+          "hybrid_score": 0.032018,
+          "reranker_score": -0.1217,
+          "channels": [
+            "dense",
+            "bm25"
+          ],
+          "text_preview": "tasks demonstrate that, while substantially reducing the overall memory footprint, CARE-LoRA achieves competitive or even superior performance compared with sta"
+        }
+      ]
+    }
+  ]
+}

@@ -1,12 +1,6 @@
+vector_store/
 __pycache__/
 *.pyc
 .venv/
-.env
-
-vector_store/
-files/corpus/chunks.json
-files/corpus/**/*.json
-files/corpus/**/*.csv
-
-*.tmp
-~$*
+venv/
+``

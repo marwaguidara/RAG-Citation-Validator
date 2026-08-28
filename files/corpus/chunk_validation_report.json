@@ -1,0 +1,974 @@
+{
+  "generator": "validate_chunks.py",
+  "generated_at": "2026-08-24T18:41:44",
+  "status": "WARNING",
+  "input": {
+    "file": "chunks.json",
+    "size_bytes": 4034390,
+    "sha256": "1e8908db880e7df5b81985a0d0c16262e65a01a71baec15845db9f02ab60a4f1",
+    "generator": "chunk_documents.py",
+    "generated_at": "2026-08-24T16:57:36",
+    "config": {
+      "chars_per_token": 4.0,
+      "target_tokens": 412,
+      "overlap_tokens": 100,
+      "hard_cap_tokens": 512,
+      "min_chunk_tokens": 100,
+      "bge_max_tokens": 512
+    }
+  },
+  "reference": {
+    "used": true,
+    "file": "documents.json",
+    "documents": 40
+  },
+  "thresholds": {
+    "min_tokens": 100,
+    "max_tokens": 512,
+    "near_dup_jaccard": 0.6,
+    "coverage_min_pct": 99.0
+  },
+  "environment": {
+    "python_version": "3.13.15",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "checks": [
+    {
+      "name": "chunk_id_unique",
+      "status": "PASS",
+      "summary": "2026 chunk_id uniques",
+      "metrics": {
+        "total_chunks": 2026,
+        "unique_chunk_ids": 2026,
+        "duplicate_ids": 0
+      },
+      "examples": []
+    },
+    {
+      "name": "required_fields",
+      "status": "PASS",
+      "summary": "tous les champs obligatoires sont présents",
+      "metrics": {
+        "chunks_with_missing_fields": 0,
+        "missing_field_patterns": {}
+      },
+      "examples": []
+    },
+    {
+      "name": "empty_text",
+      "status": "PASS",
+      "summary": "aucun chunk au texte vide",
+      "metrics": {
+        "empty_text_chunks": 0
+      },
+      "examples": []
+    },
+    {
+      "name": "content_duplicates",
+      "status": "WARNING",
+      "summary": "0 groupe(s) de doublons exacts · 17 paire(s) quasi-doublon(s)",
+      "metrics": {
+        "near_dup_jaccard_threshold": 0.6,
+        "exact_duplicate_groups": 0,
+        "exact_redundant_chunks": 0,
+        "near_duplicate_pairs": 17,
+        "documents_with_near_duplicates": [
+          "2512.13930v1"
+        ]
+      },
+      "examples": {
+        "exact_groups": [],
+        "near_pairs": [
+          {
+            "a": "5bdca5da-1bb3-58a1-bc11-118c9abd7e49",
+            "b": "d7aa0647-b060-52b0-a738-0b4890337902",
+            "document_id": "2512.13930v1",
+            "jaccard": 0.989
+          },
+          {
+            "a": "d7aa0647-b060-52b0-a738-0b4890337902",
+            "b": "f4a2c298-85b2-53a1-a490-ac5f123a7349",
+            "document_id": "2512.13930v1",
+            "jaccard": 0.923
+          },
+          {
+            "a": "5bdca5da-1bb3-58a1-bc11-118c9abd7e49",
+            "b": "f4a2c298-85b2-53a1-a490-ac5f123a7349",
+            "document_id": "2512.13930v1",
+            "jaccard": 0.92
+          },
+          {
+            "a": "83ccd450-8a36-5564-884c-9b7dc4d9d86f",
+            "b": "ebec51f7-a937-5320-a496-42916a5cee42",
+            "document_id": "2512.13930v1",
+            "jaccard": 0.824
+          },
+          {
+            "a": "ab752037-4274-5ad2-9634-1526cba02a5e",
+            "b": "d62ad326-09a3-5799-8b47-1bd41f531d0d",
+            "document_id": "2512.13930v1",
+            "jaccard": 0.763
+          },
+          {
+            "a": "0e4d1e76-d851-50db-9cf4-5479f41d8230",
+            "b": "f4a2c298-85b2-53a1-a490-ac5f123a7349",
+            "document_id": "2512.13930v1",
+            "jaccard": 0.76
+          },
+          {
+            "a": "6243e847-9ad3-5fbf-9a7c-4093858931fe",
+            "b": "e9618278-c82f-5ae1-9b96-d65f1177cb44",
+            "document_id": "2512.13930v1",
+            "jaccard": 0.717
+          },
+          {
+            "a": "0e4d1e76-d851-50db-9cf4-5479f41d8230",
+            "b": "d7aa0647-b060-52b0-a738-0b4890337902",
+            "document_id": "2512.13930v1",
+            "jaccard": 0.713
+          },
+          {
+            "a": "0e4d1e76-d851-50db-9cf4-5479f41d8230",
+            "b": "5bdca5da-1bb3-58a1-bc11-118c9abd7e49",
+            "document_id": "2512.13930v1",
+            "jaccard": 0.711
+          },
+          {
+            "a": "b7f26ce5-152a-572a-ac6d-59abbfa743e7",
+            "b": "d2a8c23b-d277-58c2-aaae-d2ea7dd22a0b",
+            "document_id": "2512.13930v1",
+            "jaccard": 0.661
+          }
+        ]
+      }
+    },
+    {
+      "name": "document_id_consistency",
+      "status": "PASS",
+      "summary": "40 document_id cohérents (format + thème unique)",
+      "metrics": {
+        "documents": 40,
+        "empty_document_ids": 0,
+        "invalid_format_count": 0,
+        "mixed_theme_documents": {}
+      },
+      "examples": {
+        "invalid_format": []
+      }
+    },
+    {
+      "name": "page_coherence",
+      "status": "PASS",
+      "summary": "pages cohérentes sur 2026 chunks",
+      "metrics": {
+        "incoherent_page_chunks": 0
+      },
+      "examples": []
+    },
+    {
+      "name": "length_range",
+      "status": "PASS",
+      "summary": "0 sous 100 t · 0 au-dessus de 512 t · 0 estimation(s) <= 0",
+      "metrics": {
+        "min_tokens": 100,
+        "max_tokens": 512,
+        "below_min_count": 0,
+        "above_max_count": 0,
+        "non_positive_estimates": 0
+      },
+      "examples": {
+        "below_min": [],
+        "above_max": []
+      }
+    },
+    {
+      "name": "document_coverage",
+      "status": "PASS",
+      "summary": "40 document(s) · référence: 40 document(s) · 0 manquant(s) · 0 page(s) manquante(s) (trous)",
+      "metrics": {
+        "documents": 40,
+        "reference_used": true,
+        "missing_documents_vs_reference": [],
+        "unexpected_documents_vs_reference": [],
+        "total_hole_pages": 0,
+        "coverage_min_pct": 99.0,
+        "low_coverage_documents": [],
+        "page_count_mismatches": [],
+        "overall_coverage_pct": 100.0
+      },
+      "examples": {
+        "per_document": {
+          "1407.5416v1": {
+            "theme": "rag",
+            "chunks": 24,
+            "first_page": 1,
+            "last_page": 6,
+            "pages_covered": 6,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 6
+          },
+          "2010.08191v2": {
+            "theme": "rag",
+            "chunks": 40,
+            "first_page": 1,
+            "last_page": 13,
+            "pages_covered": 13,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 13
+          },
+          "2110.01599v1": {
+            "theme": "rag",
+            "chunks": 21,
+            "first_page": 1,
+            "last_page": 7,
+            "pages_covered": 7,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 7
+          },
+          "2110.06500v2": {
+            "theme": "fine_tuning",
+            "chunks": 49,
+            "first_page": 1,
+            "last_page": 19,
+            "pages_covered": 19,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 19
+          },
+          "2204.07496v4": {
+            "theme": "rag",
+            "chunks": 52,
+            "first_page": 1,
+            "last_page": 18,
+            "pages_covered": 18,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 18
+          },
+          "2208.02070v1": {
+            "theme": "fine_tuning",
+            "chunks": 23,
+            "first_page": 1,
+            "last_page": 8,
+            "pages_covered": 8,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 8
+          },
+          "2210.12607v1": {
+            "theme": "fine_tuning",
+            "chunks": 36,
+            "first_page": 1,
+            "last_page": 11,
+            "pages_covered": 11,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 11
+          },
+          "2308.16118v2": {
+            "theme": "agents",
+            "chunks": 18,
+            "first_page": 1,
+            "last_page": 14,
+            "pages_covered": 14,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 14
+          },
+          "2309.02144v1": {
+            "theme": "agents",
+            "chunks": 47,
+            "first_page": 1,
+            "last_page": 19,
+            "pages_covered": 19,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 19
+          },
+          "2309.15217v2": {
+            "theme": "rag",
+            "chunks": 24,
+            "first_page": 1,
+            "last_page": 8,
+            "pages_covered": 8,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 8
+          },
+          "2310.03059v8": {
+            "theme": "fine_tuning",
+            "chunks": 35,
+            "first_page": 1,
+            "last_page": 11,
+            "pages_covered": 11,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 11
+          },
+          "2312.10793v3": {
+            "theme": "fine_tuning",
+            "chunks": 24,
+            "first_page": 1,
+            "last_page": 8,
+            "pages_covered": 8,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 8
+          },
+          "2402.11651v2": {
+            "theme": "agents",
+            "chunks": 39,
+            "first_page": 1,
+            "last_page": 13,
+            "pages_covered": 13,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 13
+          },
+          "2402.12317v2": {
+            "theme": "rag",
+            "chunks": 54,
+            "first_page": 1,
+            "last_page": 16,
+            "pages_covered": 16,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 16
+          },
+          "2402.12354v2": {
+            "theme": "fine_tuning",
+            "chunks": 59,
+            "first_page": 1,
+            "last_page": 24,
+            "pages_covered": 24,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 24
+          },
+          "2404.01023v1": {
+            "theme": "agents",
+            "chunks": 36,
+            "first_page": 1,
+            "last_page": 12,
+            "pages_covered": 12,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 12
+          },
+          "2404.14464v1": {
+            "theme": "rag",
+            "chunks": 42,
+            "first_page": 1,
+            "last_page": 17,
+            "pages_covered": 17,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 17
+          },
+          "2405.07551v1": {
+            "theme": "agents",
+            "chunks": 40,
+            "first_page": 1,
+            "last_page": 15,
+            "pages_covered": 15,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 15
+          },
+          "2408.07888v2": {
+            "theme": "fine_tuning",
+            "chunks": 25,
+            "first_page": 1,
+            "last_page": 10,
+            "pages_covered": 10,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 10
+          },
+          "2409.11353v3": {
+            "theme": "agents",
+            "chunks": 46,
+            "first_page": 1,
+            "last_page": 24,
+            "pages_covered": 24,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 24
+          },
+          "2411.14961v3": {
+            "theme": "fine_tuning",
+            "chunks": 57,
+            "first_page": 1,
+            "last_page": 15,
+            "pages_covered": 15,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 15
+          },
+          "2411.18583v1": {
+            "theme": "rag",
+            "chunks": 20,
+            "first_page": 1,
+            "last_page": 6,
+            "pages_covered": 6,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 6
+          },
+          "2502.00306v2": {
+            "theme": "rag",
+            "chunks": 84,
+            "first_page": 1,
+            "last_page": 27,
+            "pages_covered": 27,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 27
+          },
+          "2503.01763v2": {
+            "theme": "agents",
+            "chunks": 86,
+            "first_page": 1,
+            "last_page": 28,
+            "pages_covered": 28,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 28
+          },
+          "2504.16021v1": {
+            "theme": "agents",
+            "chunks": 11,
+            "first_page": 1,
+            "last_page": 4,
+            "pages_covered": 4,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 4
+          },
+          "2504.16584v1": {
+            "theme": "fine_tuning",
+            "chunks": 23,
+            "first_page": 1,
+            "last_page": 11,
+            "pages_covered": 11,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 11
+          },
+          "2504.17204v1": {
+            "theme": "rag",
+            "chunks": 14,
+            "first_page": 1,
+            "last_page": 6,
+            "pages_covered": 6,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 6
+          },
+          "2506.06962v3": {
+            "theme": "rag",
+            "chunks": 51,
+            "first_page": 1,
+            "last_page": 18,
+            "pages_covered": 18,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 18
+          },
+          "2507.23334v2": {
+            "theme": "rag",
+            "chunks": 28,
+            "first_page": 1,
+            "last_page": 8,
+            "pages_covered": 8,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 8
+          },
+          "2508.04848v1": {
+            "theme": "agents",
+            "chunks": 34,
+            "first_page": 1,
+            "last_page": 9,
+            "pages_covered": 9,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 9
+          },
+          "2510.00071v2": {
+            "theme": "agents",
+            "chunks": 13,
+            "first_page": 1,
+            "last_page": 7,
+            "pages_covered": 7,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 7
+          },
+          "2512.13930v1": {
+            "theme": "agents",
+            "chunks": 98,
+            "first_page": 1,
+            "last_page": 96,
+            "pages_covered": 96,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 96
+          },
+          "2512.15233v2": {
+            "theme": "fine_tuning",
+            "chunks": 18,
+            "first_page": 1,
+            "last_page": 5,
+            "pages_covered": 5,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 5
+          },
+          "2601.12538v1": {
+            "theme": "agents",
+            "chunks": 351,
+            "first_page": 1,
+            "last_page": 135,
+            "pages_covered": 135,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 135
+          },
+          "2602.08239v1": {
+            "theme": "fine_tuning",
+            "chunks": 50,
+            "first_page": 1,
+            "last_page": 24,
+            "pages_covered": 24,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 24
+          },
+          "2604.14214v1": {
+            "theme": "agents",
+            "chunks": 40,
+            "first_page": 1,
+            "last_page": 16,
+            "pages_covered": 16,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 16
+          },
+          "2605.12335v1": {
+            "theme": "rag",
+            "chunks": 89,
+            "first_page": 1,
+            "last_page": 31,
+            "pages_covered": 31,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 31
+          },
+          "2605.28222v1": {
+            "theme": "fine_tuning",
+            "chunks": 110,
+            "first_page": 1,
+            "last_page": 69,
+            "pages_covered": 69,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 69
+          },
+          "2606.01947v1": {
+            "theme": "fine_tuning",
+            "chunks": 67,
+            "first_page": 1,
+            "last_page": 25,
+            "pages_covered": 25,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 25
+          },
+          "2607.11940v1": {
+            "theme": "fine_tuning",
+            "chunks": 48,
+            "first_page": 1,
+            "last_page": 15,
+            "pages_covered": 15,
+            "hole_pages": 0,
+            "coverage_pct": 100.0,
+            "reference_page_count": 15
+          }
+        }
+      }
+    }
+  ],
+  "anomalies": [
+    {
+      "check": "content_duplicates",
+      "severity": "WARNING",
+      "message": "0 groupe(s) de doublons exacts · 17 paire(s) quasi-doublon(s)"
+    }
+  ],
+  "statistics": {
+    "global": {
+      "chunks": 2026,
+      "documents": 40,
+      "themes": 3,
+      "tokens_est_total": 862511,
+      "tokens_est_min": 100,
+      "tokens_est_max": 512,
+      "tokens_est_mean": 425.7,
+      "tokens_est_median": 427,
+      "tokens_est_p05": 402,
+      "tokens_est_p25": 417,
+      "tokens_est_p75": 440,
+      "tokens_est_p90": 458,
+      "tokens_est_p95": 471,
+      "pages_span_mean": 1.39,
+      "multi_page_chunks": 739,
+      "multi_page_pct": 36.5
+    },
+    "per_theme": {
+      "agents": {
+        "documents": 13,
+        "chunks": 859,
+        "tokens_est": 366313,
+        "mean_tokens_per_chunk": 426.4
+      },
+      "fine_tuning": {
+        "documents": 14,
+        "chunks": 624,
+        "tokens_est": 265158,
+        "mean_tokens_per_chunk": 424.9
+      },
+      "rag": {
+        "documents": 13,
+        "chunks": 543,
+        "tokens_est": 231040,
+        "mean_tokens_per_chunk": 425.5
+      }
+    },
+    "per_document": {
+      "1407.5416v1": {
+        "theme": "rag",
+        "chunks": 24,
+        "tokens_est": 10325,
+        "first_page": 1,
+        "last_page": 6,
+        "mean_tokens_per_chunk": 430.2
+      },
+      "2010.08191v2": {
+        "theme": "rag",
+        "chunks": 40,
+        "tokens_est": 16995,
+        "first_page": 1,
+        "last_page": 13,
+        "mean_tokens_per_chunk": 424.9
+      },
+      "2110.01599v1": {
+        "theme": "rag",
+        "chunks": 21,
+        "tokens_est": 8878,
+        "first_page": 1,
+        "last_page": 7,
+        "mean_tokens_per_chunk": 422.8
+      },
+      "2110.06500v2": {
+        "theme": "fine_tuning",
+        "chunks": 49,
+        "tokens_est": 20978,
+        "first_page": 1,
+        "last_page": 19,
+        "mean_tokens_per_chunk": 428.1
+      },
+      "2204.07496v4": {
+        "theme": "rag",
+        "chunks": 52,
+        "tokens_est": 21976,
+        "first_page": 1,
+        "last_page": 18,
+        "mean_tokens_per_chunk": 422.6
+      },
+      "2208.02070v1": {
+        "theme": "fine_tuning",
+        "chunks": 23,
+        "tokens_est": 9762,
+        "first_page": 1,
+        "last_page": 8,
+        "mean_tokens_per_chunk": 424.4
+      },
+      "2210.12607v1": {
+        "theme": "fine_tuning",
+        "chunks": 36,
+        "tokens_est": 15231,
+        "first_page": 1,
+        "last_page": 11,
+        "mean_tokens_per_chunk": 423.1
+      },
+      "2308.16118v2": {
+        "theme": "agents",
+        "chunks": 18,
+        "tokens_est": 7860,
+        "first_page": 1,
+        "last_page": 14,
+        "mean_tokens_per_chunk": 436.7
+      },
+      "2309.02144v1": {
+        "theme": "agents",
+        "chunks": 47,
+        "tokens_est": 20205,
+        "first_page": 1,
+        "last_page": 19,
+        "mean_tokens_per_chunk": 429.9
+      },
+      "2309.15217v2": {
+        "theme": "rag",
+        "chunks": 24,
+        "tokens_est": 10166,
+        "first_page": 1,
+        "last_page": 8,
+        "mean_tokens_per_chunk": 423.6
+      },
+      "2310.03059v8": {
+        "theme": "fine_tuning",
+        "chunks": 35,
+        "tokens_est": 14849,
+        "first_page": 1,
+        "last_page": 11,
+        "mean_tokens_per_chunk": 424.3
+      },
+      "2312.10793v3": {
+        "theme": "fine_tuning",
+        "chunks": 24,
+        "tokens_est": 10197,
+        "first_page": 1,
+        "last_page": 8,
+        "mean_tokens_per_chunk": 424.9
+      },
+      "2402.11651v2": {
+        "theme": "agents",
+        "chunks": 39,
+        "tokens_est": 16508,
+        "first_page": 1,
+        "last_page": 13,
+        "mean_tokens_per_chunk": 423.3
+      },
+      "2402.12317v2": {
+        "theme": "rag",
+        "chunks": 54,
+        "tokens_est": 22936,
+        "first_page": 1,
+        "last_page": 16,
+        "mean_tokens_per_chunk": 424.7
+      },
+      "2402.12354v2": {
+        "theme": "fine_tuning",
+        "chunks": 59,
+        "tokens_est": 25113,
+        "first_page": 1,
+        "last_page": 24,
+        "mean_tokens_per_chunk": 425.6
+      },
+      "2404.01023v1": {
+        "theme": "agents",
+        "chunks": 36,
+        "tokens_est": 15128,
+        "first_page": 1,
+        "last_page": 12,
+        "mean_tokens_per_chunk": 420.2
+      },
+      "2404.14464v1": {
+        "theme": "rag",
+        "chunks": 42,
+        "tokens_est": 18136,
+        "first_page": 1,
+        "last_page": 17,
+        "mean_tokens_per_chunk": 431.8
+      },
+      "2405.07551v1": {
+        "theme": "agents",
+        "chunks": 40,
+        "tokens_est": 16808,
+        "first_page": 1,
+        "last_page": 15,
+        "mean_tokens_per_chunk": 420.2
+      },
+      "2408.07888v2": {
+        "theme": "fine_tuning",
+        "chunks": 25,
+        "tokens_est": 10742,
+        "first_page": 1,
+        "last_page": 10,
+        "mean_tokens_per_chunk": 429.7
+      },
+      "2409.11353v3": {
+        "theme": "agents",
+        "chunks": 46,
+        "tokens_est": 19566,
+        "first_page": 1,
+        "last_page": 24,
+        "mean_tokens_per_chunk": 425.3
+      },
+      "2411.14961v3": {
+        "theme": "fine_tuning",
+        "chunks": 57,
+        "tokens_est": 23878,
+        "first_page": 1,
+        "last_page": 15,
+        "mean_tokens_per_chunk": 418.9
+      },
+      "2411.18583v1": {
+        "theme": "rag",
+        "chunks": 20,
+        "tokens_est": 8316,
+        "first_page": 1,
+        "last_page": 6,
+        "mean_tokens_per_chunk": 415.8
+      },
+      "2502.00306v2": {
+        "theme": "rag",
+        "chunks": 84,
+        "tokens_est": 36044,
+        "first_page": 1,
+        "last_page": 27,
+        "mean_tokens_per_chunk": 429.1
+      },
+      "2503.01763v2": {
+        "theme": "agents",
+        "chunks": 86,
+        "tokens_est": 36268,
+        "first_page": 1,
+        "last_page": 28,
+        "mean_tokens_per_chunk": 421.7
+      },
+      "2504.16021v1": {
+        "theme": "agents",
+        "chunks": 11,
+        "tokens_est": 4522,
+        "first_page": 1,
+        "last_page": 4,
+        "mean_tokens_per_chunk": 411.1
+      },
+      "2504.16584v1": {
+        "theme": "fine_tuning",
+        "chunks": 23,
+        "tokens_est": 9798,
+        "first_page": 1,
+        "last_page": 11,
+        "mean_tokens_per_chunk": 426.0
+      },
+      "2504.17204v1": {
+        "theme": "rag",
+        "chunks": 14,
+        "tokens_est": 5782,
+        "first_page": 1,
+        "last_page": 6,
+        "mean_tokens_per_chunk": 413.0
+      },
+      "2506.06962v3": {
+        "theme": "rag",
+        "chunks": 51,
+        "tokens_est": 22017,
+        "first_page": 1,
+        "last_page": 18,
+        "mean_tokens_per_chunk": 431.7
+      },
+      "2507.23334v2": {
+        "theme": "rag",
+        "chunks": 28,
+        "tokens_est": 11843,
+        "first_page": 1,
+        "last_page": 8,
+        "mean_tokens_per_chunk": 423.0
+      },
+      "2508.04848v1": {
+        "theme": "agents",
+        "chunks": 34,
+        "tokens_est": 14261,
+        "first_page": 1,
+        "last_page": 9,
+        "mean_tokens_per_chunk": 419.4
+      },
+      "2510.00071v2": {
+        "theme": "agents",
+        "chunks": 13,
+        "tokens_est": 5253,
+        "first_page": 1,
+        "last_page": 7,
+        "mean_tokens_per_chunk": 404.1
+      },
+      "2512.13930v1": {
+        "theme": "agents",
+        "chunks": 98,
+        "tokens_est": 42049,
+        "first_page": 1,
+        "last_page": 96,
+        "mean_tokens_per_chunk": 429.1
+      },
+      "2512.15233v2": {
+        "theme": "fine_tuning",
+        "chunks": 18,
+        "tokens_est": 7487,
+        "first_page": 1,
+        "last_page": 5,
+        "mean_tokens_per_chunk": 415.9
+      },
+      "2601.12538v1": {
+        "theme": "agents",
+        "chunks": 351,
+        "tokens_est": 150753,
+        "first_page": 1,
+        "last_page": 135,
+        "mean_tokens_per_chunk": 429.5
+      },
+      "2602.08239v1": {
+        "theme": "fine_tuning",
+        "chunks": 50,
+        "tokens_est": 21146,
+        "first_page": 1,
+        "last_page": 24,
+        "mean_tokens_per_chunk": 422.9
+      },
+      "2604.14214v1": {
+        "theme": "agents",
+        "chunks": 40,
+        "tokens_est": 17132,
+        "first_page": 1,
+        "last_page": 16,
+        "mean_tokens_per_chunk": 428.3
+      },
+      "2605.12335v1": {
+        "theme": "rag",
+        "chunks": 89,
+        "tokens_est": 37626,
+        "first_page": 1,
+        "last_page": 31,
+        "mean_tokens_per_chunk": 422.8
+      },
+      "2605.28222v1": {
+        "theme": "fine_tuning",
+        "chunks": 110,
+        "tokens_est": 46369,
+        "first_page": 1,
+        "last_page": 69,
+        "mean_tokens_per_chunk": 421.5
+      },
+      "2606.01947v1": {
+        "theme": "fine_tuning",
+        "chunks": 67,
+        "tokens_est": 28788,
+        "first_page": 1,
+        "last_page": 25,
+        "mean_tokens_per_chunk": 429.7
+      },
+      "2607.11940v1": {
+        "theme": "fine_tuning",
+        "chunks": 48,
+        "tokens_est": 20820,
+        "first_page": 1,
+        "last_page": 15,
+        "mean_tokens_per_chunk": 433.8
+      }
+    }
+  }
+}
