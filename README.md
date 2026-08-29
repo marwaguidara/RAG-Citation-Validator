@@ -4,7 +4,6 @@
 
 [![Python](https://img.shields.io/badge/Python-3.11+-blue?logo=python)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.41-red?logo=streamlit)](https://streamlit.io/)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Version](https://img.shields.io/badge/version-v1.0--final-orange)]()
 
 ---
@@ -362,7 +361,6 @@ streamlit run app.py
 - Python version, platform, and library versions recorded in evaluation artifacts
 - All raw pipeline outputs archived in `files/corpus/`
 - Development/debug scripts archived in `files/archive/`
-- Full audit report in `docs/AUDIT_FINAL_JURY.md`
 
 ---
 
@@ -401,7 +399,7 @@ The ablation was performed on the same chunk window with the same claim semantic
 
 ## Recruiter Review
 
-The project has been evaluated from three perspectives. Full analysis: `docs/AUDIT_FINAL_JURY.md`.
+The project has been evaluated from three perspectives.
 
 ### Scoring summary
 
@@ -452,8 +450,6 @@ A: The retrieval, RRF, reranker, NLI, sanitation, and gate are fully determinist
 
 - [x] Repository cleaned (dev scripts archived in `files/archive/`, temp logs deleted)
 - [x] Professional README (16 sections + interview shield + recruiter review)
-- [x] PFE report (`RAPPORT_PFE_RAG_Citation_Validator.md`)
-- [x] Full audit (`docs/AUDIT_FINAL_JURY.md`)
 - [x] Evaluation artifacts (`files/corpus/evaluation_report.json`, `comparison_table.json`, `comparison_plot.png`)
 - [x] Metrics reproduced (SHA-256 traceability, 30 annotated queries)
 - [ ] Git tag `v1.0-final` (run after final commit)
@@ -470,14 +466,8 @@ RAG-Citation-Validator/
 +- app.py                              # Streamlit UI (thin orchestration shell)
 +- dashboard_evaluation.py             # Evaluation dashboard
 +- README.md                           # This file
-+- RAPPORT_PFE_RAG_Citation_Validator.md  # Full PFE report
 +- requirements.txt                    # Python dependencies
-+- LICENSE                             # MIT
 +- .gitignore
-|
-+- docs/
-|   +- AUDIT_FINAL_JURY.md            # Full jury audit + interview Q&A prep
-|   +- AUDIT_J3_chunk_documents.md     # Chunking audit
 |
 +- files/
 |   +- citation_verifier.py           # NLI citation verification
