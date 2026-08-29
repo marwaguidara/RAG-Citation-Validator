@@ -981,6 +981,24 @@ Après génération, il vérifie par NLI qu'au moins une citation soutient réel
 
 ---
 
+## 32. Metric Interpretation
+
+Faithfulness (72.7%) measures consistency with retrieved chunks rather than factual correctness against a gold standard.
+
+Because citation verification relies on a strict NLI model (RoBERTa-large-MNLI), correct paraphrases may sometimes be classified as Neutral instead of Entailment.
+
+Consequently, Faithfulness should be interpreted as a **conservative lower bound** of grounding quality rather than an absolute measure of answer correctness.
+
+This behavior was verified through controlled ablation experiments comparing:
+
+- **verbatim statements** — support ≈ 0.79, classified as Supported
+- **accurate paraphrases** — support ≈ 0.26, classified as Unsupported due to Neutral bias
+- **false claims** — support ≈ 0.0001, classified as Unsupported (P(contradiction) ≈ 0.76)
+
+The ablation was performed on the same chunk window with the same claim semantics, isolating the paraphrase penalty of the NLI model from any pipeline behavior.
+
+---
+
 ## Annexe A. Répertoire des modules
 
 | Module | Rôle |

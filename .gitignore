@@ -1,6 +1,33 @@
+# --- Runtime / build artifacts ---
 vector_store/
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+
+# --- Virtual environments ---
 .venv/
 venv/
-``
+env/
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- OS temp files ---
+.DS_Store
+Thumbs.db
+~$*
+*.tmp
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Distribution ---
+*.egg-info/
+dist/
+build/
