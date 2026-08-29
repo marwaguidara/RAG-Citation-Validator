@@ -53,7 +53,7 @@ This system was built to answer three sub-questions:
 
 ## Architecture
 
-`mermaid
+```mermaid
 flowchart TD
     A[PDF Corpus<br/>40 arXiv papers] --> B[Extraction<br/>PyMuPDF]
     B --> C[Chunking<br/>412+100=512 tokens<br/>2,026 chunks]
@@ -61,22 +61,12 @@ flowchart TD
     C --> E[BM25 Index<br/>rank-bm25]
     D --> F[Hybrid Search<br/>RRF k=60]
     E --> F
-    F --> G[BGE Reranker<br/>bge-reranker-base<br/>cross-encoder]
+    F --> G[BGE Reranker<br/>bge-reranker-base]
     G --> H[Reranked Top-5]
-    H --> I[LLM Generation<br/>Qwen2.5 via Ollama<br/>JSON claims with citations]
-    I --> J[Citation Verification<br/>RoBERTa-large-MNLI<br/>entailment / neutral / contradiction]
-    J --> K[Final Answer<br/>+ Support Scores<br/>+ Verdicts]
-
-    style A fill:#e1f5fe
-    style C fill:#fafafa
-    style D fill:#fafafa
-    style E fill:#fafafa
-    style F fill:#fff3e0
-    style G fill:#fff3e0
-    style I fill:#fce4ec
-    style J fill:#fff8e1
-    style K fill:#e8f5e9
-`
+    H --> I[LLM Generation<br/>Qwen2.5 via Ollama]
+    I --> J[Citation Verification<br/>RoBERTa-large-MNLI]
+    J --> K[Final Answer<br/>Support Scores + Verdicts]
+```
 
 **Design principle:** each stage is a standalone module with a typed contract `app.py` is a thin Streamlit shell — no business logic is duplicated.
 
